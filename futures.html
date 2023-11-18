@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>futures</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="styles/main.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header"> 
+        <div class="container">
+          <div class="header-inner"> <a class="header__logo" href="/">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#logo"></use>
+              </svg></a><a class="link__btn" href="#" target="_self">Вход/Регистрация</a>
+            <div class="header__burger"> 
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#burger"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main"> 
+        <section class="newsticker js-newsticker">
+          <div class="container container--flex">
+            <div class="newsticker__icon"> 
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#speaker"></use>
+              </svg>
+            </div>
+            <div class="newsticker__slider swiper-container js-newstickerSlider">
+              <ul class="newsticker__list swiper-wrapper">
+                <li class="newsticker__item swiper-slide"><a class="newsticker__text" href="#">Торгуйте фьючерсами GROK и выиграйте 10 000$<span>Узнать больше</span></a></li>
+                <li class="newsticker__item swiper-slide"><a class="newsticker__text" href="#">Торгуйте фьючерсами AVAX, BNT, ZRX, NEAR, ARK, APT и FIL с кредитным плечом 15-200x<span>Узнать больше</span></a></li>
+                <li class="newsticker__item swiper-slide"><a class="newsticker__text" href="#">Улучшение преимуществ MX: Удерживайте MX, чтобы получить скидку в 50% на торговые комиссии.<span>Узнать больше</span></a></li>
+                <li class="newsticker__item swiper-slide"><a class="newsticker__text" href="#">[M-Day - Фьючерсы] Общий призовой фонд: фьючерсный бонус размером в $81 000 ждет вас. Торговый раунд: 09:00, 14 ноября - 09:00, 15 ноября (МСК)<span>Узнать больше</span></a></li>
+                <li class="newsticker__item swiper-slide"><a class="newsticker__text" href="#">Торгуйте фьючерсами MBL и выиграйте 20 000$<span>Узнать больше</span></a></li>
+              </ul>
+            </div>
+            <div class="newsticker__close js-newstickerClose">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#close"></use>
+              </svg>
+            </div>
+          </div>
+        </section>
+        <section class="favourites"> 
+          <div class="container container--flex">
+            <div class="favourites__icon"> 
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#favourites"></use>
+              </svg>
+            </div>
+            <ul class="favourites__list"> 
+              <li class="favourites__item">BTC USDT</li>
+            </ul>
+            <div class="favourites__setting">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#setting"></use>
+              </svg>
+            </div>
+          </div>
+        </section>
+        <section class="contract"> 
+          <div class="container"> 
+            <div class="contract-inner"> 
+              <div class="contract__left">
+                <div class="contract__row"> 
+                  <h1 class="contract__pair">BTC USDT <span>Perpetual</span></h1>
+                  <div class="contract-filters js-contractFilters"></div>
+                </div>
+                <div class="contract__row"> 
+                  <h2 class="contract__price contract__price--green">36,045.1</h2>
+                </div>
+                <div class="contract__row"> 
+                  <div class="contract__rate contract__rate--red">-0.95% </div>
+                </div>
+                <div class="contract__row"> 
+                  <div class="contract__detail contract__detail--title"><span class="underline js-popupOpen" data-popup="rate">Ставка финансирования</span><span class="space">/</span><span>Обратный отсчет</span></div>
+                  <div class="contract__detail"><span>+0.0100%</span><span class="space">/</span><span>01:47:14</span></div>
+                </div>
+              </div>
+              <div class="contract__right"> 
+                <div class="contract__right-col">
+                  <div class="contract__row"> 
+                    <div class="contract__detail contract__detail--title"><span class="underline js-popupOpen" data-popup="index-price">Индексная цена</span></div>
+                    <div class="contract__detail"><span>36,087.9</span></div>
+                  </div>
+                  <div class="contract__row"> 
+                    <div class="contract__detail contract__detail--title"><span class="underline js-popupOpen" data-popup="fair-price">Справедливая цена</span></div>
+                    <div class="contract__detail"><span>36,041.1</span></div>
+                  </div>
+                  <div class="contract__row"> 
+                    <div class="contract__detail contract__detail--title"><span>Обороты 24ч</span></div>
+                    <div class="contract__detail"><span>1.805B USDT</span></div>
+                  </div>
+                </div>
+                <div class="contract__right-col">
+                  <div class="contract__row"> 
+                    <div class="contract__detail contract__detail--title"><span>Макс 24ч</span></div>
+                    <div class="contract__detail"><span>37,998.0</span></div>
+                  </div>
+                  <div class="contract__row"> 
+                    <div class="contract__detail contract__detail--title"><span>Мин 24ч</span></div>
+                    <div class="contract__detail"><span>35,488.3</span></div>
+                  </div>
+                  <div class="contract__row"> 
+                    <div class="contract__detail contract__detail--title"><span>Объем 24ч</span></div>
+                    <div class="contract__detail"><span>49.101K BTC</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="market"> 
+          <div class="market-tabs"> 
+            <ul class="market-tabs__list"> 
+              <li class="market-tabs__item js-marketTab" data-tab="chart">График</li>
+              <li class="market-tabs__item js-marketTab" data-tab="orders">Книга ордеров</li>
+              <li class="market-tabs__item show js-marketTab" data-tab="transactions">Сделки на рынке</li>
+            </ul>
+          </div>
+          <div class="market-content market-transactions js-marketContent show" data-tab="transactions">
+            <div class="market-transactions__inner">
+              <table class="market-transactions__table">
+                <thead class="market-transactions__thead">
+                  <tr class="market-transactions__row">
+                    <th class="market-transactions__price">
+                      <div>Цена<span>(USDT)</span></div>
+                    </th>
+                    <th class="market-transactions__vol">
+                      <div>Кол-во<span>(BTC)</span></div>
+                    </th>
+                    <th class="market-transactions__time">
+                      <div>Время</div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="market-transactions__tbody">
+                  <tr class="market-transactions__row">
+                    <th class="market-transactions__price market-transactions__price--green">
+                      <div>36,080.2</div>
+                    </th>
+                    <th class="market-transactions__vol">
+                      <div>12.0579</div>
+                    </th>
+                    <th class="market-transactions__time">
+                      <div>02:10:16</div>
+                    </th>
+                  </tr>
+                  <tr class="market-transactions__row">
+                    <th class="market-transactions__price market-transactions__price--green">
+                      <div>36,080.2</div>
+                    </th>
+                    <th class="market-transactions__vol">
+                      <div>12.0579</div>
+                    </th>
+                    <th class="market-transactions__time">
+                      <div>02:10:16</div>
+                    </th>
+                  </tr>
+                  <tr class="market-transactions__row">
+                    <th class="market-transactions__price market-transactions__price--green">
+                      <div>36,080.2</div>
+                    </th>
+                    <th class="market-transactions__vol">
+                      <div>12.0579</div>
+                    </th>
+                    <th class="market-transactions__time">
+                      <div>02:10:16</div>
+                    </th>
+                  </tr>
+                  <tr class="market-transactions__row">
+                    <th class="market-transactions__price market-transactions__price--green">
+                      <div>36,080.2</div>
+                    </th>
+                    <th class="market-transactions__vol">
+                      <div>12.0579</div>
+                    </th>
+                    <th class="market-transactions__time">
+                      <div>02:10:16</div>
+                    </th>
+                  </tr>
+                  <tr class="market-transactions__row">
+                    <th class="market-transactions__price market-transactions__price--red">
+                      <div>32,080.2</div>
+                    </th>
+                    <th class="market-transactions__vol">
+                      <div>10.0579</div>
+                    </th>
+                    <th class="market-transactions__time">
+                      <div>04:10:16</div>
+                    </th>
+                  </tr>
+                  <tr class="market-transactions__row">
+                    <th class="market-transactions__price market-transactions__price--red">
+                      <div>32,080.2</div>
+                    </th>
+                    <th class="market-transactions__vol">
+                      <div>10.0579</div>
+                    </th>
+                    <th class="market-transactions__time">
+                      <div>04:10:16</div>
+                    </th>
+                  </tr>
+                  <tr class="market-transactions__row">
+                    <th class="market-transactions__price market-transactions__price--red">
+                      <div>32,080.2</div>
+                    </th>
+                    <th class="market-transactions__vol">
+                      <div>10.0579</div>
+                    </th>
+                    <th class="market-transactions__time">
+                      <div>04:10:16</div>
+                    </th>
+                  </tr>
+                  <tr class="market-transactions__row">
+                    <th class="market-transactions__price market-transactions__price--red">
+                      <div>32,080.2</div>
+                    </th>
+                    <th class="market-transactions__vol">
+                      <div>10.0579</div>
+                    </th>
+                    <th class="market-transactions__time">
+                      <div>04:10:16</div>
+                    </th>
+                  </tr>
+                  <tr class="market-transactions__row">
+                    <th class="market-transactions__price market-transactions__price--green">
+                      <div>36,503.2</div>
+                    </th>
+                    <th class="market-transactions__vol">
+                      <div>3.0579</div>
+                    </th>
+                    <th class="market-transactions__time">
+                      <div>01:12:16</div>
+                    </th>
+                  </tr>
+                  <tr class="market-transactions__row">
+                    <th class="market-transactions__price market-transactions__price--green">
+                      <div>36,503.2</div>
+                    </th>
+                    <th class="market-transactions__vol">
+                      <div>3.0579</div>
+                    </th>
+                    <th class="market-transactions__time">
+                      <div>01:12:16</div>
+                    </th>
+                  </tr>
+                  <tr class="market-transactions__row">
+                    <th class="market-transactions__price market-transactions__price--green">
+                      <div>36,503.2</div>
+                    </th>
+                    <th class="market-transactions__vol">
+                      <div>3.0579</div>
+                    </th>
+                    <th class="market-transactions__time">
+                      <div>01:12:16</div>
+                    </th>
+                  </tr>
+                  <tr class="market-transactions__row">
+                    <th class="market-transactions__price market-transactions__price--green">
+                      <div>36,503.2</div>
+                    </th>
+                    <th class="market-transactions__vol">
+                      <div>3.0579</div>
+                    </th>
+                    <th class="market-transactions__time">
+                      <div>01:12:16</div>
+                    </th>
+                  </tr>
+                  <tr class="market-transactions__row">
+                    <th class="market-transactions__price market-transactions__price--red">
+                      <div>321,080.2</div>
+                    </th>
+                    <th class="market-transactions__vol">
+                      <div>2.0579</div>
+                    </th>
+                    <th class="market-transactions__time">
+                      <div>14:14:16</div>
+                    </th>
+                  </tr>
+                  <tr class="market-transactions__row">
+                    <th class="market-transactions__price market-transactions__price--red">
+                      <div>321,080.2</div>
+                    </th>
+                    <th class="market-transactions__vol">
+                      <div>2.0579</div>
+                    </th>
+                    <th class="market-transactions__time">
+                      <div>14:14:16</div>
+                    </th>
+                  </tr>
+                  <tr class="market-transactions__row">
+                    <th class="market-transactions__price market-transactions__price--red">
+                      <div>321,080.2</div>
+                    </th>
+                    <th class="market-transactions__vol">
+                      <div>2.0579</div>
+                    </th>
+                    <th class="market-transactions__time">
+                      <div>14:14:16</div>
+                    </th>
+                  </tr>
+                  <tr class="market-transactions__row">
+                    <th class="market-transactions__price market-transactions__price--red">
+                      <div>321,080.2</div>
+                    </th>
+                    <th class="market-transactions__vol">
+                      <div>2.0579</div>
+                    </th>
+                    <th class="market-transactions__time">
+                      <div>14:14:16</div>
+                    </th>
+                  </tr>
+                  <tr class="market-transactions__row">
+                    <th class="market-transactions__price market-transactions__price--red">
+                      <div>1,080.42</div>
+                    </th>
+                    <th class="market-transactions__vol">
+                      <div>6.1231</div>
+                    </th>
+                    <th class="market-transactions__time">
+                      <div>12:12:12</div>
+                    </th>
+                  </tr>
+                  <tr class="market-transactions__row">
+                    <th class="market-transactions__price market-transactions__price--red">
+                      <div>1,080.42</div>
+                    </th>
+                    <th class="market-transactions__vol">
+                      <div>6.1231</div>
+                    </th>
+                    <th class="market-transactions__time">
+                      <div>12:12:12</div>
+                    </th>
+                  </tr>
+                  <tr class="market-transactions__row">
+                    <th class="market-transactions__price market-transactions__price--red">
+                      <div>1,080.42</div>
+                    </th>
+                    <th class="market-transactions__vol">
+                      <div>6.1231</div>
+                    </th>
+                    <th class="market-transactions__time">
+                      <div>12:12:12</div>
+                    </th>
+                  </tr>
+                  <tr class="market-transactions__row">
+                    <th class="market-transactions__price market-transactions__price--red">
+                      <div>1,080.42</div>
+                    </th>
+                    <th class="market-transactions__vol">
+                      <div>6.1231</div>
+                    </th>
+                    <th class="market-transactions__time">
+                      <div>12:12:12</div>
+                    </th>
+                  </tr>
+                  <tr class="market-transactions__row">
+                    <th class="market-transactions__price market-transactions__price--green">
+                      <div>3,1231.78</div>
+                    </th>
+                    <th class="market-transactions__vol">
+                      <div>3.2321</div>
+                    </th>
+                    <th class="market-transactions__time">
+                      <div>09:09:12</div>
+                    </th>
+                  </tr>
+                  <tr class="market-transactions__row">
+                    <th class="market-transactions__price market-transactions__price--green">
+                      <div>3,1231.78</div>
+                    </th>
+                    <th class="market-transactions__vol">
+                      <div>3.2321</div>
+                    </th>
+                    <th class="market-transactions__time">
+                      <div>09:09:12</div>
+                    </th>
+                  </tr>
+                  <tr class="market-transactions__row">
+                    <th class="market-transactions__price market-transactions__price--green">
+                      <div>3,1231.78</div>
+                    </th>
+                    <th class="market-transactions__vol">
+                      <div>3.2321</div>
+                    </th>
+                    <th class="market-transactions__time">
+                      <div>09:09:12</div>
+                    </th>
+                  </tr>
+                  <tr class="market-transactions__row">
+                    <th class="market-transactions__price market-transactions__price--green">
+                      <div>3,1231.78</div>
+                    </th>
+                    <th class="market-transactions__vol">
+                      <div>3.2321</div>
+                    </th>
+                    <th class="market-transactions__time">
+                      <div>09:09:12</div>
+                    </th>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="market-content market-orders js-marketContent" data-tab="orders">
+            <div class="market-orders__inner"></div>
+          </div>
+          <div class="market-content js-marketContent" data-tab="chart"></div>
+        </section>
+        <section class="data"> 
+          <div class="data-tabs"> 
+            <div class="data-tabs__wrapper swiper-container js-dataTabsSlider"> 
+              <div class="data-tabs__arrow data-tabs__arrow--prev swiper-button-prev"></div>
+              <ul class="data-tabs__list swiper-wrapper">
+                <li class="data-tabs__item swiper-slide active js-dataTab" data-tab="positions">Открытые позиции(0)</li>
+                <li class="data-tabs__item swiper-slide js-dataTab" data-tab="orders">Открытые ордера (0)</li>
+                <li class="data-tabs__item swiper-slide js-dataTab" data-tab="history-positions">История позиций</li>
+                <li class="data-tabs__item swiper-slide js-dataTab" data-tab="orders-history">История ордеров</li>
+                <li class="data-tabs__item swiper-slide js-dataTab" data-tab="capital">Поток капитала</li>
+                <li class="data-tabs__item swiper-slide js-dataTab" data-tab="wallet">Кошелек</li>
+              </ul>
+              <div class="data-tabs__arrow data-tabs__arrow--next swiper-button-next"></div>
+            </div>
+          </div>
+          <div class="data-content data-positions active js-dataContent" data-tab="positions">
+            <div class="data-controls"> 
+              <div class="data-controls__input">
+                <input type="checkbox" id="hide">
+                <label for="hide">Скрыть другие пары  </label>
+              </div>
+            </div>
+            <div class="data-content__nodata"> 
+              <div class="data-img"><img src="/img/trading/no-data.png" alt="Нет данных"></div>
+              <div class="data-label">Нет данных</div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container"> 
+          <div class="footer-inner"> 
+            <div class="footer__category js-footerOpener">О нас
+              <ul class="footer__links"> 
+                <li class="footer__link"><a href="#">О бирже MEXC</a></li>
+                <li class="footer__link"><a href="#">Пользовательским соглашением</a></li>
+                <li class="footer__link"><a href="#">Политикой конфиденциальности</a></li>
+                <li class="footer__link"><a href="#">Предупреждение о рисках</a></li>
+                <li class="footer__link"><a href="#">M-Ventures</a></li>
+                <li class="footer__link"><a href="#">MEXC Blog</a></li>
+              </ul>
+            </div>
+            <div class="footer__category js-footerOpener">Услуги
+              <ul class="footer__links"> 
+                <li class="footer__link"><a href="#">Купить крипто</a></li>
+                <li class="footer__link"><a href="#">Скачать приложение</a></li>
+                <li class="footer__link"><a href="#">Комиссии</a></li>
+                <li class="footer__link"><a href="#">Реферальная программа</a></li>
+                <li class="footer__link"><a href="#">Партнерская программа</a></li>
+                <li class="footer__link"><a href="#">API</a></li>
+                <li class="footer__link"><a href="#">Корпоративные услуги</a></li>
+                <li class="footer__link"><a href="#">Как купить криптовалюту</a></li>
+                <li class="footer__link"><a href="#">Информация о криптовалюте</a></li>
+                <li class="footer__link"><a href="#">Цена криптовалюты</a></li>
+              </ul>
+            </div>
+            <div class="footer__category js-footerOpener">Служба поддержки
+              <ul class="footer__links"> 
+                <li class="footer__link"><a href="#">Служба поддержки</a></li>
+                <li class="footer__link"><a href="#">Справочный центр</a></li>
+                <li class="footer__link"><a href="#">Объявления</a></li>
+                <li class="footer__link"><a href="#">Обучение</a></li>
+                <li class="footer__link"><a href="#">VIP-привилегии</a></li>
+                <li class="footer__link"><a href="#">Отправить запрос</a></li>
+                <li class="footer__link"><a href="#">Предложения по улучшению</a></li>
+                <li class="footer__link"><a href="#">Сообщить об аномальных средствах</a></li>
+                <li class="footer__link"><a href="#">Судебная помощь</a></li>
+                <li class="footer__link"><a href="#">Верификация MEXC</a></li>
+                <li class="footer__link"><a href="#">Подать жалобу</a></li>
+              </ul>
+            </div>
+            <div class="footer__category js-footerOpener">Свяжитесь с нами
+              <ul class="footer__links"> 
+                <li class="footer__link"><a href="#">Деловое сотрудничество</a></li>
+                <li class="footer__link"><a href="#">Сотрудничество (Корпоративные клиенты)</a></li>
+                <li class="footer__link"><a href="#">Деловое сотрудничество (СМИ)</a></li>
+                <li class="footer__link"><a href="#">Заявка на листинг</a></li>
+                <li class="footer__link"><a href="#">Заявка на P2P-мерчанта</a></li>
+              </ul>
+            </div>
+            <div class="footer__category footer__category--socials">Сообщество</div>
+          </div>
+          <p class="footer__copyright">&copy;&nbsp;2023&nbsp;MEXC.COM</p>
+        </div>
+      </footer>
+    </div>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
