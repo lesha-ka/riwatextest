@@ -137,12 +137,14 @@
         <section class="market"> 
           <div class="market-tabs"> 
             <ul class="market-tabs__list"> 
-              <li class="market-tabs__item js-marketTab" data-tab="chart">График</li>
+              <li class="market-tabs__item js-marketTab" data-tab="transactions">Сделки на рынке</li>
+              <li class="market-tabs__item js-marketTab" data-tab="overview">Обзор криптовалюты</li>
+              <li class="market-tabs__item js-marketTab" data-tab="rules">Правила торговли </li>
               <li class="market-tabs__item js-marketTab" data-tab="orders">Книга ордеров</li>
-              <li class="market-tabs__item show js-marketTab" data-tab="transactions">Сделки на рынке</li>
+              <li class="market-tabs__item js-marketTab" data-tab="chart">График</li>
             </ul>
           </div>
-          <div class="market-content market-transactions js-marketContent show" data-tab="transactions">
+          <div class="market-content market-transactions js-marketContent" data-tab="transactions">
             <div class="market-transactions__inner">
               <table class="market-transactions__table">
                 <thead class="market-transactions__thead">
@@ -431,6 +433,77 @@
             <div class="market-orders__inner"></div>
           </div>
           <div class="market-content js-marketContent" data-tab="chart"></div>
+          <div class="market-content market-overwiew js-marketContent" data-tab="overview">
+            <div class="market-overwiew__inner">
+              <h3 class="market-overwiew__title"> <img src="img/popular/btc.png" alt="bitcoin"><span>BTC</span></h3>
+              <p class="market-overwiew__text">Биткойн&nbsp;&mdash; это цифровой актив и&nbsp;платежная система, изобретенная Сатоши Накамото, который опубликовал соответствующую статью в&nbsp;2008 году и&nbsp;выпустил ее&nbsp;как программное обеспечение с&nbsp;открытым исходным кодом в&nbsp;2009&nbsp;году. пользователи могут совершать сделки напрямую без посредников.</p>
+              <div class="market-overwiew__title">Обзор криптовалюты</div>
+              <ul class="market-overwiew__specifications">
+                <li class="market-overwiew__specification"><span class="market-overwiew__name">Название криптовалюты</span><span class="market-overwiew__value">BTC</span></li>
+                <li class="market-overwiew__specification"><span class="market-overwiew__name">Время выпуска</span><span class="market-overwiew__value">2008-10-31 19:00:00</span></li>
+                <li class="market-overwiew__specification"><span class="market-overwiew__name">Цена выпуска</span><span class="market-overwiew__value">0.0025 USDT</span></li>
+                <li class="market-overwiew__specification"><span class="market-overwiew__name">Макс. предложение</span><span class="market-overwiew__value">21,000,000</span></li>
+                <li class="market-overwiew__specification"><span class="market-overwiew__name">Оборотное предложение</span><span class="market-overwiew__value">17,834,087</span></li>
+                <li class="market-overwiew__specification"><span class="market-overwiew__name">Связанные ссылки</span>
+                  <div class="market-overwiew__links"><a class="market-overwiew__link" href="#">White Paper</a><a class="market-overwiew__link" href="#">Официальный веб-сайт</a><a class="market-overwiew__link" href="#">Обозреватель блоков</a></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="market-content market-rules js-marketContent" data-tab="rules">
+            <div class="market-rules__inner">
+              <h3 class="market-rules__title">
+                 BTC USDT<span>Perpetual</span></h3>
+              <div class="market-rules__title">Правила торговли</div>
+              <ul class="market-rules__specifications">
+                <li class="market-rules__specification">
+                  <div class="market-rules__name">Плечо</div>
+                  <div class="market-rules__line"></div>
+                  <div class="market-rules__value">1 ~ 200</div>
+                </li>
+                <li class="market-rules__specification">
+                  <div class="market-rules__name">Мин. сумма ордера</div>
+                  <div class="market-rules__line"></div>
+                  <div class="market-rules__value">0.0001<span>BTC</span></div>
+                </li>
+                <li class="market-rules__specification">
+                  <div class="market-rules__name">Макс. кол-во единичных рыночных ордеров</div>
+                  <div class="market-rules__line"></div>
+                  <div class="market-rules__value">262.5000<span>BTC</span></div>
+                </li>
+                <li class="market-rules__specification">
+                  <div class="market-rules__name">Макс. кол-во единичных лимитных ордеров</div>
+                  <div class="market-rules__line"></div>
+                  <div class="market-rules__value">262.5000<span>BTC</span></div>
+                </li>
+                <li class="market-rules__specification">
+                  <div class="market-rules__name">Мин. изменение цены</div>
+                  <div class="market-rules__line"></div>
+                  <div class="market-rules__value">0.1</div>
+                </li>
+                <li class="market-rules__specification">
+                  <div class="market-rules__name">Макс./Мин. цена лимитного ордера</div>
+                  <div class="market-rules__line"></div>
+                  <div class="market-rules__value">10% / 10%</div>
+                </li>
+                <li class="market-rules__specification">
+                  <div class="market-rules__name">Максимальное количество открытых ордеров</div>
+                  <div class="market-rules__line"></div>
+                  <div class="market-rules__value">200</div>
+                </li>
+                <li class="market-rules__specification">
+                  <div class="market-rules__name">Ценовая защита</div>
+                  <div class="market-rules__line"></div>
+                  <div class="market-rules__value">10%</div>
+                </li>
+                <li class="market-rules__specification">
+                  <div class="market-rules__name">Размер</div>
+                  <div class="market-rules__line"></div>
+                  <div class="market-rules__value">1 Конт = 0.0001<span>BTC</span></div>
+                </li>
+              </ul><a class="market-rules__link" href="#">Посмотреть все правила торговли фьючерсами</a>
+            </div>
+          </div>
         </section>
         <section class="data"> 
           <div class="data-tabs"> 
@@ -517,6 +590,48 @@
           <p class="footer__copyright">&copy;&nbsp;2023&nbsp;MEXC.COM</p>
         </div>
       </footer>
+            <div class="popup js-popup js-hide" id="rate">
+              <div class="popup-inner"> 
+                <div class="popup-head"> 
+                  <h5 class="popup__title">Примечание</h5>
+                  <div class="popup__close js-popupClose"></div>
+                </div>
+                <div class="popup-body"> 
+                  <p class="popup__text">Ставка финансирования на 2023-11-27 19:00:00. Если ставка положительная, трейдеры с длинными позициями будут платить трейдерам с короткими позициями. Если ставка отрицательная, трейдеры с короткими позициями будут платить трейдерам с длинными позициями.(Расчетная 0.0100% удерживаемой позиции, которая должна быть выплачена трейдерами с длинными позициями трейдерам с короткими позициями в текущем цикле, в зависимости от фактической ставки финансирования на момент расчета) <a href="#">Подробнее</a></p>
+                </div>
+                <div class="popup-footer"> 
+                  <button class="popup__btn js-popupClose" type="button">Подтвердить</button>
+                </div>
+              </div>
+            </div>
+            <div class="popup js-popup js-hide" id="index-price">
+              <div class="popup-inner"> 
+                <div class="popup-head"> 
+                  <h5 class="popup__title">Примечание</h5>
+                  <div class="popup__close js-popupClose"></div>
+                </div>
+                <div class="popup-body"> 
+                  <p class="popup__text">Комплексный индекс цен, полученный на основе цен на основных рынках спотовой торговли и средневзвешенного объема их торгов. Это указывает на текущую индексную цену базового актива (BTC). <a href="#">Подробнее</a></p>
+                </div>
+                <div class="popup-footer"> 
+                  <button class="popup__btn js-popupClose" type="button">Подтвердить</button>
+                </div>
+              </div>
+            </div>
+            <div class="popup js-popup js-hide" id="fair-price">
+              <div class="popup-inner"> 
+                <div class="popup-head"> 
+                  <h5 class="popup__title">Примечание</h5>
+                  <div class="popup__close js-popupClose"></div>
+                </div>
+                <div class="popup-body"> 
+                  <p class="popup__text">Справедливая цена фьючерса в режиме реального времени, рассчитанная на основе как индексной, так и рыночной цены. Она используется для расчета плавающего PNL счета, а также в качестве фактора для определения ликвидации позиции. Справедливая цена может отличаться от последней цены, чтобы избежать манипулирования ценами. <a href="#">Подробнее</a></p>
+                </div>
+                <div class="popup-footer"> 
+                  <button class="popup__btn js-popupClose" type="button">Подтвердить</button>
+                </div>
+              </div>
+            </div>
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
