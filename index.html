@@ -100,30 +100,30 @@
         <section class="popular"> 
           <div class="container"> 
                     <h3 class="section-title">Популярные криптовалюты</h3><a class="link" href="#" target="_self">Подробнее</a>
-            <div class="popular-tabs"> 
+            <div class="popular-tabs js-tabWrapper"> 
               <div class="popular__nav" role="tablist">
                 <div class="popular__nav-wrap"> 
-                  <ul class="popular__nav-list"> 
-                    <li class="popular-tab js-popularTabBtn" data-tab="1">
+                  <ul class="popular__nav-list">
+                    <li class="popular-tab js-tabItem show" data-tab="1">
                       <div class="popular-tab__btn" role="tab">Топ фьючерсы <span class="blue">Мейкер 0% / Тейкер 0,01%</span> </div>
                     </li>
-                    <li class="popular-tab js-popularTabBtn" data-tab="2">
+                    <li class="popular-tab js-tabItem" data-tab="2">
                       <div class="popular-tab__btn" role="tab">В тренде</div>
                     </li>
-                    <li class="popular-tab js-popularTabBtn" data-tab="3">
+                    <li class="popular-tab js-tabItem" data-tab="3">
                       <div class="popular-tab__btn" role="tab">Новые</div>
                     </li>
-                    <li class="popular-tab js-popularTabBtn" data-tab="4">
+                    <li class="popular-tab js-tabItem" data-tab="4">
                       <div class="popular-tab__btn" role="tab">Топ по объему</div>
                     </li>
-                    <li class="popular-tab js-popularTabBtn" data-tab="5">
+                    <li class="popular-tab js-tabItem" data-tab="5">
                       <div class="popular-tab__btn" role="tab">Лидеры дня <span class="green">398.18%</span></div>
                     </li>
                   </ul>
                 </div>
               </div>
               <div class="popular__content">
-                <div class="popular__tabpanel js-popularTabPanel" role="tabpanel" data-tab="1">
+                <div class="popular__tabpanel js-tabContent show" role="tabpanel" data-tab="1">
                   <div class="popular__table">
                     <div class="popular__table-container">
                       <div class="popular__table-content">
@@ -146,7 +146,7 @@
                                 <div class="popular__table-name">BTC USDT Perpetual</div>
                               </th>
                               <th class="popular__table-cell">37,362.1</th>
-                              <th class="popular__table-cell popular__table-cell--green">+0.72%</th>
+                              <th class="popular__table-cell green">+0.72%</th>
                               <th class="popular__table-cell"></th>
                               <th class="popular__table-cell"><a class="popular__table-action" href="#">Торговля</a></th>
                             </tr>
@@ -170,7 +170,7 @@
                                 <div class="popular__table-name">GAS USDT Perpetual</div>
                               </th>
                               <th class="popular__table-cell">22.001</th>
-                              <th class="popular__table-cell popular__table-cell--red">-25.09%</th>
+                              <th class="popular__table-cell red">-25.09%</th>
                               <th class="popular__table-cell"></th>
                               <th class="popular__table-cell"><a class="popular__table-action" href="#">Торговля</a></th>
                             </tr>
@@ -182,7 +182,7 @@
                                 <div class="popular__table-name">SOL USDT Perpetual</div>
                               </th>
                               <th class="popular__table-cell">54,562</th>
-                              <th class="popular__table-cell popular__table-cell--green">+7.14%</th>
+                              <th class="popular__table-cell green">+7.14%</th>
                               <th class="popular__table-cell"></th>
                               <th class="popular__table-cell"><a class="popular__table-action" href="#">Торговля</a></th>
                             </tr>
@@ -194,7 +194,7 @@
                                 <div class="popular__table-name">TBR USDT Perpetual</div>
                               </th>
                               <th class="popular__table-cell">94.614</th>
-                              <th class="popular__table-cell popular__table-cell--green">+3.83%</th>
+                              <th class="popular__table-cell green">+3.83%</th>
                               <th class="popular__table-cell"></th>
                               <th class="popular__table-cell"><a class="popular__table-action" href="#">Торговля</a></th>
                             </tr>
@@ -204,7 +204,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="popular__tabpanel js-popularTabPanel" role="tabpanel" data-tab="2">
+                <div class="popular__tabpanel js-tabContent" role="tabpanel" data-tab="2">
                   <div class="popular__table">
                     <div class="popular__table-container">
                       <div class="popular__table-content">
@@ -227,7 +227,7 @@
                                 <div class="popular__table-name">MX/USDT</div>
                               </th>
                               <th class="popular__table-cell">2.9405</th>
-                              <th class="popular__table-cell popular__table-cell--red">-1.93%</th>
+                              <th class="popular__table-cell red">-1.93%</th>
                               <th class="popular__table-cell"></th>
                               <th class="popular__table-cell"><a class="popular__table-action" href="#">Торговля</a></th>
                             </tr>
@@ -251,7 +251,7 @@
                                 <div class="popular__table-name">ETH/USDT</div>
                               </th>
                               <th class="popular__table-cell">2.001</th>
-                              <th class="popular__table-cell popular__table-cell--red">-0.09%</th>
+                              <th class="popular__table-cell red">-0.09%</th>
                               <th class="popular__table-cell"></th>
                               <th class="popular__table-cell"><a class="popular__table-action" href="#">Торговля</a></th>
                             </tr>
@@ -263,7 +263,7 @@
                                 <div class="popular__table-name">KAS/USDT</div>
                               </th>
                               <th class="popular__table-cell">54,562</th>
-                              <th class="popular__table-cell popular__table-cell--green">+7.14%</th>
+                              <th class="popular__table-cell green">+7.14%</th>
                               <th class="popular__table-cell"></th>
                               <th class="popular__table-cell"><a class="popular__table-action" href="#">Торговля</a></th>
                             </tr>
@@ -275,7 +275,7 @@
                                 <div class="popular__table-name">XRP/USDT</div>
                               </th>
                               <th class="popular__table-cell">94.614</th>
-                              <th class="popular__table-cell popular__table-cell--green">+3.83%</th>
+                              <th class="popular__table-cell green">+3.83%</th>
                               <th class="popular__table-cell"></th>
                               <th class="popular__table-cell"><a class="popular__table-action" href="#">Торговля</a></th>
                             </tr>
@@ -391,7 +391,7 @@
         <section class="why-choose">
           <div class="container"> 
                     <h3 class="section-title">Почему выбирают MEXC?</h3>
-            <div class="why-choose__wrapper"> 
+            <div class="why-choose__wrapper js-tabWrapper">
               <div class="why-choose__player">
                 <div class="why-choose__content js-tabContent show" data-tab="tab1">
                   <p>Видео 1</p>
@@ -406,7 +406,7 @@
                 </div>
               </div>
               <div class="why-choose__tabs">
-                <div class="why-choose__tab js-tabItem show" id="tab1"> 
+                <div class="why-choose__tab js-tabItem show" data-tab="tab1">
                   <div class="why-choose__icon">
                     <svg>
                       <use xlink:href="img/sprites/sprite.svg#video-icon1"></use>
@@ -414,7 +414,7 @@
                   </div>
                   <label class="why-choose__name">Самая низкая ставка на рынке</label>
                 </div>
-                <div class="why-choose__tab js-tabItem" id="tab2"> 
+                <div class="why-choose__tab js-tabItem" data-tab="tab2">
                   <div class="why-choose__icon">
                     <svg>
                       <use xlink:href="img/sprites/sprite.svg#video-icon2"></use>
@@ -422,7 +422,7 @@
                   </div>
                   <label class="why-choose__name">Лучшая ликвидность на рынке</label>
                 </div>
-                <div class="why-choose__tab js-tabItem" id="tab3">
+                <div class="why-choose__tab js-tabItem" data-tab="tab3">
                   <div class="why-choose__icon">
                     <svg>
                       <use xlink:href="img/sprites/sprite.svg#video-icon3"></use>
