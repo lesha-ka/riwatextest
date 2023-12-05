@@ -138,7 +138,7 @@
                               <div class="contract-filters__item-name">BTC USDT  Perpetual</div>
                               <div class="contract-filters__item-volume"><span>Объем</span>62.166M
                               </div>
-                              <div class="contract-filters__item-price">37,350.2</div>
+                              <div class="contract-filters__item-price">37 350.2</div>
                               <div class="contract-filters__item-change green">+1.62%</div>
                             </li>
                             <li class="contract-filters__item"> 
@@ -150,7 +150,7 @@
                               <div class="contract-filters__item-name">ETH USDT Perpetual</div>
                               <div class="contract-filters__item-volume"><span>Объем</span>23.379M
                               </div>
-                              <div class="contract-filters__item-price">2,024.08</div>
+                              <div class="contract-filters__item-price">2 024.08</div>
                               <div class="contract-filters__item-change green">+1.62%</div>
                             </li>
                           </ul>
@@ -158,11 +158,11 @@
                       </div>
                       <div class="contract-filters__content js-tabContent" data-tab="usdt">
                         <div class="contract-filters__inner js-tabWrapper">
-                          <!--ul.contract-filters__categories
-                          li.contract-filters__category.min.js-tabItem.show(data-tab="all") Все
-                          li.contract-filters__category.min.js-tabItem(data-tab="new") Новые
-                          li.contract-filters__category.min.js-tabItem(data-tab="meme") MEME
-                          -->
+                          <ul class="contract-filters__categories">
+                            <li class="contract-filters__category js-tabItem show" data-tab="all">Все</li>
+                            <li class="contract-filters__category js-tabItem" data-tab="new">Новые</li>
+                            <li class="contract-filters__category js-tabItem" data-tab="meme">MEME</li>
+                          </ul>
                                   <div class="contract-filters__sorting">
                                     <div class="contract-filters__sorting-item"> <span>Торговая пара</span><span class="slash">/</span></div>
                                     <div class="contract-filters__sorting-item"> <span>Объем</span><span class="caret"> 
@@ -197,7 +197,7 @@
                               <div class="contract-filters__item-name">BTC USDT  Perpetual</div>
                               <div class="contract-filters__item-volume"><span>Объем</span>62.166M
                               </div>
-                              <div class="contract-filters__item-price">37,350.2</div>
+                              <div class="contract-filters__item-price">37 350.2</div>
                               <div class="contract-filters__item-change green">+1.62%</div>
                             </li>
                             <li class="contract-filters__item">
@@ -209,7 +209,7 @@
                               <div class="contract-filters__item-name">ETH USDT Perpetual</div>
                               <div class="contract-filters__item-volume"><span>Объем</span>23.379M
                               </div>
-                              <div class="contract-filters__item-price">2,024.08</div>
+                              <div class="contract-filters__item-price">2 024.08</div>
                               <div class="contract-filters__item-change green">+1.62%</div>
                             </li>
                             <li class="contract-filters__item">
@@ -249,47 +249,41 @@
                               <div class="contract-filters__item-change red">-0.32%</div>
                             </li>
                           </ul>
-                          <!--ul.contract-filters__list.min.js-tabContent(data-tab="new")
-                          each pair in pairs
-                              if pair.new
-                                  li.contract-filters__item
-                                      .contract-filters__item-favourite(class=pair.favourite ? 'active' : '')
-                                          +svg('favourites', 'js-sortingFavorite')
-                                      .contract-filters__item-name(class=pair.new ? 'contract-filters__item-name--new' : '', class=pair.hot ? 'contract-filters__item-name--hot' : '')=pair.name   
-                                      .contract-filters__item-volume
-                                          span Объем
-                                          = pair.volume
-                                      .contract-filters__item-price=pair.price
-                                      if pair.green
-                                          .contract-filters__item-change.green= pair.change
-                                      else
-                                          .contract-filters__item-change.red= pair.change
-                          -->
-                          <!--ul.contract-filters__list.min.js-tabContent(data-tab="meme")
-                          each pair in pairs
-                              if pair.meme
-                                  li.contract-filters__item
-                                      .contract-filters__item-favourite(class=pair.favourite ? 'active' : '')
-                                          +svg('favourites', 'js-sortingFavorite')
-                                      .contract-filters__item-name(class=pair.new ? 'contract-filters__item-name--new' : '', class=pair.hot ? 'contract-filters__item-name--hot' : '')=pair.name   
-                                      .contract-filters__item-volume
-                                          span Объем
-                                          = pair.volume
-                                      .contract-filters__item-price=pair.price
-                                      if pair.green
-                                          .contract-filters__item-change.green= pair.change
-                                      else
-                                          .contract-filters__item-change.red= pair.change
-                          
-                          
-                          -->
+                          <ul class="contract-filters__list js-tabContent" data-tab="new">
+                            <li class="contract-filters__item">
+                              <div class="contract-filters__item-favourite">
+                                <svg class="js-sortingFavorite">
+                                  <use xlink:href="img/sprites/sprite.svg#favourites"></use>
+                                </svg>
+                              </div>
+                              <div class="contract-filters__item-name contract-filters__item-name--new">XNA USDT Perpetual</div>
+                              <div class="contract-filters__item-volume"><span>Объем</span>208.967M
+                              </div>
+                              <div class="contract-filters__item-price">60.971</div>
+                              <div class="contract-filters__item-change red">-3.72%</div>
+                            </li>
+                          </ul>
+                          <ul class="contract-filters__list js-tabContent" data-tab="meme">
+                            <li class="contract-filters__item">
+                              <div class="contract-filters__item-favourite">
+                                <svg class="js-sortingFavorite">
+                                  <use xlink:href="img/sprites/sprite.svg#favourites"></use>
+                                </svg>
+                              </div>
+                              <div class="contract-filters__item-name contract-filters__item-name--hot">SOL USDT Perpetual</div>
+                              <div class="contract-filters__item-volume"><span>Объем</span>208.967M
+                              </div>
+                              <div class="contract-filters__item-price">60.971</div>
+                              <div class="contract-filters__item-change red">-0.32%</div>
+                            </li>
+                          </ul>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="contract__row"> 
-                  <h2 class="contract__price green">36,045.1</h2>
+                  <h2 class="contract__price green">36 045.1</h2>
                 </div>
                 <div class="contract__row"> 
                   <div class="contract__rate red">-0.95% </div>
@@ -303,11 +297,11 @@
                 <div class="contract__right-col">
                   <div class="contract__row"> 
                     <div class="contract__detail contract__detail--title"><span class="underline js-popupOpen" data-popup="index-price">Индексная цена</span></div>
-                    <div class="contract__detail"><span>36,087.9</span></div>
+                    <div class="contract__detail"><span>36 087.9</span></div>
                   </div>
                   <div class="contract__row"> 
                     <div class="contract__detail contract__detail--title"><span class="underline js-popupOpen" data-popup="fair-price">Справедливая цена</span></div>
-                    <div class="contract__detail"><span>36,041.1</span></div>
+                    <div class="contract__detail"><span>36 041.1</span></div>
                   </div>
                   <div class="contract__row"> 
                     <div class="contract__detail contract__detail--title"><span>Обороты 24ч</span></div>
@@ -317,11 +311,11 @@
                 <div class="contract__right-col">
                   <div class="contract__row"> 
                     <div class="contract__detail contract__detail--title"><span>Макс 24ч</span></div>
-                    <div class="contract__detail"><span>37,998.0</span></div>
+                    <div class="contract__detail"><span>37 998.0</span></div>
                   </div>
                   <div class="contract__row"> 
                     <div class="contract__detail contract__detail--title"><span>Мин 24ч</span></div>
-                    <div class="contract__detail"><span>35,488.3</span></div>
+                    <div class="contract__detail"><span>35 488.3</span></div>
                   </div>
                   <div class="contract__row"> 
                     <div class="contract__detail contract__detail--title"><span>Объем 24ч</span></div>
@@ -627,13 +621,26 @@
             </div>
           </div>
           <div class="market-content market-orders js-tabContent show" data-tab="orders">
-            <div class="market-orders__inner">
-              <!--.market-orders__head 
-              ul.market-orders__tabs.min.js-tabWrapper 
-                  li.market-orders__tab.show(data-tab="view1") 1
-                  li.market-orders__tab(data-tab="view2") 2
-                  li.market-orders__tab(data-tab="view3") 3
-              -->
+            <div class="market-orders__inner js-tabWrapper"> 
+              <div class="market-orders__head"> 
+                <ul class="market-orders__tabs">
+                  <li class="market-orders__tab js-tabItem show" data-tab="view1"> 
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#orders1"></use>
+                    </svg>
+                  </li>
+                  <li class="market-orders__tab js-tabItem" data-tab="view2"> 
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#orders3"></use>
+                    </svg>
+                  </li>
+                  <li class="market-orders__tab js-tabItem" data-tab="view3"> 
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#orders2"></use>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
               <div class="market-orders__body">
                 <div class="market-orders__row market-orders__row--head">
                   <div class="market-orders__price">Цена(USD)</div>
@@ -641,67 +648,145 @@
                   <div class="market-orders__total">Всего(USD)</div>
                 </div>
                 <div class="market-orders__content js-tabContent show" data-tab="view1">
-                  <div class="market-orders__row">
-                    <div class="market-orders__price green">38,388.1</div>
-                    <div class="market-orders__count">1.30275167</div>
-                    <div class="market-orders__total">39,388.1</div>
+                  <div class="market-orders__item green js-statItem">
+                    <div class="market-orders__row js-statRow">
+                      <div class="market-orders__price red">38 388.1</div>
+                      <div class="market-orders__count js-statCount">1.2131212</div>
+                      <div class="market-orders__total js-statTotal">2 388.1</div>
+                    </div>
+                    <div class="market-orders__row js-statRow">
+                      <div class="market-orders__price red">37 388.1</div>
+                      <div class="market-orders__count js-statCount">1.0275167</div>
+                      <div class="market-orders__total js-statTotal">38 388.1</div>
+                    </div>
+                    <div class="market-orders__row js-statRow">
+                      <div class="market-orders__price red">37 388.1</div>
+                      <div class="market-orders__count js-statCount">1.0275167</div>
+                      <div class="market-orders__total js-statTotal">38 388.1</div>
+                    </div>
+                    <div class="market-orders__row js-statRow">
+                      <div class="market-orders__price red">36 388.1</div>
+                      <div class="market-orders__count js-statCount">2.12375167</div>
+                      <div class="market-orders__total js-statTotal">23 388.1</div>
+                    </div>
+                    <div class="market-orders__row js-statRow">
+                      <div class="market-orders__price red">35 388.1</div>
+                      <div class="market-orders__count js-statCount">3.50275167</div>
+                      <div class="market-orders__total js-statTotal">31 388.1</div>
+                    </div>
+                    <div class="market-orders__row js-statRow">
+                      <div class="market-orders__price red">36 388.1</div>
+                      <div class="market-orders__count js-statCount">4.213412</div>
+                      <div class="market-orders__total js-statTotal">373 388.1</div>
+                    </div>
                   </div>
-                  <div class="market-orders__row">
-                    <div class="market-orders__price red">37,388.1</div>
-                    <div class="market-orders__count">1.30275167</div>
-                    <div class="market-orders__total">38,388.1</div>
+                  <div class="market-orders__fair green">37 345.2 <span class="js-popupOpen" data-popup="fair-price">36 458.1<span></div>
+                  <div class="market-orders__item red js-statItem">
+                    <div class="market-orders__row js-statRow">
+                      <div class="market-orders__price green">38 388.1</div>
+                      <div class="market-orders__count js-statCount">1.2131212</div>
+                      <div class="market-orders__total market-orders__item red js-statTotal">2 388.1</div>
+                    </div>
+                    <div class="market-orders__row js-statRow">
+                      <div class="market-orders__price green">37 388.1</div>
+                      <div class="market-orders__count js-statCount">1.0275167</div>
+                      <div class="market-orders__total market-orders__item red js-statTotal">38 388.1</div>
+                    </div>
+                    <div class="market-orders__row js-statRow">
+                      <div class="market-orders__price green">36 388.1</div>
+                      <div class="market-orders__count js-statCount">2.12375167</div>
+                      <div class="market-orders__total market-orders__item red js-statTotal">23 388.1</div>
+                    </div>
+                    <div class="market-orders__row js-statRow">
+                      <div class="market-orders__price green">35 388.1</div>
+                      <div class="market-orders__count js-statCount">3.50275167</div>
+                      <div class="market-orders__total market-orders__item red js-statTotal">31 388.1</div>
+                    </div>
+                    <div class="market-orders__row js-statRow">
+                      <div class="market-orders__price green">36 388.1</div>
+                      <div class="market-orders__count js-statCount">4.213412</div>
+                      <div class="market-orders__total market-orders__item red js-statTotal">373 388.1</div>
+                    </div>
+                    <div class="market-orders__row js-statRow">
+                      <div class="market-orders__price green">35 388.1</div>
+                      <div class="market-orders__count js-statCount">1.40275167</div>
+                      <div class="market-orders__total market-orders__item red js-statTotal">35 388.1</div>
+                    </div>
                   </div>
-                  <div class="market-orders__row">
-                    <div class="market-orders__price red">36,388.1</div>
-                    <div class="market-orders__count">1.30275167</div>
-                    <div class="market-orders__total">37,388.1</div>
+                </div>
+                <div class="market-orders__content js-tabContent" data-tab="view2">
+                  <div class="market-orders__fair green">37 345.2 <span class="js-popupOpen" data-popup="fair-price">36 458.1<span></div>
+                  <div class="market-orders__item green js-statItem">
+                    <div class="market-orders__row js-statRow">
+                      <div class="market-orders__price green">38 388.1</div>
+                      <div class="market-orders__count js-statCount">1.2131212</div>
+                      <div class="market-orders__total js-statTotal">2 388.1</div>
+                    </div>
+                    <div class="market-orders__row js-statRow">
+                      <div class="market-orders__price green">37 388.1</div>
+                      <div class="market-orders__count js-statCount">1.0275167</div>
+                      <div class="market-orders__total js-statTotal">38 388.1</div>
+                    </div>
+                    <div class="market-orders__row js-statRow">
+                      <div class="market-orders__price green">36 388.1</div>
+                      <div class="market-orders__count js-statCount">2.12375167</div>
+                      <div class="market-orders__total js-statTotal">23 388.1</div>
+                    </div>
+                    <div class="market-orders__row js-statRow">
+                      <div class="market-orders__price green">35 388.1</div>
+                      <div class="market-orders__count js-statCount">3.50275167</div>
+                      <div class="market-orders__total js-statTotal">31 388.1</div>
+                    </div>
+                    <div class="market-orders__row js-statRow">
+                      <div class="market-orders__price green">36 388.1</div>
+                      <div class="market-orders__count js-statCount">4.213412</div>
+                      <div class="market-orders__total js-statTotal">373 388.1</div>
+                    </div>
+                    <div class="market-orders__row js-statRow">
+                      <div class="market-orders__price green">35 388.1</div>
+                      <div class="market-orders__count js-statCount">1.40275167</div>
+                      <div class="market-orders__total js-statTotal">35 388.1</div>
+                    </div>
                   </div>
-                  <div class="market-orders__row">
-                    <div class="market-orders__price red">35,388.1</div>
-                    <div class="market-orders__count">1.50275167</div>
-                    <div class="market-orders__total">39,388.1</div>
+                </div>
+                <div class="market-orders__content js-tabContent" data-tab="view3">
+                  <div class="market-orders__item green js-statItem">
+                    <div class="market-orders__row js-statRow">
+                      <div class="market-orders__price red">38 388.1</div>
+                      <div class="market-orders__count js-statCount">1.2131212</div>
+                      <div class="market-orders__total js-statTotal">2 388.1</div>
+                    </div>
+                    <div class="market-orders__row js-statRow">
+                      <div class="market-orders__price red">37 388.1</div>
+                      <div class="market-orders__count js-statCount">1.0275167</div>
+                      <div class="market-orders__total js-statTotal">38 388.1</div>
+                    </div>
+                    <div class="market-orders__row js-statRow">
+                      <div class="market-orders__price red">37 388.1</div>
+                      <div class="market-orders__count js-statCount">1.0275167</div>
+                      <div class="market-orders__total js-statTotal">38 388.1</div>
+                    </div>
+                    <div class="market-orders__row js-statRow">
+                      <div class="market-orders__price red">36 388.1</div>
+                      <div class="market-orders__count js-statCount">2.12375167</div>
+                      <div class="market-orders__total js-statTotal">23 388.1</div>
+                    </div>
+                    <div class="market-orders__row js-statRow">
+                      <div class="market-orders__price red">35 388.1</div>
+                      <div class="market-orders__count js-statCount">3.50275167</div>
+                      <div class="market-orders__total js-statTotal">31 388.1</div>
+                    </div>
+                    <div class="market-orders__row js-statRow">
+                      <div class="market-orders__price red">36 388.1</div>
+                      <div class="market-orders__count js-statCount">4.213412</div>
+                      <div class="market-orders__total js-statTotal">373 388.1</div>
+                    </div>
                   </div>
-                  <div class="market-orders__row">
-                    <div class="market-orders__price red">36,388.1</div>
-                    <div class="market-orders__count">1.30275167</div>
-                    <div class="market-orders__total">37,388.1</div>
-                  </div>
-                  <div class="market-orders__row">
-                    <div class="market-orders__price red">35,388.1</div>
-                    <div class="market-orders__count">1.50275167</div>
-                    <div class="market-orders__total">39,388.1</div>
-                  </div>
-                  <div class="market-orders__fair green">37,345.2 <span class="js-popupOpen" data-popup="fair-price">36,458.1<span></div>
-                  <div class="market-orders__row">
-                    <div class="market-orders__price green">38,388.1</div>
-                    <div class="market-orders__count">1.30275167</div>
-                    <div class="market-orders__total">39,388.1</div>
-                  </div>
-                  <div class="market-orders__row">
-                    <div class="market-orders__price red">37,388.1</div>
-                    <div class="market-orders__count">1.30275167</div>
-                    <div class="market-orders__total">38,388.1</div>
-                  </div>
-                  <div class="market-orders__row">
-                    <div class="market-orders__price red">36,388.1</div>
-                    <div class="market-orders__count">1.30275167</div>
-                    <div class="market-orders__total">37,388.1</div>
-                  </div>
-                  <div class="market-orders__row">
-                    <div class="market-orders__price red">35,388.1</div>
-                    <div class="market-orders__count">1.50275167</div>
-                    <div class="market-orders__total">39,388.1</div>
-                  </div>
-                  <div class="market-orders__row">
-                    <div class="market-orders__price red">36,388.1</div>
-                    <div class="market-orders__count">1.30275167</div>
-                    <div class="market-orders__total">37,388.1</div>
-                  </div>
-                  <div class="market-orders__row">
-                    <div class="market-orders__price red">35,388.1</div>
-                    <div class="market-orders__count">1.50275167</div>
-                    <div class="market-orders__total">39,388.1</div>
-                  </div>
+                  <div class="market-orders__fair red">37 345.2 <span class="js-popupOpen" data-popup="fair-price">36 458.1<span></div>
+                </div>
+                <div class="market-orders__ratio js-popupOpen" data-popup="fair-price"> 
+                  <div class="market-orders__ratio-side green" style="width: 49.1%"><span class="market-orders__ratio-mark">B</span><span class="market-orders__ratio-percent">49.1%</span></div>
+                  <div class="market-orders__ratio-side js red" style="width: 51.9%"><span class="market-orders__ratio-mark">S</span><span class="market-orders__ratio-percent">51.9%</span></div>
                 </div>
               </div>
             </div>
