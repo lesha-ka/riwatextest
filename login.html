@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>login</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="styles/main.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header"> 
+        <div class="container">
+          <div class="header-inner"> <a class="header__logo" href="/">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#logo"></use>
+              </svg></a>
+            <div class="header__lang">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#lang"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main"> 
+        <section class="login"> 
+          <div class="container container--flex"> 
+            <div class="login-inner">
+              <h2 class="login__title">Добро пожаловать на MEXC</h2>
+              <p class="login__subtitle">Первый вход в систему считается регистрацией</p>
+              <form class="login__form js-tabWrapper" action="POST"> 
+                <div class="login__tabs">
+                  <div class="login__tab js-tabItem show" data-tab="email">Эл. почта</div>
+                  <div class="login__tab js-tabItem" data-tab="tel">Телефон</div>
+                </div>
+                <div class="login__content js-tabContent show" data-tab="email"> 
+                  <div class="login__input-wrap login__input-wrap--email">
+                    <input class="login__input login__input--email" type="email" name="email" required autocomplete placeholder="Эл. почта / Субаккаунт">
+                  </div>
+                </div>
+                <div class="login__content js-tabContent" data-tab="tel"> 
+                  <div class="login__input-wrap">
+                    <input class="login__input" type="email" name="email" required autocomplete placeholder="Телефон">
+                  </div>
+                </div>
+                        <button class="btn login__btn btn--wide" type="submit">Далее</button>
+              </form>
+              <div class="login__line"> <span>или войдите с помощью</span></div>
+              <ul class="login__others">
+                <li class="login__other">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#google"></use>
+                  </svg>
+                </li>
+                <li class="login__other">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#apple"></use>
+                  </svg>
+                </li>
+                <li class="login__other">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#metamask"></use>
+                  </svg>
+                </li>
+                <li class="login__other login__other--telegram">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#telegram"></use>
+                  </svg>
+                </li>
+              </ul>
+            </div>
+            <div class="login-qr">
+              <div class="login-qr__img"> <img src="/img/login/qr.png" alt=""></div>
+              <h4 class="login-qr__title">Войти с помощью QR-кода</h4>
+              <p class="login-qr__text">Отсканируйте QR-код с помощью <a href="#">приложения MEXC</a>, чтобы мгновенно войти в систему</p>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container"> 
+          <div class="footer-inner"> 
+            <div class="footer__category js-footerOpener">О нас
+              <ul class="footer__links"> 
+                <li class="footer__link"><a href="#">О бирже MEXC</a></li>
+                <li class="footer__link"><a href="#">Пользовательским соглашением</a></li>
+                <li class="footer__link"><a href="#">Политикой конфиденциальности</a></li>
+                <li class="footer__link"><a href="#">Предупреждение о рисках</a></li>
+                <li class="footer__link"><a href="#">M-Ventures</a></li>
+                <li class="footer__link"><a href="#">MEXC Blog</a></li>
+              </ul>
+            </div>
+            <div class="footer__category js-footerOpener">Услуги
+              <ul class="footer__links"> 
+                <li class="footer__link"><a href="#">Купить крипто</a></li>
+                <li class="footer__link"><a href="#">Скачать приложение</a></li>
+                <li class="footer__link"><a href="#">Комиссии</a></li>
+                <li class="footer__link"><a href="#">Реферальная программа</a></li>
+                <li class="footer__link"><a href="#">Партнерская программа</a></li>
+                <li class="footer__link"><a href="#">API</a></li>
+                <li class="footer__link"><a href="#">Корпоративные услуги</a></li>
+                <li class="footer__link"><a href="#">Как купить криптовалюту</a></li>
+                <li class="footer__link"><a href="#">Информация о криптовалюте</a></li>
+                <li class="footer__link"><a href="#">Цена криптовалюты</a></li>
+              </ul>
+            </div>
+            <div class="footer__category js-footerOpener">Служба поддержки
+              <ul class="footer__links"> 
+                <li class="footer__link"><a href="#">Служба поддержки</a></li>
+                <li class="footer__link"><a href="#">Справочный центр</a></li>
+                <li class="footer__link"><a href="#">Объявления</a></li>
+                <li class="footer__link"><a href="#">Обучение</a></li>
+                <li class="footer__link"><a href="#">VIP-привилегии</a></li>
+                <li class="footer__link"><a href="#">Отправить запрос</a></li>
+                <li class="footer__link"><a href="#">Предложения по улучшению</a></li>
+                <li class="footer__link"><a href="#">Сообщить об аномальных средствах</a></li>
+                <li class="footer__link"><a href="#">Судебная помощь</a></li>
+                <li class="footer__link"><a href="#">Верификация MEXC</a></li>
+                <li class="footer__link"><a href="#">Подать жалобу</a></li>
+              </ul>
+            </div>
+            <div class="footer__category js-footerOpener">Свяжитесь с нами
+              <ul class="footer__links"> 
+                <li class="footer__link"><a href="#">Деловое сотрудничество</a></li>
+                <li class="footer__link"><a href="#">Сотрудничество (Корпоративные клиенты)</a></li>
+                <li class="footer__link"><a href="#">Деловое сотрудничество (СМИ)</a></li>
+                <li class="footer__link"><a href="#">Заявка на листинг</a></li>
+                <li class="footer__link"><a href="#">Заявка на P2P-мерчанта</a></li>
+              </ul>
+            </div>
+            <div class="footer__category footer__category--socials">Сообщество</div>
+          </div>
+          <p class="footer__copyright">&copy;&nbsp;2023&nbsp;MEXC.COM</p>
+        </div>
+      </footer>
+    </div>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
