@@ -47,51 +47,64 @@
             <div class="login-inner">
               <h2 class="login__title">Добро пожаловать на MEXC</h2>
               <p class="login__subtitle">Первый вход в систему считается регистрацией</p>
-              <form class="login__form js-tabWrapper" action="POST"> 
+              <div class="login__form js-tabWrapper js-form">
                 <div class="login__tabs">
                   <div class="login__tab js-tabItem show" data-tab="email">Эл. почта</div>
                   <div class="login__tab js-tabItem" data-tab="tel">Телефон</div>
                 </div>
-                <div class="login__content js-tabContent show" data-tab="email"> 
+                <form class="login__content js-tabContent show" action="POST" data-tab="email"> 
                   <div class="login__input-wrap login__input-wrap--email">
-                    <input class="login__input login__input--email" type="email" name="email" required autocomplete placeholder="Эл. почта / Субаккаунт">
+                    <input class="login__input login__input--icon js-inputCheck" type="email" name="email" required autocomplete placeholder="Эл. почта / Субаккаунт">
                   </div>
-                </div>
-                <div class="login__content js-tabContent" data-tab="tel"> 
+                  <div class="login__input-wrap login__input-wrap--pass hide js-inputHide">
+                    <input class="login__input login__input--icon" type="password" name="password" placeholder="Пароль">
+                  </div>
+                          <button class="btn login__btn btn--wide js-FormSubmit" type="submit" disabled>Далее</button>
+                </form>
+                <form class="login__content js-tabContent" action="POST" data-tab="tel"> 
                   <div class="login__input-wrap">
-                    <input class="login__input" type="email" name="email" required autocomplete placeholder="Телефон">
+                    <input class="login__input" type="tel" name="tel" required autocomplete placeholder="Телефон">
                   </div>
-                </div>
-                        <button class="btn login__btn btn--wide" type="submit">Далее</button>
-              </form>
-              <div class="login__line"> <span>или войдите с помощью</span></div>
-              <ul class="login__others">
-                <li class="login__other">
-                  <svg>
-                    <use xlink:href="img/sprites/sprite.svg#google"></use>
-                  </svg>
-                </li>
-                <li class="login__other">
-                  <svg>
-                    <use xlink:href="img/sprites/sprite.svg#apple"></use>
-                  </svg>
-                </li>
-                <li class="login__other">
-                  <svg>
-                    <use xlink:href="img/sprites/sprite.svg#metamask"></use>
-                  </svg>
-                </li>
-                <li class="login__other login__other--telegram">
-                  <svg>
-                    <use xlink:href="img/sprites/sprite.svg#telegram"></use>
-                  </svg>
-                </li>
+                          <button class="btn login__btn btn--wide js-FormSubmit" type="submit" disabled>Далее</button>
+                </form>
+              </div>
+              <ul class="login__others js-loginOthers">
+                <div class="login__line"> <span>или войдите с помощью</span></div>
+                <ul class="login__others-list">
+                  <li class="login__other">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#google"></use>
+                    </svg>
+                  </li>
+                  <li class="login__other">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#apple"></use>
+                    </svg>
+                  </li>
+                  <li class="login__other">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#metamask"></use>
+                    </svg>
+                  </li>
+                  <li class="login__other login__other--telegram">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#telegram"></use>
+                    </svg>
+                  </li>
+                </ul>
               </ul>
             </div>
-            <div class="login-qr">
-              <div class="login-qr__img"> <img src="img/login/qr.png" alt=""></div>
+            <div class="login-qr js-qrBlock">
+              <div class="login-qr__img outdated"><img src="img/login/qr.png" alt="qr">
+                <div class="login-qr__outdated"><span class="login-qr__outdated-text">Срок действия QR-кода истек</span>
+                          <button class="btn btn--small login-qr__btn" type="button">Обновить</button>
+                </div>
+              </div>
               <h4 class="login-qr__title">Войти с помощью QR-кода</h4>
               <p class="login-qr__text">Отсканируйте QR-код с помощью <a href="#">приложения MEXC</a>, чтобы мгновенно войти в систему</p>
+            </div>
+            <div class="login-banner hide js-loginBanner">
+              <div class="login-banner__img"><img src="img/login/banner.png" alt="qr"></div>
             </div>
           </div>
         </section>
