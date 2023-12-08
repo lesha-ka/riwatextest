@@ -55,20 +55,37 @@
                 <form class="login__content js-tabContent show" action="POST" data-tab="email"> 
                   <div class="login__input-wrap login__input-wrap--email">
                     <input class="login__input login__input--icon js-inputCheck" type="email" name="email" required autocomplete placeholder="Эл. почта / Субаккаунт">
+                    <button class="login__input-clearing js-inputClearing" type="button"></button>
                   </div>
-                  <div class="login__input-wrap login__input-wrap--pass hide js-inputHide">
-                    <input class="login__input login__input--icon" type="password" name="password" placeholder="Пароль">
+                  <div class="login__input-wrap login__input-wrap--pass js-stepTwo">
+                    <input class="login__input login__input--icon" type="password" name="password" placeholder="Пароль" autocomplete>
                   </div>
-                          <button class="btn login__btn btn--wide js-FormSubmit" type="submit" disabled>Далее</button>
+                          <button class="btn js-stepOne login__btn btn--wide js-FormSubmit" type="submit" disabled>Далее</button>
+                  <div class="login__code js-toggleWrap js-stepTwo">
+                    <div class="login__code-title js-toggle"><span>Реферальный код (Необязательно)  </span>
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#triangle"></use>
+                      </svg>
+                    </div>
+                    <div class="login__input-wrap login__input-wrap--hide js-toggleContent">
+                      <input class="login__input" type="text" name="code" placeholder="Реферальный код (Необязательно)" autocomplete>
+                    </div>
+                  </div>
+                  <div class="login__agreement js-stepTwo">
+                    <input class="login__input-checkbox" type="checkbox" name="agreement" id="agreement">
+                    <label for="agreement">Я прочитал и согласен с <a href="#" target="_blank">Пользовательским соглашением</a> и <a href="#" target="_blank">Политикой конфиденциальности</a>.</label>
+                  </div>
+                          <button class="btn js-stepTwo login__btn btn--wide js-FormSubmit" type="submit">Регистрация</button>
                 </form>
                 <form class="login__content js-tabContent" action="POST" data-tab="tel"> 
                   <div class="login__input-wrap">
                     <input class="login__input" type="tel" name="tel" required autocomplete placeholder="Телефон">
+                    <button class="login__input-clearing js-inputClearing" type="button"></button>
                   </div>
                           <button class="btn login__btn btn--wide js-FormSubmit" type="submit" disabled>Далее</button>
                 </form>
               </div>
-              <ul class="login__others js-loginOthers">
+              <ul class="login__others js-stepTwo">
                 <div class="login__line"> <span>или войдите с помощью</span></div>
                 <ul class="login__others-list">
                   <li class="login__other">
@@ -94,7 +111,7 @@
                 </ul>
               </ul>
             </div>
-            <div class="login-qr js-qrBlock">
+            <div class="login-qr js-stepOne">
               <div class="login-qr__img outdated"><img src="img/login/qr.png" alt="qr">
                 <div class="login-qr__outdated"><span class="login-qr__outdated-text">Срок действия QR-кода истек</span>
                           <button class="btn btn--small login-qr__btn" type="button">Обновить</button>
@@ -103,7 +120,7 @@
               <h4 class="login-qr__title">Войти с помощью QR-кода</h4>
               <p class="login-qr__text">Отсканируйте QR-код с помощью <a href="#">приложения MEXC</a>, чтобы мгновенно войти в систему</p>
             </div>
-            <div class="login-banner hide js-loginBanner">
+            <div class="login-banner js-stepTwo"> 
               <div class="login-banner__img"><img src="img/login/banner.png" alt="qr"></div>
             </div>
           </div>
