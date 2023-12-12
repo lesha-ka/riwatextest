@@ -45,27 +45,35 @@
         <section class="banner"> 
           <div class="container"> 
             <h1 class="banner__title">Минимум комиссий <br> Максимум прибыли</h1>
-            <p class="banner__subtitle"><strong>0%</strong> комиссия на споте<br><strong>0%/0,02%</strong> комиссия Maker/Taker на фьючерсах</p><a class="link__btn link__btn--wide" href="#" target="_self">Регистрация</a>
+            <p class="banner__subtitle"><strong>0%</strong> комиссия на споте<br><strong>0%/0,02%</strong> комиссия Maker/Taker на фьючерсах</p>
+            <form class="banner__form" action="POST"> 
+              <input class="banner__input" type="text" placeholder="Эл. почта/номер телефона" name="contact"><a class="link__btn banner__btn link__btn--wide" href="#" target="_self">Начать</a>
+            </form>
           </div>
         </section>
         <section class="bonus"> 
           <div class="container"> 
-                    <h3 class="section-title">Получите бонус 1000$!</h3><a class="link" href="#" target="_self">Все события</a>
-            <ul class="bonus-list">
-              <li class="bonus__item"> 
-                <h6 class="bonus__title">Создать аккаунт </h6>
-                <p class="bonus__text">Зарегистрируйтесь и начните свое крипто-путешествие</p><a class="bonus__link" href="#">Регистрация</a>
-              </li>
-              <li class="bonus__item"> 
-                <div class="bonus__award">Ограниченная по времени награда 2X</div>
-                <h6 class="bonus__title">Случайные награды 5-30 USDT</h6>
-                <p class="bonus__text">Первый разовый перевод ≥ 500 USDT и чистый перевод в размере не менее 500 USDT в течение 7 последовательных днейиОбщий объем торгов ≥ 10,000 USDT</p>
-              </li>
-              <li class="bonus__item"> 
-                <h6 class="bonus__title">Получено 5 USDT</h6>
-                <p class="bonus__text">7 -дневный cовокупный объем торговли фьючерсами ≥ 100,000 USDT</p>
-              </li>
-            </ul>
+            <div class="bonus-inner">
+              <div class="bonus-header">
+                        <h3 class="section-title">Получите бонус 1000$!</h3><a class="link" href="#" target="_self">Все Бонусы</a>
+              </div>
+              <ul class="bonus-list">
+                <li class="bonus__img"> <img src="img/bonus/box.svg" alt="Бонус"></li>
+                <li class="bonus__item"> 
+                  <div class="bonus__award">Бонусы заканчиваются 30.01.2024</div>
+                  <h6 class="bonus__title">Создать аккаунт </h6>
+                  <p class="bonus__text">Пройдите регистрацию и получите приветственный бонус в виде 50 USDT</p><a class="bonus__link" href="#">Регистрация</a>
+                </li>
+                <li class="bonus__item"> 
+                  <h6 class="bonus__title">Пройдите верификацию</h6>
+                  <p class="bonus__text">Пройдите верификацию и откройте для себя все преимущества платформы RIWATEX</p>
+                </li>
+                <li class="bonus__item"> 
+                  <h6 class="bonus__title">Совершите депозит</h6>
+                  <p class="bonus__text">Совершить депозит и получите cashback в размере 10% от суммы</p>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
         <section class="advertising"> 
@@ -75,6 +83,8 @@
                 <li class="advertising__item swiper-slide"> <a class="advertising__img" href="#"> <img src="img/advertising/advertising1.png" alt="Реклама 1"></a></li>
                 <li class="advertising__item swiper-slide"> <a class="advertising__img" href="#"> <img src="img/advertising/advertising2.png" alt="Реклама 2"></a></li>
                 <li class="advertising__item swiper-slide"> <a class="advertising__img" href="#"><img src="img/advertising/advertising3.png" alt="Реклама 3"></a></li>
+                <li class="advertising__item swiper-slide"> <a class="advertising__img" href="#"><img src="img/advertising/advertising1.png" alt="Реклама 3"></a></li>
+                <li class="advertising__item swiper-slide"> <a class="advertising__img" href="#"><img src="img/advertising/advertising1.png" alt="Реклама 3"></a></li>
               </ul>
               <div class="advertising__pagination swiper-pagination"></div>
             </div>
@@ -83,193 +93,195 @@
         <section class="popular"> 
           <div class="container"> 
                     <h3 class="section-title">Популярные криптовалюты</h3>
-            <div class="popular-tabs js-tabWrapper"> 
-              <div class="popular__nav" role="tablist">
-                <div class="popular__nav-wrap"> 
-                  <ul class="popular__nav-list">
-                    <li class="popular-tab js-tabItem show" data-tab="1">
-                      <div class="popular-tab__btn" role="tab">Топ фьючерсы <span class="blue">Мейкер 0% / Тейкер 0,01%</span> </div>
-                    </li>
-                    <li class="popular-tab js-tabItem" data-tab="2">
-                      <div class="popular-tab__btn" role="tab">В тренде</div>
-                    </li>
-                    <li class="popular-tab js-tabItem" data-tab="3">
-                      <div class="popular-tab__btn" role="tab">Новые</div>
-                    </li>
-                    <li class="popular-tab js-tabItem" data-tab="4">
-                      <div class="popular-tab__btn" role="tab">Топ по объему</div>
-                    </li>
-                    <li class="popular-tab js-tabItem" data-tab="5">
-                      <div class="popular-tab__btn" role="tab">Лидеры дня <span class="green">398.18%</span></div>
-                    </li>
-                  </ul>
+            <div class="popular-inner">
+              <div class="popular-tabs js-tabWrapper"> 
+                <div class="popular__nav" role="tablist">
+                  <div class="popular__nav-wrap"> 
+                    <ul class="popular__nav-list">
+                      <li class="popular-tab js-tabItem show" data-tab="1">
+                        <div class="popular-tab__btn" role="tab">Топ фьючерсы <span class="green">Мейкер 0% / Тейкер 0,01%</span> </div>
+                      </li>
+                      <li class="popular-tab js-tabItem" data-tab="2">
+                        <div class="popular-tab__btn" role="tab">В тренде</div>
+                      </li>
+                      <li class="popular-tab js-tabItem" data-tab="3">
+                        <div class="popular-tab__btn" role="tab">Новые</div>
+                      </li>
+                      <li class="popular-tab js-tabItem" data-tab="4">
+                        <div class="popular-tab__btn" role="tab">Топ по объему</div>
+                      </li>
+                      <li class="popular-tab js-tabItem" data-tab="5">
+                        <div class="popular-tab__btn" role="tab">Лидеры дня <span class="green">398.18%</span></div>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
-              <div class="popular__content">
-                <div class="popular__tabpanel js-tabContent show" role="tabpanel" data-tab="1">
-                  <div class="popular__table">
-                    <div class="popular__table-container">
-                      <div class="popular__table-content">
-                        <table> 
-                          <thead class="popular__table-thead">
-                            <tr>
-                              <th class="popular__table-cell">Торговая пара</th>
-                              <th class="popular__table-cell">Цена</th>
-                              <th class="popular__table-cell">Изменение </th>
-                              <th class="popular__table-cell">Рынок</th>
-                              <th class="popular__table-cell">Действие</th>
-                            </tr>
-                          </thead>
-                          <tbody class="popular__table-tbody"> 
-                            <tr>
-                              <th class="popular__table-cell popular__table-cell--flex">
-                                <div class="popular__table-symbol">
-                                  <div class="popular__table-img"><img src="img/popular/btc.png" alt="BTC USDT Perpetual"></div>
-                                </div>
-                                <div class="popular__table-name">BTC USDT Perpetual</div>
-                              </th>
-                              <th class="popular__table-cell">37,362.1</th>
-                              <th class="popular__table-cell green">+0.72%</th>
-                              <th class="popular__table-cell"></th>
-                              <th class="popular__table-cell"><a class="popular__table-action" href="#">Торговля</a></th>
-                            </tr>
-                            <tr>
-                              <th class="popular__table-cell popular__table-cell--flex">
-                                <div class="popular__table-symbol">
-                                  <div class="popular__table-img"><img src="img/popular/eth.png" alt="ETH USDT Perpetual"></div>
-                                </div>
-                                <div class="popular__table-name">ETH USDT Perpetual</div>
-                              </th>
-                              <th class="popular__table-cell">2,096.82</th>
-                              <th class="popular__table-cell">0.00%</th>
-                              <th class="popular__table-cell"></th>
-                              <th class="popular__table-cell"><a class="popular__table-action" href="#">Торговля</a></th>
-                            </tr>
-                            <tr>
-                              <th class="popular__table-cell popular__table-cell--flex">
-                                <div class="popular__table-symbol">
-                                  <div class="popular__table-img"><img src="img/popular/gas.png" alt="GAS USDT Perpetual"></div>
-                                </div>
-                                <div class="popular__table-name">GAS USDT Perpetual</div>
-                              </th>
-                              <th class="popular__table-cell">22.001</th>
-                              <th class="popular__table-cell red">-25.09%</th>
-                              <th class="popular__table-cell"></th>
-                              <th class="popular__table-cell"><a class="popular__table-action" href="#">Торговля</a></th>
-                            </tr>
-                            <tr>
-                              <th class="popular__table-cell popular__table-cell--flex">
-                                <div class="popular__table-symbol">
-                                  <div class="popular__table-img"><img src="img/popular/sol.png" alt="SOL USDT Perpetual"></div>
-                                </div>
-                                <div class="popular__table-name">SOL USDT Perpetual</div>
-                              </th>
-                              <th class="popular__table-cell">54,562</th>
-                              <th class="popular__table-cell green">+7.14%</th>
-                              <th class="popular__table-cell"></th>
-                              <th class="popular__table-cell"><a class="popular__table-action" href="#">Торговля</a></th>
-                            </tr>
-                            <tr>
-                              <th class="popular__table-cell popular__table-cell--flex">
-                                <div class="popular__table-symbol">
-                                  <div class="popular__table-img"><img src="img/popular/trb.png" alt="TBR USDT Perpetual"></div>
-                                </div>
-                                <div class="popular__table-name">TBR USDT Perpetual</div>
-                              </th>
-                              <th class="popular__table-cell">94.614</th>
-                              <th class="popular__table-cell green">+3.83%</th>
-                              <th class="popular__table-cell"></th>
-                              <th class="popular__table-cell"><a class="popular__table-action" href="#">Торговля</a></th>
-                            </tr>
-                          </tbody>
-                        </table>
+                <div class="popular__content">
+                  <div class="popular__tabpanel js-tabContent show" role="tabpanel" data-tab="1">
+                    <div class="popular__table">
+                      <div class="popular__table-container">
+                        <div class="popular__table-content">
+                          <table> 
+                            <thead class="popular__table-thead">
+                              <tr>
+                                <th class="popular__table-cell">Торговая пара</th>
+                                <th class="popular__table-cell">Цена</th>
+                                <th class="popular__table-cell">Изменение </th>
+                                <th class="popular__table-cell">Рынок</th>
+                                <th class="popular__table-cell">Действие</th>
+                              </tr>
+                            </thead>
+                            <tbody class="popular__table-tbody"> 
+                              <tr>
+                                <th class="popular__table-cell popular__table-cell--flex">
+                                  <div class="popular__table-symbol">
+                                    <div class="popular__table-img"><img src="img/popular/btc.png" alt="BTC USDT Perpetual"></div>
+                                  </div>
+                                  <div class="popular__table-name">BTC USDT Perpetual</div>
+                                </th>
+                                <th class="popular__table-cell">37,362.1</th>
+                                <th class="popular__table-cell green">+0.72%</th>
+                                <th class="popular__table-cell popular__table-cell--chart"><img src="img/popular/chart.svg" alt="график"></th>
+                                <th class="popular__table-cell"><a class="popular__table-action btn" href="#">Торговать</a></th>
+                              </tr>
+                              <tr>
+                                <th class="popular__table-cell popular__table-cell--flex">
+                                  <div class="popular__table-symbol">
+                                    <div class="popular__table-img"><img src="img/popular/eth.png" alt="ETH USDT Perpetual"></div>
+                                  </div>
+                                  <div class="popular__table-name">ETH USDT Perpetual</div>
+                                </th>
+                                <th class="popular__table-cell">2,096.82</th>
+                                <th class="popular__table-cell">0.00%</th>
+                                <th class="popular__table-cell popular__table-cell--chart"><img src="img/popular/chart.svg" alt="график"></th>
+                                <th class="popular__table-cell"><a class="popular__table-action btn" href="#">Торговать</a></th>
+                              </tr>
+                              <tr>
+                                <th class="popular__table-cell popular__table-cell--flex">
+                                  <div class="popular__table-symbol">
+                                    <div class="popular__table-img"><img src="img/popular/gas.png" alt="GAS USDT Perpetual"></div>
+                                  </div>
+                                  <div class="popular__table-name">GAS USDT Perpetual</div>
+                                </th>
+                                <th class="popular__table-cell">22.001</th>
+                                <th class="popular__table-cell red">-25.09%</th>
+                                <th class="popular__table-cell popular__table-cell--chart"><img src="img/popular/chart.svg" alt="график"></th>
+                                <th class="popular__table-cell"><a class="popular__table-action btn" href="#">Торговать</a></th>
+                              </tr>
+                              <tr>
+                                <th class="popular__table-cell popular__table-cell--flex">
+                                  <div class="popular__table-symbol">
+                                    <div class="popular__table-img"><img src="img/popular/sol.png" alt="SOL USDT Perpetual"></div>
+                                  </div>
+                                  <div class="popular__table-name">SOL USDT Perpetual</div>
+                                </th>
+                                <th class="popular__table-cell">54,562</th>
+                                <th class="popular__table-cell green">+7.14%</th>
+                                <th class="popular__table-cell popular__table-cell--chart"><img src="img/popular/chart.svg" alt="график"></th>
+                                <th class="popular__table-cell"><a class="popular__table-action btn" href="#">Торговать</a></th>
+                              </tr>
+                              <tr>
+                                <th class="popular__table-cell popular__table-cell--flex">
+                                  <div class="popular__table-symbol">
+                                    <div class="popular__table-img"><img src="img/popular/trb.png" alt="TBR USDT Perpetual"></div>
+                                  </div>
+                                  <div class="popular__table-name">TBR USDT Perpetual</div>
+                                </th>
+                                <th class="popular__table-cell">94.614</th>
+                                <th class="popular__table-cell green">+3.83%</th>
+                                <th class="popular__table-cell popular__table-cell--chart"><img src="img/popular/chart.svg" alt="график"></th>
+                                <th class="popular__table-cell"><a class="popular__table-action btn" href="#">Торговать</a></th>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="popular__tabpanel js-tabContent" role="tabpanel" data-tab="2">
+                    <div class="popular__table">
+                      <div class="popular__table-container">
+                        <div class="popular__table-content">
+                          <table> 
+                            <thead class="popular__table-thead">
+                              <tr>
+                                <th class="popular__table-cell">Торговая пара</th>
+                                <th class="popular__table-cell">Цена</th>
+                                <th class="popular__table-cell">Изменение </th>
+                                <th class="popular__table-cell">Рынок</th>
+                                <th class="popular__table-cell">Действие</th>
+                              </tr>
+                            </thead>
+                            <tbody class="popular__table-tbody"> 
+                              <tr>
+                                <th class="popular__table-cell popular__table-cell--flex">
+                                  <div class="popular__table-symbol">
+                                    <div class="popular__table-img"><img src="img/popular/mx.png" alt="MX/USDT"></div>
+                                  </div>
+                                  <div class="popular__table-name">MX/USDT</div>
+                                </th>
+                                <th class="popular__table-cell">2.9405</th>
+                                <th class="popular__table-cell red">-1.93%</th>
+                                <th class="popular__table-cell">img/popular/chart.svg</th>
+                                <th class="popular__table-cell"><a class="popular__table-action" href="#">Торговля</a></th>
+                              </tr>
+                              <tr>
+                                <th class="popular__table-cell popular__table-cell--flex">
+                                  <div class="popular__table-symbol">
+                                    <div class="popular__table-img"><img src="img/popular/btc.png" alt="BTC/USDT"></div>
+                                  </div>
+                                  <div class="popular__table-name">BTC/USDT</div>
+                                </th>
+                                <th class="popular__table-cell">2,096.82</th>
+                                <th class="popular__table-cell">0.00%</th>
+                                <th class="popular__table-cell">img/popular/chart.svg</th>
+                                <th class="popular__table-cell"><a class="popular__table-action" href="#">Торговля</a></th>
+                              </tr>
+                              <tr>
+                                <th class="popular__table-cell popular__table-cell--flex">
+                                  <div class="popular__table-symbol">
+                                    <div class="popular__table-img"><img src="img/popular/eth.png" alt="ETH/USDT"></div>
+                                  </div>
+                                  <div class="popular__table-name">ETH/USDT</div>
+                                </th>
+                                <th class="popular__table-cell">2.001</th>
+                                <th class="popular__table-cell red">-0.09%</th>
+                                <th class="popular__table-cell">img/popular/chart.svg</th>
+                                <th class="popular__table-cell"><a class="popular__table-action" href="#">Торговля</a></th>
+                              </tr>
+                              <tr>
+                                <th class="popular__table-cell popular__table-cell--flex">
+                                  <div class="popular__table-symbol">
+                                    <div class="popular__table-img"><img src="img/popular/kas.png" alt="KAS/USDT"></div>
+                                  </div>
+                                  <div class="popular__table-name">KAS/USDT</div>
+                                </th>
+                                <th class="popular__table-cell">54,562</th>
+                                <th class="popular__table-cell green">+7.14%</th>
+                                <th class="popular__table-cell">img/popular/chart.svg</th>
+                                <th class="popular__table-cell"><a class="popular__table-action" href="#">Торговля</a></th>
+                              </tr>
+                              <tr>
+                                <th class="popular__table-cell popular__table-cell--flex">
+                                  <div class="popular__table-symbol">
+                                    <div class="popular__table-img"><img src="img/popular/xrp.png" alt="XRP/USDT"></div>
+                                  </div>
+                                  <div class="popular__table-name">XRP/USDT</div>
+                                </th>
+                                <th class="popular__table-cell">94.614</th>
+                                <th class="popular__table-cell green">+3.83%</th>
+                                <th class="popular__table-cell">img/popular/chart.svg</th>
+                                <th class="popular__table-cell"><a class="popular__table-action" href="#">Торговля</a></th>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="popular__tabpanel js-tabContent" role="tabpanel" data-tab="2">
-                  <div class="popular__table">
-                    <div class="popular__table-container">
-                      <div class="popular__table-content">
-                        <table> 
-                          <thead class="popular__table-thead">
-                            <tr>
-                              <th class="popular__table-cell">Торговая пара</th>
-                              <th class="popular__table-cell">Цена</th>
-                              <th class="popular__table-cell">Изменение </th>
-                              <th class="popular__table-cell">Рынок</th>
-                              <th class="popular__table-cell">Действие</th>
-                            </tr>
-                          </thead>
-                          <tbody class="popular__table-tbody"> 
-                            <tr>
-                              <th class="popular__table-cell popular__table-cell--flex">
-                                <div class="popular__table-symbol">
-                                  <div class="popular__table-img"><img src="img/popular/mx.png" alt="MX/USDT"></div>
-                                </div>
-                                <div class="popular__table-name">MX/USDT</div>
-                              </th>
-                              <th class="popular__table-cell">2.9405</th>
-                              <th class="popular__table-cell red">-1.93%</th>
-                              <th class="popular__table-cell"></th>
-                              <th class="popular__table-cell"><a class="popular__table-action" href="#">Торговля</a></th>
-                            </tr>
-                            <tr>
-                              <th class="popular__table-cell popular__table-cell--flex">
-                                <div class="popular__table-symbol">
-                                  <div class="popular__table-img"><img src="img/popular/btc.png" alt="BTC/USDT"></div>
-                                </div>
-                                <div class="popular__table-name">BTC/USDT</div>
-                              </th>
-                              <th class="popular__table-cell">2,096.82</th>
-                              <th class="popular__table-cell">0.00%</th>
-                              <th class="popular__table-cell"></th>
-                              <th class="popular__table-cell"><a class="popular__table-action" href="#">Торговля</a></th>
-                            </tr>
-                            <tr>
-                              <th class="popular__table-cell popular__table-cell--flex">
-                                <div class="popular__table-symbol">
-                                  <div class="popular__table-img"><img src="img/popular/eth.png" alt="ETH/USDT"></div>
-                                </div>
-                                <div class="popular__table-name">ETH/USDT</div>
-                              </th>
-                              <th class="popular__table-cell">2.001</th>
-                              <th class="popular__table-cell red">-0.09%</th>
-                              <th class="popular__table-cell"></th>
-                              <th class="popular__table-cell"><a class="popular__table-action" href="#">Торговля</a></th>
-                            </tr>
-                            <tr>
-                              <th class="popular__table-cell popular__table-cell--flex">
-                                <div class="popular__table-symbol">
-                                  <div class="popular__table-img"><img src="img/popular/kas.png" alt="KAS/USDT"></div>
-                                </div>
-                                <div class="popular__table-name">KAS/USDT</div>
-                              </th>
-                              <th class="popular__table-cell">54,562</th>
-                              <th class="popular__table-cell green">+7.14%</th>
-                              <th class="popular__table-cell"></th>
-                              <th class="popular__table-cell"><a class="popular__table-action" href="#">Торговля</a></th>
-                            </tr>
-                            <tr>
-                              <th class="popular__table-cell popular__table-cell--flex">
-                                <div class="popular__table-symbol">
-                                  <div class="popular__table-img"><img src="img/popular/xrp.png" alt="XRP/USDT"></div>
-                                </div>
-                                <div class="popular__table-name">XRP/USDT</div>
-                              </th>
-                              <th class="popular__table-cell">94.614</th>
-                              <th class="popular__table-cell green">+3.83%</th>
-                              <th class="popular__table-cell"></th>
-                              <th class="popular__table-cell"><a class="popular__table-action" href="#">Торговля</a></th>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
-            </div><a class="link__btn link__btn--wide" href="#" target="_self">Начать торговлю</a>
+            </div>
           </div>
         </section>
         <section class="community">
