@@ -28,13 +28,126 @@
   <body>
     <div class="wrapper">
       <header class="header"> 
-        <div class="container">
-          <div class="header-inner"> <a class="header__logo" href="/"><img src="img/header/logo.svg" alt="Riwatex"></a><a class="link__btn" href="login.html" target="_self">Вход/Регистрация</a>
-            <div class="header__burger"> 
+        <div class="header-inner"> <a class="header__logo" href="/"><img src="img/header/logo.svg" alt="Riwatex"></a>
+          <nav class="header__nav">
+            <ul class="header__links"> 
+              <li class="header__link"><a href="#">Рынок</a></li>
+              <li class="header__link header__link--dropdown js-headerDropdown">Купить крипто
+                <ul class="header__dropdown">
+                  <li class="header__dropdown-item"> <a class="header__dropdown-card" href="#">
+                      <div class="header__dropdown-img">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#card"></use>
+                        </svg>
+                      </div>
+                      <div class="header__dropdown-text">
+                        <h4>Банковский перевод P2P</h4>
+                        <p>Купить криптовалюту с помощью карты</p>
+                      </div></a></li>
+                </ul>
+              </li>
+              <li class="header__link header__link--dropdown js-headerDropdown">Спот
+                <ul class="header__dropdown">
+                  <li class="header__dropdown-item"> <a class="header__dropdown-card" href="#">
+                      <div class="header__dropdown-img">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#spot"></use>
+                        </svg>
+                      </div>
+                      <div class="header__dropdown-text">
+                        <h4>Спотовая торговля</h4>
+                        <p>Самые популярные криптовалюты на RIWATEX</p>
+                      </div></a></li>
+                  <li class="header__dropdown-item"> <a class="header__dropdown-card" href="#">
+                      <div class="header__dropdown-img">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#rwtx"></use>
+                        </svg>
+                      </div>
+                      <div class="header__dropdown-text">
+                        <h4>Купить RWTX</h4>
+                        <p>Торгуй токеном RWTX и получай бонусы</p>
+                      </div></a></li>
+                </ul>
+              </li>
+              <li class="header__link header__link--dropdown js-headerDropdown header__link--hot"> Фьючерсы
+                <ul class="header__dropdown">
+                  <li class="header__dropdown-item"> <a class="header__dropdown-card" href="#">
+                      <div class="header__dropdown-img">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#futures"></use>
+                        </svg>
+                      </div>
+                      <div class="header__dropdown-text">
+                        <h4>Обзор фьючерсов</h4>
+                        <p>Обзор рынка фьючерсов на популярные криптовалюты</p>
+                      </div></a></li>
+                  <li class="header__dropdown-item"> <a class="header__dropdown-card" href="#">
+                      <div class="header__dropdown-img">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#futures2"></use>
+                        </svg>
+                      </div>
+                      <div class="header__dropdown-text">
+                        <h4>Бессрочные фьючерсы USDT-M</h4>
+                        <p>Бессрочные фьючерсы с расчетом в USDT</p>
+                      </div></a></li>
+                </ul>
+              </li>
+              <li class="header__link"><a href="#">Обучение</a></li>
+            </ul>
+          </nav>
+          <div class="header__right">
+            <!--+link-btn('login.html','Вход/Регистрация')-->
+            <div class="header__search">
               <svg>
-                <use xlink:href="img/sprites/sprite.svg#burger"></use>
+                <use xlink:href="img/sprites/sprite.svg#search"></use>
               </svg>
             </div>
+            <div class="header__right-links">
+              <div class="header__link js-headerDropdown">Кошелек
+                <div class="header__dropdown header__dropdown--wallet">
+                  <div class="header__balance js-hideWrapper">
+                    <div class="header__balance-head"> 
+                      <div class="header__balance-title">Общий баланс </div>
+                      <div class="header__balance-eye js-hideNumber"></div><a class="header__balance-link" href="#">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#arrow"></use>
+                        </svg></a>
+                    </div>
+                    <div class="header__balance-crypto js-hiddenNumber">9 990 999 999.00 <span>USDT</span> </div>
+                    <div class="header__balance-fiat js-hiddenNumber">9 990 999 999.00 <span>USD</span></div>
+                  </div>
+                  <div class="header__wallet-btns"><a class="header__wallet-btn" href="#">Депозит</a><a class="header__wallet-btn header__wallet-btn--up" href="#">Вывод</a></div>
+                  <div class="header__dropdown-links"><a class="header__dropdown-link" href="#">Спотовый</a><a class="header__dropdown-link" href="#">Фьючерсный</a><a class="header__dropdown-link" href="#">История транзакций</a></div>
+                </div>
+              </div>
+              <div class="header__link js-headerDropdown">Ордера
+                <div class="header__dropdown header__dropdown--orders">
+                  <div class="header__dropdown-links"><a class="header__dropdown-link" href="#">Спотовый</a><a class="header__dropdown-link" href="#">Фьючерсный</a><a class="header__dropdown-link" href="#">История транзакций</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="header__user">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#user"></use>
+              </svg>
+            </div>
+            <div class="header__notification">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#notification"></use>
+              </svg><span>9+</span>
+            </div>
+          </div>
+          <div class="header__lang">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#lang"></use>
+            </svg>
+          </div>
+          <div class="header__burger"> 
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#burger"></use>
+            </svg>
           </div>
         </div>
       </header>
@@ -890,101 +1003,99 @@
         </section>
       </main>
       <footer class="footer">
-        <div class="container">
-          <div class="footer-inner">
-            <div class="footer__category js-footerOpener">О нас
-              <ul class="footer__links"> 
-                <li class="footer__link"><a href="#">О бирже MEXC</a></li>
-                <li class="footer__link"><a href="#">Пользовательским соглашением</a></li>
-                <li class="footer__link"><a href="#">Политикой конфиденциальности</a></li>
-                <li class="footer__link"><a href="#">Предупреждение о рисках</a></li>
-                <li class="footer__link"><a href="#">M-Ventures</a></li>
-                <li class="footer__link"><a href="#">MEXC Blog</a></li>
-              </ul>
-            </div>
-            <div class="footer__category js-footerOpener">Услуги
-              <ul class="footer__links"> 
-                <li class="footer__link"><a href="#">Купить крипто</a></li>
-                <li class="footer__link"><a href="#">Скачать приложение</a></li>
-                <li class="footer__link"><a href="#">Комиссии</a></li>
-                <li class="footer__link"><a href="#">Реферальная программа</a></li>
-                <li class="footer__link"><a href="#">Партнерская программа</a></li>
-                <li class="footer__link"><a href="#">API</a></li>
-                <li class="footer__link"><a href="#">Корпоративные услуги</a></li>
-                <li class="footer__link"><a href="#">Как купить криптовалюту</a></li>
-                <li class="footer__link"><a href="#">Информация о криптовалюте</a></li>
-                <li class="footer__link"><a href="#">Цена криптовалюты</a></li>
-              </ul>
-            </div>
-            <div class="footer__category js-footerOpener">Служба поддержки
-              <ul class="footer__links"> 
-                <li class="footer__link"><a href="#">Служба поддержки</a></li>
-                <li class="footer__link"><a href="#">Справочный центр</a></li>
-                <li class="footer__link"><a href="#">Объявления</a></li>
-                <li class="footer__link"><a href="#">Обучение</a></li>
-                <li class="footer__link"><a href="#">VIP-привилегии</a></li>
-                <li class="footer__link"><a href="#">Отправить запрос</a></li>
-                <li class="footer__link"><a href="#">Предложения по улучшению</a></li>
-                <li class="footer__link"><a href="#">Сообщить об аномальных средствах</a></li>
-                <li class="footer__link"><a href="#">Судебная помощь</a></li>
-                <li class="footer__link"><a href="#">Верификация MEXC</a></li>
-                <li class="footer__link"><a href="#">Подать жалобу</a></li>
-              </ul>
-            </div>
-            <div class="footer__category js-footerOpener">Свяжитесь с нами
-              <ul class="footer__links"> 
-                <li class="footer__link"><a href="#">Деловое сотрудничество</a></li>
-                <li class="footer__link"><a href="#">Сотрудничество (Корпоративные клиенты)</a></li>
-                <li class="footer__link"><a href="#">Деловое сотрудничество (СМИ)</a></li>
-                <li class="footer__link"><a href="#">Заявка на листинг</a></li>
-                <li class="footer__link"><a href="#">Заявка на P2P-мерчанта</a></li>
-              </ul>
-            </div>
-            <div class="footer__category footer__category--socials">Сообщество
-              <div class="footer__socials"><a class="footer__social" href="#">
-                  <svg>
-                    <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
-                  </svg></a><a class="footer__social" href="#">
-                  <svg>
-                    <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
-                  </svg></a><a class="footer__social" href="#">
-                  <svg>
-                    <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
-                  </svg></a><a class="footer__social" href="#">
-                  <svg>
-                    <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
-                  </svg></a><a class="footer__social" href="#">
-                  <svg>
-                    <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
-                  </svg></a><a class="footer__social" href="#">
-                  <svg>
-                    <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
-                  </svg></a><a class="footer__social" href="#">
-                  <svg>
-                    <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
-                  </svg></a><a class="footer__social" href="#">
-                  <svg>
-                    <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
-                  </svg></a><a class="footer__social" href="#">
-                  <svg>
-                    <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
-                  </svg></a><a class="footer__social" href="#">
-                  <svg>
-                    <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
-                  </svg></a><a class="footer__social" href="#">
-                  <svg>
-                    <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
-                  </svg></a><a class="footer__social" href="#">
-                  <svg>
-                    <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
-                  </svg></a><a class="footer__social" href="#">
-                  <svg>
-                    <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
-                  </svg></a><a class="footer__social" href="#">
-                  <svg>
-                    <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
-                  </svg></a>
-              </div>
+        <div class="footer-inner">
+          <div class="footer__category js-footerOpener">О нас
+            <ul class="footer__links"> 
+              <li class="footer__link"><a href="#">О бирже MEXC</a></li>
+              <li class="footer__link"><a href="#">Пользовательским соглашением</a></li>
+              <li class="footer__link"><a href="#">Политикой конфиденциальности</a></li>
+              <li class="footer__link"><a href="#">Предупреждение о рисках</a></li>
+              <li class="footer__link"><a href="#">M-Ventures</a></li>
+              <li class="footer__link"><a href="#">MEXC Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer__category js-footerOpener">Услуги
+            <ul class="footer__links"> 
+              <li class="footer__link"><a href="#">Купить крипто</a></li>
+              <li class="footer__link"><a href="#">Скачать приложение</a></li>
+              <li class="footer__link"><a href="#">Комиссии</a></li>
+              <li class="footer__link"><a href="#">Реферальная программа</a></li>
+              <li class="footer__link"><a href="#">Партнерская программа</a></li>
+              <li class="footer__link"><a href="#">API</a></li>
+              <li class="footer__link"><a href="#">Корпоративные услуги</a></li>
+              <li class="footer__link"><a href="#">Как купить криптовалюту</a></li>
+              <li class="footer__link"><a href="#">Информация о криптовалюте</a></li>
+              <li class="footer__link"><a href="#">Цена криптовалюты</a></li>
+            </ul>
+          </div>
+          <div class="footer__category js-footerOpener">Служба поддержки
+            <ul class="footer__links"> 
+              <li class="footer__link"><a href="#">Служба поддержки</a></li>
+              <li class="footer__link"><a href="#">Справочный центр</a></li>
+              <li class="footer__link"><a href="#">Объявления</a></li>
+              <li class="footer__link"><a href="#">Обучение</a></li>
+              <li class="footer__link"><a href="#">VIP-привилегии</a></li>
+              <li class="footer__link"><a href="#">Отправить запрос</a></li>
+              <li class="footer__link"><a href="#">Предложения по улучшению</a></li>
+              <li class="footer__link"><a href="#">Сообщить об аномальных средствах</a></li>
+              <li class="footer__link"><a href="#">Судебная помощь</a></li>
+              <li class="footer__link"><a href="#">Верификация MEXC</a></li>
+              <li class="footer__link"><a href="#">Подать жалобу</a></li>
+            </ul>
+          </div>
+          <div class="footer__category js-footerOpener">Свяжитесь с нами
+            <ul class="footer__links"> 
+              <li class="footer__link"><a href="#">Деловое сотрудничество</a></li>
+              <li class="footer__link"><a href="#">Сотрудничество (Корпоративные клиенты)</a></li>
+              <li class="footer__link"><a href="#">Деловое сотрудничество (СМИ)</a></li>
+              <li class="footer__link"><a href="#">Заявка на листинг</a></li>
+              <li class="footer__link"><a href="#">Заявка на P2P-мерчанта</a></li>
+            </ul>
+          </div>
+          <div class="footer__category footer__category--socials">Сообщество
+            <div class="footer__socials"><a class="footer__social" href="#">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
+                </svg></a><a class="footer__social" href="#">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
+                </svg></a><a class="footer__social" href="#">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
+                </svg></a><a class="footer__social" href="#">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
+                </svg></a><a class="footer__social" href="#">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
+                </svg></a><a class="footer__social" href="#">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
+                </svg></a><a class="footer__social" href="#">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
+                </svg></a><a class="footer__social" href="#">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
+                </svg></a><a class="footer__social" href="#">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
+                </svg></a><a class="footer__social" href="#">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
+                </svg></a><a class="footer__social" href="#">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
+                </svg></a><a class="footer__social" href="#">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
+                </svg></a><a class="footer__social" href="#">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
+                </svg></a><a class="footer__social" href="#">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
+                </svg></a>
             </div>
           </div>
         </div>
