@@ -32,7 +32,7 @@
           <nav class="header__nav">
             <ul class="header__links"> 
               <li class="header__link"><a href="#">Рынок</a></li>
-              <li class="header__link header__link--dropdown js-headerDropdown">Купить крипто
+              <li class="header__link header__link--dropdown dropdown">Купить крипто
                 <ul class="header__dropdown">
                   <li class="header__dropdown-item"> <a class="header__dropdown-card" href="#">
                       <div class="header__dropdown-img">
@@ -46,7 +46,7 @@
                       </div></a></li>
                 </ul>
               </li>
-              <li class="header__link header__link--dropdown js-headerDropdown">Спот
+              <li class="header__link header__link--dropdown dropdown">Спот
                 <ul class="header__dropdown">
                   <li class="header__dropdown-item"> <a class="header__dropdown-card" href="#">
                       <div class="header__dropdown-img">
@@ -70,7 +70,7 @@
                       </div></a></li>
                 </ul>
               </li>
-              <li class="header__link header__link--dropdown js-headerDropdown header__link--hot"> Фьючерсы
+              <li class="header__link header__link--dropdown header__link--hot dropdown">Фьючерсы
                 <ul class="header__dropdown">
                   <li class="header__dropdown-item"> <a class="header__dropdown-card" href="#">
                       <div class="header__dropdown-img">
@@ -99,13 +99,43 @@
           </nav>
           <div class="header__right">
             <!--+link-btn('login.html','Вход/Регистрация')-->
-            <div class="header__search">
+            <div class="header__search dropdown">
               <svg>
                 <use xlink:href="img/sprites/sprite.svg#search"></use>
               </svg>
+              <div class="header__dropdown header__dropdown--search">
+                <div class="header__searc-head"> 
+                  <input class="header__search-input" type="text" placeholder="Поиск...">
+                </div>
+                <div class="header__search-resoult"> 
+                  <div class="header__search-tabs"> 
+                    <div class="header__search-tab">Популярные запросы </div>
+                  </div>
+                  <ul class="header__search-list"> 
+                    <li class="header__search-item">
+                      <div class="header__search-number">1.</div>
+                      <div class="header__search-name"> 
+                        <p>BTC-USDT</p><span>Perpetual</span>
+                      </div>
+                      <div class="header__search-value">44 099.22</div>
+                      <div class="header__search-change red">-0.44%</div>
+                      <div class="header__search-favourite"> </div>
+                    </li>
+                    <li class="header__search-item">
+                      <div class="header__search-number">2.</div>
+                      <div class="header__search-name"> 
+                        <p>BTC-USDT</p><span>Perpetual</span>
+                      </div>
+                      <div class="header__search-value">44 099.22</div>
+                      <div class="header__search-change green">+0.44%</div>
+                      <div class="header__search-favourite"> </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <div class="header__right-links">
-              <div class="header__link js-headerDropdown">Кошелек
+              <div class="header__link dropdown">Кошелек
                 <div class="header__dropdown header__dropdown--wallet">
                   <div class="header__balance js-hideWrapper">
                     <div class="header__balance-head"> 
@@ -122,21 +152,34 @@
                   <div class="header__dropdown-links"><a class="header__dropdown-link" href="#">Спотовый</a><a class="header__dropdown-link" href="#">Фьючерсный</a><a class="header__dropdown-link" href="#">История транзакций</a></div>
                 </div>
               </div>
-              <div class="header__link js-headerDropdown">Ордера
+              <div class="header__link dropdown">Ордера
                 <div class="header__dropdown header__dropdown--orders">
-                  <div class="header__dropdown-links"><a class="header__dropdown-link" href="#">Спотовый</a><a class="header__dropdown-link" href="#">Фьючерсный</a><a class="header__dropdown-link" href="#">История транзакций</a></div>
+                  <div class="header__dropdown-links"><a class="header__dropdown-link" href="#">Спотовый</a><a class="header__dropdown-link" href="#">Фьючерсный</a><a class="header__dropdown-link" href="#">История ранзакций</a></div>
                 </div>
               </div>
             </div>
-            <div class="header__user">
+            <div class="header__user dropdown">
               <svg>
                 <use xlink:href="img/sprites/sprite.svg#user"></use>
               </svg>
+              <div class="header__dropdown header__dropdown--user">
+                <div class="header__user-head"> 
+                  <div class="header__user-mail">ck***1@gmail.com</div>
+                  <div class="header__user-wrap js-copyWrap">
+                    <div class="header__user-id">ID: <span class="js-copyText">5563321</span></div>
+                    <div class="header__user-copy js-copyBtn"></div>
+                  </div>
+                </div>
+                <div class="header__dropdown-links"><a class="header__dropdown-link" href="#">Личный кабинет</a><a class="header__dropdown-link" href="#">Верификация</a><a class="header__dropdown-link" href="#">Безопасность</a><a class="header__dropdown-link" href="#">Настройки</a><a class="header__dropdown-link" href="#">Реферальная программа</a><a class="header__dropdown-link" href="#">Выйти</a></div>
+              </div>
             </div>
-            <div class="header__notification">
+            <div class="header__notification dropdown">
               <svg>
                 <use xlink:href="img/sprites/sprite.svg#notification"></use>
               </svg><span>9+</span>
+              <div class="header__dropdown header__dropdown--notification">
+                <div class="header__notification-head">123</div>
+              </div>
             </div>
           </div>
           <div class="header__lang">
@@ -555,6 +598,7 @@
             </div>
           </div>
         </div>
+        <div class="footer__copyright">© 2024 RIWATEX.COM</div>
       </footer>
     </div>
     <script src="js/vendor.min.js"></script>
