@@ -104,33 +104,97 @@
                 <use xlink:href="img/sprites/sprite.svg#search"></use>
               </svg>
               <div class="header__dropdown header__dropdown--search">
-                <div class="header__searc-head"> 
-                  <input class="header__search-input" type="text" placeholder="Поиск...">
+                <div class="header__search-head"> 
+                  <input class="header__search-input js-headerSearch" type="text" placeholder="Поиск...">
                 </div>
-                <div class="header__search-resoult"> 
-                  <div class="header__search-tabs"> 
-                    <div class="header__search-tab">Популярные запросы </div>
+                <div class="header__search-body"> 
+                  <div class="header__search-inner show js-tabWrapper js-searchRecom">
+                    <div class="header__search-tabs"> 
+                      <div class="header__search-tab js-tabItem show" data-tab="1">Популярные запросы </div>
+                      <div class="header__search-tab js-tabItem" data-tab="2">Ещё запросы </div>
+                    </div>
+                    <ul class="header__search-list header__search-list--recom show js-tabContent" data-tab="1">
+                            <li class="header__search-item"><a class="header__search-link" href="#">
+                                <div class="header__search-number">1.</div>
+                                <div class="header__search-name"> 
+                                  <p>BTC-USDT</p><span>Perpetual</span>
+                                </div>
+                                <div class="header__search-value">44 099.22</div>
+                                <div class="header__search-change red">-0.44%</div>
+                                <div class="header__search-favourite"></div></a></li>
+                            <li class="header__search-item"><a class="header__search-link" href="#">
+                                <div class="header__search-number">2.</div>
+                                <div class="header__search-name"> 
+                                  <p>BTC-USDT</p><span>Perpetual</span>
+                                </div>
+                                <div class="header__search-value">44 099.22</div>
+                                <div class="header__search-change red">-0.44%</div>
+                                <div class="header__search-favourite"></div></a></li>
+                    </ul>
+                    <ul class="header__search-list header__search-list--recom js-tabContent" data-tab="2"> 
+                            <li class="header__search-item"><a class="header__search-link" href="#">
+                                <div class="header__search-number">1.</div>
+                                <div class="header__search-name"> 
+                                  <p>BTC-USDT</p><span>Perpetual</span>
+                                </div>
+                                <div class="header__search-value">44 099.22</div>
+                                <div class="header__search-change red">-0.44%</div>
+                                <div class="header__search-favourite"></div></a></li>
+                    </ul>
                   </div>
-                  <ul class="header__search-list"> 
-                    <li class="header__search-item">
-                      <div class="header__search-number">1.</div>
-                      <div class="header__search-name"> 
-                        <p>BTC-USDT</p><span>Perpetual</span>
-                      </div>
-                      <div class="header__search-value">44 099.22</div>
-                      <div class="header__search-change red">-0.44%</div>
-                      <div class="header__search-favourite"> </div>
-                    </li>
-                    <li class="header__search-item">
-                      <div class="header__search-number">2.</div>
-                      <div class="header__search-name"> 
-                        <p>BTC-USDT</p><span>Perpetual</span>
-                      </div>
-                      <div class="header__search-value">44 099.22</div>
-                      <div class="header__search-change green">+0.44%</div>
-                      <div class="header__search-favourite"> </div>
-                    </li>
-                  </ul>
+                  <div class="header__search-inner js-searchEmpty">
+                    <div class="header__search-empty"> <img src="img/icons/no-data.png" alt="Нет данных"><span>Нет данных</span></div>
+                  </div>
+                  <div class="header__search-inner js-searchResult">
+                    <div class="header__search-title">Торговля</div>
+                    <ul class="header__search-list header__search-list--recom show js-tabContent">
+                            <li class="header__search-item"><a class="header__search-link" href="#">
+                                <div class="header__search-number">1.</div>
+                                <div class="header__search-name"> 
+                                  <p>BTC-USDT</p><span>Perpetual</span>
+                                </div>
+                                <div class="header__search-value">44 099.22</div>
+                                <div class="header__search-change red">-0.44%</div>
+                                <div class="header__search-favourite"></div></a></li>
+                            <li class="header__search-item"><a class="header__search-link" href="#">
+                                <div class="header__search-number">2.</div>
+                                <div class="header__search-name"> 
+                                  <p>BTC-USDT</p><span>Perpetual</span>
+                                </div>
+                                <div class="header__search-value">44 099.22</div>
+                                <div class="header__search-change red">-0.44%</div>
+                                <div class="header__search-favourite"></div></a></li>
+                            <li class="header__search-item"><a class="header__search-link" href="#">
+                                <div class="header__search-number">3.</div>
+                                <div class="header__search-name"> 
+                                  <p>BTC-USDT</p><span>Perpetual</span>
+                                </div>
+                                <div class="header__search-value">44 099.22</div>
+                                <div class="header__search-change red">-0.44%</div>
+                                <div class="header__search-favourite"></div></a></li>
+                    </ul>
+                    <div class="header__search-title">Информация</div>
+                    <ul class="header__search-list">
+                      <li class="header__search-item header__search-item--info"><a class="header__search-link" href="#">
+                          <div class="header__search-img">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#btc"></use>
+                            </svg>
+                          </div>
+                          <div class="header__search-name"> 
+                            <p>Bitcoin | BTC</p><span>Узнай больше о криптовалюте</span>
+                          </div></a></li>
+                      <li class="header__search-item header__search-item--info"><a class="header__search-link" href="#">
+                          <div class="header__search-img">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#btc"></use>
+                            </svg>
+                          </div>
+                          <div class="header__search-name"> 
+                            <p>Bitcoin | BTC</p><span>Узнай больше о криптовалюте</span>
+                          </div></a></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -181,11 +245,11 @@
                 <div class="header__notification-head">123</div>
               </div>
             </div>
-          </div>
-          <div class="header__lang">
-            <svg>
-              <use xlink:href="img/sprites/sprite.svg#lang"></use>
-            </svg>
+            <div class="header__lang">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#lang"></use>
+              </svg>
+            </div>
           </div>
           <div class="header__burger"> 
             <svg>
@@ -208,7 +272,7 @@
           <div class="container"> 
             <div class="bonus-inner">
               <div class="bonus-header">
-                        <h3 class="section-title">Получите бонус 1000$!</h3><a class="link" href="#" target="_self">Все Бонусы</a>
+                        <h3 class="section-title">Получите бонус 1550$!</h3><a class="link" href="#" target="_self">Все Бонусы</a>
               </div>
               <ul class="bonus-list">
                 <li class="bonus__img"> <img src="img/bonus/box.svg" alt="Бонус"></li>
@@ -228,6 +292,23 @@
                 </li>
               </ul>
             </div>
+          </div>
+        </section>
+        <section class="notices"> 
+          <div class="container container--flex">
+            <div class="notices__icon"> 
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#volume"></use>
+              </svg>
+            </div>
+            <div class="notices__slider swiper-container js-noticesSlider">
+              <ul class="notices__list swiper-wrapper">
+                <li class="notices__item swiper-slide"> <a class="notices__text" href="#">MEXC поддержит обновление основной сети NULS (NULS)</a></li>
+                <li class="notices__item swiper-slide"> <a class="notices__text" href="#">Фьючерсы MEXC Копи-трейдинг поддерживает фьючерсы SUSHI USDT-M</a></li>
+                <li class="notices__item swiper-slide"> <a class="notices__text" href="#">Результаты голосования на Kickstarter и листинг -  Intelligent (AITRAN)</a></li>
+                <li class="notices__item swiper-slide"> <a class="notices__text" href="#">31-й сезон Таблицы лидеров фьючерсов: Займите первые места в основных рейтингах и поборитесь за еженедельный бонус в размере 75 000 USDT. Бонус распределяется ежедневно (ежедневное фьючерсное событие)</a></li>
+              </ul>
+            </div><a class="link" href="#" target="_self">Подробнее</a>
           </div>
         </section>
         <section class="advertising"> 
@@ -251,7 +332,7 @@
         </section>
         <section class="popular"> 
           <div class="container"> 
-                    <h3 class="section-title">Популярные криптовалюты</h3>
+                    <h3 class="section-title">Популярные криптовалюты</h3><a class="link popular__link" href="#" target="_self">Подробнее</a>
             <div class="popular-inner">
               <div class="popular-tabs js-tabWrapper"> 
                 <div class="popular__nav" role="tablist">
@@ -440,7 +521,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div><a class="link__btn popular__btn link__btn--regular" href="#" target="_self">Торговать</a>
           </div>
         </section>
         <section class="community">
@@ -495,7 +576,8 @@
                         <h3 class="section-title">Начните свой путь в мире криптовалют</h3>
                 <p class="start__text">Зарегистрируйтесь на RIWATEX сейчас и торгуйте более чем 100 деривативами на криптовалюты с плечом до х155</p><a class="link__btn link__btn--center" href="#" target="_self">Начните работу с RIWATEX</a>
               </div>
-              <div class="start__img"> <img src="img/start/start.svg" alt="Путь в мире криптовалют"></div>
+              <div class="start__img"> <img src="img/start/start.svg" alt="Путь в мире криптовалют"><a class="link__btn start__btn" href="#" target="_self">Начните работу с RIWATEX</a>
+              </div>
             </div>
             <div class="start__disclaimer">Торговля на&nbsp;маржине, фьючерсами и&nbsp;возможность получения наград подчинены определенным географическим ограничениям и&nbsp;критериям доступности. Ставки на&nbsp;вознаграждение могут изменяться, и&nbsp;их&nbsp;применение зависит от&nbsp;соблюдения условий и&nbsp;положений Riwatex. Эти материалы предназначены исключительно для общей информации и&nbsp;не&nbsp;являются инвестиционным советом, рекомендацией или приглашением к&nbsp;покупке, продаже, стейкингу или удержанию любого криптоактива или участию в&nbsp;какой-либо конкретной стратегии торговли. Некоторые криптопродукты и&nbsp;рынки не&nbsp;регулируются, и&nbsp;вы&nbsp;можете не&nbsp;быть защищены государственными компенсационными и/или регулирующими схемами защиты. Непредсказуемая природа рынков криптоактивов может привести к&nbsp;потере средств. Налоги могут быть обязательными при получении дохода и/или при увеличении стоимости ваших криптоактивов, и&nbsp;вам следует получить независимый налоговый совет по&nbsp;вашему налоговому положению. Для получения дополнительной информации, ознакомьтесь с&nbsp;нашими Условиями обслуживания. Торговля фьючерсами, деривативами и&nbsp;другими инструментами с&nbsp;использованием кредитного плеча сопряжена с&nbsp;риском и&nbsp;может быть не&nbsp;подходящей для всех. Чтобы узнать больше, ознакомьтесь с&nbsp;открытием рисков Kraken.</div>
           </div>

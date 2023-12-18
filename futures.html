@@ -104,33 +104,97 @@
                 <use xlink:href="img/sprites/sprite.svg#search"></use>
               </svg>
               <div class="header__dropdown header__dropdown--search">
-                <div class="header__searc-head"> 
-                  <input class="header__search-input" type="text" placeholder="Поиск...">
+                <div class="header__search-head"> 
+                  <input class="header__search-input js-headerSearch" type="text" placeholder="Поиск...">
                 </div>
-                <div class="header__search-resoult"> 
-                  <div class="header__search-tabs"> 
-                    <div class="header__search-tab">Популярные запросы </div>
+                <div class="header__search-body"> 
+                  <div class="header__search-inner show js-tabWrapper js-searchRecom">
+                    <div class="header__search-tabs"> 
+                      <div class="header__search-tab js-tabItem show" data-tab="1">Популярные запросы </div>
+                      <div class="header__search-tab js-tabItem" data-tab="2">Ещё запросы </div>
+                    </div>
+                    <ul class="header__search-list header__search-list--recom show js-tabContent" data-tab="1">
+                            <li class="header__search-item"><a class="header__search-link" href="#">
+                                <div class="header__search-number">1.</div>
+                                <div class="header__search-name"> 
+                                  <p>BTC-USDT</p><span>Perpetual</span>
+                                </div>
+                                <div class="header__search-value">44 099.22</div>
+                                <div class="header__search-change red">-0.44%</div>
+                                <div class="header__search-favourite"></div></a></li>
+                            <li class="header__search-item"><a class="header__search-link" href="#">
+                                <div class="header__search-number">2.</div>
+                                <div class="header__search-name"> 
+                                  <p>BTC-USDT</p><span>Perpetual</span>
+                                </div>
+                                <div class="header__search-value">44 099.22</div>
+                                <div class="header__search-change red">-0.44%</div>
+                                <div class="header__search-favourite"></div></a></li>
+                    </ul>
+                    <ul class="header__search-list header__search-list--recom js-tabContent" data-tab="2"> 
+                            <li class="header__search-item"><a class="header__search-link" href="#">
+                                <div class="header__search-number">1.</div>
+                                <div class="header__search-name"> 
+                                  <p>BTC-USDT</p><span>Perpetual</span>
+                                </div>
+                                <div class="header__search-value">44 099.22</div>
+                                <div class="header__search-change red">-0.44%</div>
+                                <div class="header__search-favourite"></div></a></li>
+                    </ul>
                   </div>
-                  <ul class="header__search-list"> 
-                    <li class="header__search-item">
-                      <div class="header__search-number">1.</div>
-                      <div class="header__search-name"> 
-                        <p>BTC-USDT</p><span>Perpetual</span>
-                      </div>
-                      <div class="header__search-value">44 099.22</div>
-                      <div class="header__search-change red">-0.44%</div>
-                      <div class="header__search-favourite"> </div>
-                    </li>
-                    <li class="header__search-item">
-                      <div class="header__search-number">2.</div>
-                      <div class="header__search-name"> 
-                        <p>BTC-USDT</p><span>Perpetual</span>
-                      </div>
-                      <div class="header__search-value">44 099.22</div>
-                      <div class="header__search-change green">+0.44%</div>
-                      <div class="header__search-favourite"> </div>
-                    </li>
-                  </ul>
+                  <div class="header__search-inner js-searchEmpty">
+                    <div class="header__search-empty"> <img src="img/icons/no-data.png" alt="Нет данных"><span>Нет данных</span></div>
+                  </div>
+                  <div class="header__search-inner js-searchResult">
+                    <div class="header__search-title">Торговля</div>
+                    <ul class="header__search-list header__search-list--recom show js-tabContent">
+                            <li class="header__search-item"><a class="header__search-link" href="#">
+                                <div class="header__search-number">1.</div>
+                                <div class="header__search-name"> 
+                                  <p>BTC-USDT</p><span>Perpetual</span>
+                                </div>
+                                <div class="header__search-value">44 099.22</div>
+                                <div class="header__search-change red">-0.44%</div>
+                                <div class="header__search-favourite"></div></a></li>
+                            <li class="header__search-item"><a class="header__search-link" href="#">
+                                <div class="header__search-number">2.</div>
+                                <div class="header__search-name"> 
+                                  <p>BTC-USDT</p><span>Perpetual</span>
+                                </div>
+                                <div class="header__search-value">44 099.22</div>
+                                <div class="header__search-change red">-0.44%</div>
+                                <div class="header__search-favourite"></div></a></li>
+                            <li class="header__search-item"><a class="header__search-link" href="#">
+                                <div class="header__search-number">3.</div>
+                                <div class="header__search-name"> 
+                                  <p>BTC-USDT</p><span>Perpetual</span>
+                                </div>
+                                <div class="header__search-value">44 099.22</div>
+                                <div class="header__search-change red">-0.44%</div>
+                                <div class="header__search-favourite"></div></a></li>
+                    </ul>
+                    <div class="header__search-title">Информация</div>
+                    <ul class="header__search-list">
+                      <li class="header__search-item header__search-item--info"><a class="header__search-link" href="#">
+                          <div class="header__search-img">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#btc"></use>
+                            </svg>
+                          </div>
+                          <div class="header__search-name"> 
+                            <p>Bitcoin | BTC</p><span>Узнай больше о криптовалюте</span>
+                          </div></a></li>
+                      <li class="header__search-item header__search-item--info"><a class="header__search-link" href="#">
+                          <div class="header__search-img">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#btc"></use>
+                            </svg>
+                          </div>
+                          <div class="header__search-name"> 
+                            <p>Bitcoin | BTC</p><span>Узнай больше о криптовалюте</span>
+                          </div></a></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -181,11 +245,11 @@
                 <div class="header__notification-head">123</div>
               </div>
             </div>
-          </div>
-          <div class="header__lang">
-            <svg>
-              <use xlink:href="img/sprites/sprite.svg#lang"></use>
-            </svg>
+            <div class="header__lang">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#lang"></use>
+              </svg>
+            </div>
           </div>
           <div class="header__burger"> 
             <svg>
