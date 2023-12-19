@@ -222,7 +222,7 @@
                 </div>
               </div>
             </div>
-            <div class="header__user dropdown">
+            <div class="header__user dropdown js-headerUser"> 
               <svg>
                 <use xlink:href="img/sprites/sprite.svg#user"></use>
               </svg>
@@ -240,9 +240,82 @@
             <div class="header__notification dropdown">
               <svg>
                 <use xlink:href="img/sprites/sprite.svg#notification"></use>
-              </svg><span>9+</span>
-              <div class="header__dropdown header__dropdown--notification">
-                <div class="header__notification-head">123</div>
+              </svg><span class="count">9+</span>
+              <div class="header__dropdown header__dropdown--notification js-tabWrapper"> 
+                <div class="header__notification-head"> 
+                  <div class="header__notification-count">
+                    999<span>новых уведомлений</span></div>
+                  <button class="header__notification-btn" type="button">Прочитать все</button><a class="link link--bold" href="#" target="_self">Посмотреть все</a>
+                </div>
+                <ul class="header__notification-tabs">
+                  <li class="header__notification-tab new show js-tabItem" data-tab="all">Все уведомления</li>
+                  <li class="header__notification-tab new js-tabItem" data-tab="system">Системные</li>
+                  <li class="header__notification-tab js-tabItem" data-tab="move">Ввод/вывод</li>
+                </ul>
+                <div class="header__notification-body">
+                  <ul class="header__notification-list js-tabContent show" data-tab="all"> 
+                          <li class="header__notification-item new"><a class="header__notification-link" href="#">
+                              <div class="header__notification-name">Депозит USDT</div>
+                              <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                              <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                          <li class="header__notification-item new"><a class="header__notification-link" href="#">
+                              <div class="header__notification-name">Депозит USDT</div>
+                              <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                              <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                          <li class="header__notification-item"><a class="header__notification-link" href="#">
+                              <div class="header__notification-name">Депозит USDT</div>
+                              <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                              <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                          <li class="header__notification-item"><a class="header__notification-link" href="#">
+                              <div class="header__notification-name">Депозит USDT</div>
+                              <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                              <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                          <li class="header__notification-item"><a class="header__notification-link" href="#">
+                              <div class="header__notification-name">Депозит USDT</div>
+                              <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                              <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                          <li class="header__notification-item"><a class="header__notification-link" href="#">
+                              <div class="header__notification-name">Депозит USDT</div>
+                              <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                              <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                          <li class="header__notification-item"><a class="header__notification-link" href="#">
+                              <div class="header__notification-name">Депозит USDT</div>
+                              <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                              <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                          <li class="header__notification-item"><a class="header__notification-link" href="#">
+                              <div class="header__notification-name">Депозит USDT</div>
+                              <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                              <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                  </ul>
+                  <ul class="header__notification-list js-tabContent" data-tab="system"> 
+                          <li class="header__notification-item"><a class="header__notification-link" href="#">
+                              <div class="header__notification-name">Депозит USDT</div>
+                              <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                              <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                          <li class="header__notification-item"><a class="header__notification-link" href="#">
+                              <div class="header__notification-name">Депозит USDT</div>
+                              <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                              <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                  </ul>
+                  <ul class="header__notification-list js-tabContent" data-tab="move"> 
+                          <li class="header__notification-item"><a class="header__notification-link" href="#">
+                              <div class="header__notification-name">Депозит USDT</div>
+                              <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                              <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                          <li class="header__notification-item"><a class="header__notification-link" href="#">
+                              <div class="header__notification-name">Депозит USDT</div>
+                              <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                              <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                          <li class="header__notification-item"><a class="header__notification-link" href="#">
+                              <div class="header__notification-name">Депозит USDT</div>
+                              <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                              <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                          <li class="header__notification-item"><a class="header__notification-link" href="#">
+                              <div class="header__notification-name">Депозит USDT</div>
+                              <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                              <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                  </ul>
+                </div>
               </div>
             </div>
             <div class="header__lang">
@@ -251,10 +324,73 @@
               </svg>
             </div>
           </div>
-          <div class="header__burger"> 
-            <svg>
-              <use xlink:href="img/sprites/sprite.svg#burger"></use>
-            </svg>
+          <div class="header__burger">
+            <div class="header__burger-btn js-burgerBtn">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#burger"></use>
+              </svg>
+            </div>
+            <div class="header__menu js-burgerMenu">
+              <div class="header__menu-inner"> 
+                <div class="header__menu-head"> 
+                  <button class="header__menu-close js-menuClose" type="button"></button>
+                </div>
+                <div class="header__menu-body"> 
+                  <ul class="header__menu-links"> 
+                    <li class="header__menu-link header__menu-link--mobile"><a href="#">Уведомления</a></li>
+                    <li class="header__menu-link"><a href="#">Рынок</a></li>
+                    <li class="header__menu-link header__menu-link--dropdown js-menuDropdown"> <span>Купить крипто</span>
+                      <div class="header__menu-dropdown"> <a class="header__menu-link" href="№">Дебетовая/кредитная карта</a><a class="header__menu-link" href="№">Международный банковский перевод</a><a class="header__menu-link" href="№">Быстрая покупка/продажа</a><a class="header__menu-link" href="№">P2P-торговля</a><a class="header__menu-link" href="№">MasterCard MEXC</a></div>
+                    </li>
+                    <li class="header__menu-link header__menu-link--dropdown js-menuDropdown"> <span>Спот</span>
+                      <div class="header__menu-dropdown"> <a class="header__menu-link" href="№">Спотовая торговля</a><a class="header__menu-link" href="№">Купить RWTX</a></div>
+                    </li>
+                    <li class="header__menu-link header__menu-link--dropdown js-menuDropdown"> <span class="hot">Фьючерсы</span>
+                      <div class="header__menu-dropdown"> <a class="header__menu-link" href="№">Обзор фьючерсов</a><a class="header__menu-link" href="№">Бессрочные фьючерсы</a><a class="header__menu-link" href="№">Копи-трейдинг</a><a class="header__menu-link" href="№">Демо-трейдинг</a><a class="header__menu-link" href="№">Фьючерсные события</a></div>
+                    </li>
+                    <li class="header__menu-link"><a href="#">Обучение</a></li>
+                    <li class="header__menu-link header__menu-link--mobile header__menu-link--dropdown js-menuDropdown"> <span>Русский</span>
+                      <div class="header__menu-dropdown"> 
+                        <div class="header__menu-link">Русский</div>
+                        <div class="header__menu-link">Английкий</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="header__menu js-menuUser">
+              <div class="header__menu-inner"> 
+                <div class="header__menu-head"> 
+                  <button class="header__menu-close js-menuUserClose" type="button"></button>
+                </div>
+                <div class="header__menu-body"> 
+                  <div class="header__user-head header__user-head--menu"> 
+                    <div class="header__user-mail">ck***1@gmail.com</div>
+                    <div class="header__user-wrap js-copyWrap">
+                      <div class="header__user-id">ID: <span class="js-copyText">5563321</span></div>
+                      <div class="header__user-copy js-copyBtn"></div>
+                    </div>
+                  </div>
+                  <ul class="header__menu-links"> 
+                    <li class="header__menu-link header__menu-link--dropdown js-menuDropdown"> <span>Кошелек</span>
+                      <div class="header__menu-dropdown"> <a class="header__menu-link" href="№">Спотовый счет</a><a class="header__menu-link" href="№">Фьючерсный счет</a><a class="header__menu-link" href="№">Фиатный счет</a><a class="header__menu-link" href="№">Копи-трейдинг</a><a class="header__menu-link" href="№">История транзакций</a></div>
+                    </li>
+                    <li class="header__menu-link header__menu-link--dropdown js-menuDropdown"> <span>Ордера</span>
+                      <div class="header__menu-dropdown"> <a class="header__menu-link" href="№">Спотовые ордера</a><a class="header__menu-link" href="№">Фьючерсные ордера</a><a class="header__menu-link" href="№">История транзакций</a></div>
+                    </li>
+                    <li class="header__menu-link"><a href="#">Личный кабинет</a></li>
+                    <li class="header__menu-link"><a href="#">Безопасность</a></li>
+                    <li class="header__menu-link"><a href="#">Верификация</a></li>
+                    <li class="header__menu-link"><a href="#">Реферальная программа</a></li>
+                    <li class="header__menu-link"><a href="#">Торговые комисии</a></li>
+                    <li class="header__menu-link">
+                      <button type="button">Выйти</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </header>
