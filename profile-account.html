@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Личный кабинет</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="styles/main.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header"> 
+        <div class="header-inner"> <a class="header__logo" href="/"><img src="img/header/logo.svg" alt="Riwatex"></a>
+          <nav class="header__nav">
+            <ul class="header__links"> 
+              <li class="header__link"><a href="#">Рынок</a></li>
+              <li class="header__link header__link--dropdown dropdown">Купить крипто
+                <ul class="header__dropdown">
+                  <li class="header__dropdown-item"> <a class="header__dropdown-card" href="#">
+                      <div class="header__dropdown-img">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#card"></use>
+                        </svg>
+                      </div>
+                      <div class="header__dropdown-text">
+                        <h4>Банковский перевод P2P</h4>
+                        <p>Купить криптовалюту с помощью карты</p>
+                      </div></a></li>
+                </ul>
+              </li>
+              <li class="header__link header__link--dropdown dropdown">Спот
+                <ul class="header__dropdown">
+                  <li class="header__dropdown-item"> <a class="header__dropdown-card" href="#">
+                      <div class="header__dropdown-img">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#spot"></use>
+                        </svg>
+                      </div>
+                      <div class="header__dropdown-text">
+                        <h4>Спотовая торговля</h4>
+                        <p>Самые популярные криптовалюты на RIWATEX</p>
+                      </div></a></li>
+                  <li class="header__dropdown-item"> <a class="header__dropdown-card" href="#">
+                      <div class="header__dropdown-img">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#rwtx"></use>
+                        </svg>
+                      </div>
+                      <div class="header__dropdown-text">
+                        <h4>Купить RWTX</h4>
+                        <p>Торгуй токеном RWTX и получай бонусы</p>
+                      </div></a></li>
+                </ul>
+              </li>
+              <li class="header__link header__link--dropdown header__link--hot dropdown">Фьючерсы
+                <ul class="header__dropdown">
+                  <li class="header__dropdown-item"> <a class="header__dropdown-card" href="#">
+                      <div class="header__dropdown-img">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#futures"></use>
+                        </svg>
+                      </div>
+                      <div class="header__dropdown-text">
+                        <h4>Обзор фьючерсов</h4>
+                        <p>Обзор рынка фьючерсов на популярные криптовалюты</p>
+                      </div></a></li>
+                  <li class="header__dropdown-item"> <a class="header__dropdown-card" href="#">
+                      <div class="header__dropdown-img">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#futures2"></use>
+                        </svg>
+                      </div>
+                      <div class="header__dropdown-text">
+                        <h4>Бессрочные фьючерсы USDT-M</h4>
+                        <p>Бессрочные фьючерсы с расчетом в USDT</p>
+                      </div></a></li>
+                </ul>
+              </li>
+              <li class="header__link"><a href="#">Обучение</a></li>
+            </ul>
+          </nav>
+          <div class="header__right">
+            <div class="header__search dropdown">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#search"></use>
+              </svg>
+              <div class="header__dropdown header__dropdown--search">
+                <div class="header__search-head"> 
+                  <input class="header__search-input js-headerSearch" type="text" placeholder="Поиск...">
+                </div>
+                <div class="header__search-body"> 
+                  <div class="header__search-inner show js-tabWrapper js-searchRecom">
+                    <div class="header__search-tabs"> 
+                      <div class="header__search-tab js-tabItem show" data-tab="1">Популярные запросы </div>
+                      <div class="header__search-tab js-tabItem" data-tab="2">Ещё запросы </div>
+                    </div>
+                    <ul class="header__search-list header__search-list--recom show js-tabContent" data-tab="1">
+                                  <li class="header__search-item"><a class="header__search-link" href="#">
+                                      <div class="header__search-number">1.</div>
+                                      <div class="header__search-name"> 
+                                        <p>BTC-USDT</p><span>Perpetual</span>
+                                      </div>
+                                      <div class="header__search-value">44 099.22</div>
+                                      <div class="header__search-change red">-0.44%</div>
+                                      <div class="header__search-favourite"></div></a></li>
+                                  <li class="header__search-item"><a class="header__search-link" href="#">
+                                      <div class="header__search-number">2.</div>
+                                      <div class="header__search-name"> 
+                                        <p>BTC-USDT</p><span>Perpetual</span>
+                                      </div>
+                                      <div class="header__search-value">44 099.22</div>
+                                      <div class="header__search-change red">-0.44%</div>
+                                      <div class="header__search-favourite"></div></a></li>
+                    </ul>
+                    <ul class="header__search-list header__search-list--recom js-tabContent" data-tab="2"> 
+                                  <li class="header__search-item"><a class="header__search-link" href="#">
+                                      <div class="header__search-number">1.</div>
+                                      <div class="header__search-name"> 
+                                        <p>BTC-USDT</p><span>Perpetual</span>
+                                      </div>
+                                      <div class="header__search-value">44 099.22</div>
+                                      <div class="header__search-change red">-0.44%</div>
+                                      <div class="header__search-favourite"></div></a></li>
+                    </ul>
+                  </div>
+                  <div class="header__search-inner js-searchEmpty">
+                    <div class="header__search-empty"> <img src="img/icons/no-data.png" alt="Нет данных"><span>Нет данных</span></div>
+                  </div>
+                  <div class="header__search-inner js-searchResult">
+                    <div class="header__search-title">Торговля</div>
+                    <ul class="header__search-list header__search-list--recom show js-tabContent">
+                                  <li class="header__search-item"><a class="header__search-link" href="#">
+                                      <div class="header__search-number">1.</div>
+                                      <div class="header__search-name"> 
+                                        <p>BTC-USDT</p><span>Perpetual</span>
+                                      </div>
+                                      <div class="header__search-value">44 099.22</div>
+                                      <div class="header__search-change red">-0.44%</div>
+                                      <div class="header__search-favourite"></div></a></li>
+                                  <li class="header__search-item"><a class="header__search-link" href="#">
+                                      <div class="header__search-number">2.</div>
+                                      <div class="header__search-name"> 
+                                        <p>BTC-USDT</p><span>Perpetual</span>
+                                      </div>
+                                      <div class="header__search-value">44 099.22</div>
+                                      <div class="header__search-change red">-0.44%</div>
+                                      <div class="header__search-favourite"></div></a></li>
+                                  <li class="header__search-item"><a class="header__search-link" href="#">
+                                      <div class="header__search-number">3.</div>
+                                      <div class="header__search-name"> 
+                                        <p>BTC-USDT</p><span>Perpetual</span>
+                                      </div>
+                                      <div class="header__search-value">44 099.22</div>
+                                      <div class="header__search-change red">-0.44%</div>
+                                      <div class="header__search-favourite"></div></a></li>
+                    </ul>
+                    <div class="header__search-title">Информация</div>
+                    <ul class="header__search-list">
+                      <li class="header__search-item header__search-item--info"><a class="header__search-link" href="#">
+                          <div class="header__search-img">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#btc"></use>
+                            </svg>
+                          </div>
+                          <div class="header__search-name"> 
+                            <p>Bitcoin | BTC</p><span>Узнай больше о криптовалюте</span>
+                          </div></a></li>
+                      <li class="header__search-item header__search-item--info"><a class="header__search-link" href="#">
+                          <div class="header__search-img">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#btc"></use>
+                            </svg>
+                          </div>
+                          <div class="header__search-name"> 
+                            <p>Bitcoin | BTC</p><span>Узнай больше о криптовалюте</span>
+                          </div></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header__right-links">
+              <div class="header__link dropdown">Кошелек
+                <div class="header__dropdown header__dropdown--wallet">
+                  <div class="header__balance js-hideWrapper">
+                    <div class="header__balance-head"> 
+                      <div class="header__balance-title">Общий баланс </div>
+                      <div class="header__balance-eye js-hideNumber"></div><a class="header__balance-link" href="#">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#arrow"></use>
+                        </svg></a>
+                    </div>
+                    <div class="header__balance-crypto js-hiddenNumber">9 990 999 999.00 <span>USDT</span> </div>
+                    <div class="header__balance-fiat js-hiddenNumber">9 990 999 999.00 <span>USD</span></div>
+                  </div>
+                  <div class="header__wallet-btns"><a class="header__wallet-btn" href="#">Депозит</a><a class="header__wallet-btn header__wallet-btn--up" href="#">Вывод</a></div>
+                  <div class="header__dropdown-links"><a class="header__dropdown-link" href="#">Спотовый</a><a class="header__dropdown-link" href="#">Фьючерсный</a><a class="header__dropdown-link" href="#">История транзакций</a></div>
+                </div>
+              </div>
+              <div class="header__link dropdown">Ордера
+                <div class="header__dropdown header__dropdown--orders">
+                  <div class="header__dropdown-links"><a class="header__dropdown-link" href="#">Спотовый</a><a class="header__dropdown-link" href="#">Фьючерсный</a><a class="header__dropdown-link" href="#">История ранзакций</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="header__user dropdown js-headerUser"> 
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#user"></use>
+              </svg>
+              <div class="header__dropdown header__dropdown--user">
+                <div class="header__user-head"> 
+                  <div class="header__user-mail">ck***1@gmail.com</div>
+                  <div class="header__user-wrap js-copyWrap">
+                    <div class="header__user-id">ID: <span class="js-copyText">5563321</span></div>
+                    <div class="header__user-copy js-copyBtn"></div>
+                  </div>
+                </div>
+                <div class="header__dropdown-links"><a class="header__dropdown-link" href="#">Личный кабинет</a><a class="header__dropdown-link" href="#">Верификация</a><a class="header__dropdown-link" href="#">Безопасность</a><a class="header__dropdown-link" href="#">Настройки</a><a class="header__dropdown-link" href="#">Реферальная программа</a><a class="header__dropdown-link" href="#">Выйти</a></div>
+              </div>
+            </div>
+            <div class="header__notification dropdown">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#notification"></use>
+              </svg><span class="count">9+</span>
+              <div class="header__dropdown header__dropdown--notification js-tabWrapper"> 
+                <div class="header__notification-head"> 
+                  <div class="header__notification-count">
+                    999<span>новых уведомлений</span></div>
+                  <button class="header__notification-btn" type="button">Прочитать все</button><a class="link link--bold" href="#" target="_self">Посмотреть все</a>
+                </div>
+                <ul class="header__notification-tabs">
+                  <li class="header__notification-tab new show js-tabItem" data-tab="all">Все уведомления</li>
+                  <li class="header__notification-tab new js-tabItem" data-tab="system">Системные</li>
+                  <li class="header__notification-tab js-tabItem" data-tab="move">Ввод/вывод</li>
+                </ul>
+                <div class="header__notification-body">
+                  <ul class="header__notification-list js-tabContent show" data-tab="all"> 
+                                <li class="header__notification-item new"><a class="header__notification-link" href="#">
+                                    <div class="header__notification-name">Депозит USDT</div>
+                                    <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                                    <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                                <li class="header__notification-item new"><a class="header__notification-link" href="#">
+                                    <div class="header__notification-name">Депозит USDT</div>
+                                    <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                                    <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                                <li class="header__notification-item"><a class="header__notification-link" href="#">
+                                    <div class="header__notification-name">Депозит USDT</div>
+                                    <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                                    <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                                <li class="header__notification-item"><a class="header__notification-link" href="#">
+                                    <div class="header__notification-name">Депозит USDT</div>
+                                    <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                                    <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                                <li class="header__notification-item"><a class="header__notification-link" href="#">
+                                    <div class="header__notification-name">Депозит USDT</div>
+                                    <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                                    <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                                <li class="header__notification-item"><a class="header__notification-link" href="#">
+                                    <div class="header__notification-name">Депозит USDT</div>
+                                    <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                                    <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                                <li class="header__notification-item"><a class="header__notification-link" href="#">
+                                    <div class="header__notification-name">Депозит USDT</div>
+                                    <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                                    <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                                <li class="header__notification-item"><a class="header__notification-link" href="#">
+                                    <div class="header__notification-name">Депозит USDT</div>
+                                    <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                                    <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                  </ul>
+                  <ul class="header__notification-list js-tabContent" data-tab="system"> 
+                                <li class="header__notification-item"><a class="header__notification-link" href="#">
+                                    <div class="header__notification-name">Депозит USDT</div>
+                                    <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                                    <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                                <li class="header__notification-item"><a class="header__notification-link" href="#">
+                                    <div class="header__notification-name">Депозит USDT</div>
+                                    <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                                    <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                  </ul>
+                  <ul class="header__notification-list js-tabContent" data-tab="move"> 
+                                <li class="header__notification-item"><a class="header__notification-link" href="#">
+                                    <div class="header__notification-name">Депозит USDT</div>
+                                    <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                                    <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                                <li class="header__notification-item"><a class="header__notification-link" href="#">
+                                    <div class="header__notification-name">Депозит USDT</div>
+                                    <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                                    <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                                <li class="header__notification-item"><a class="header__notification-link" href="#">
+                                    <div class="header__notification-name">Депозит USDT</div>
+                                    <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                                    <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                                <li class="header__notification-item"><a class="header__notification-link" href="#">
+                                    <div class="header__notification-name">Депозит USDT</div>
+                                    <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                                    <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="header__lang">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#lang"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="header__burger">
+            <div class="header__burger-btn js-burgerBtn">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#burger"></use>
+              </svg>
+            </div>
+            <div class="header__menu js-burgerMenu">
+              <div class="header__menu-inner"> 
+                <div class="header__menu-head"> 
+                  <button class="header__menu-close js-menuClose" type="button"></button>
+                </div>
+                <div class="header__menu-body"> 
+                  <ul class="header__menu-links"> 
+                    <li class="header__menu-link header__menu-link--mobile"><a href="#">Уведомления</a></li>
+                    <li class="header__menu-link"><a href="#">Рынок</a></li>
+                    <li class="header__menu-link header__menu-link--dropdown js-menuDropdown"> <span>Купить крипто</span>
+                      <div class="header__menu-dropdown"> <a class="header__menu-link" href="№">Дебетовая/кредитная карта</a><a class="header__menu-link" href="№">Международный банковский перевод</a><a class="header__menu-link" href="№">Быстрая покупка/продажа</a><a class="header__menu-link" href="№">P2P-торговля</a><a class="header__menu-link" href="№">MasterCard MEXC</a></div>
+                    </li>
+                    <li class="header__menu-link header__menu-link--dropdown js-menuDropdown"> <span>Спот</span>
+                      <div class="header__menu-dropdown"> <a class="header__menu-link" href="№">Спотовая торговля</a><a class="header__menu-link" href="№">Купить RWTX</a></div>
+                    </li>
+                    <li class="header__menu-link header__menu-link--dropdown js-menuDropdown"> <span class="hot">Фьючерсы</span>
+                      <div class="header__menu-dropdown"> <a class="header__menu-link" href="№">Обзор фьючерсов</a><a class="header__menu-link" href="№">Бессрочные фьючерсы</a><a class="header__menu-link" href="№">Копи-трейдинг</a><a class="header__menu-link" href="№">Демо-трейдинг</a><a class="header__menu-link" href="№">Фьючерсные события</a></div>
+                    </li>
+                    <li class="header__menu-link"><a href="#">Обучение</a></li>
+                    <li class="header__menu-link header__menu-link--mobile header__menu-link--dropdown js-menuDropdown"> <span>Русский</span>
+                      <div class="header__menu-dropdown"> 
+                        <div class="header__menu-link">Русский</div>
+                        <div class="header__menu-link">Английкий</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="header__menu js-menuUser">
+              <div class="header__menu-inner"> 
+                <div class="header__menu-head"> 
+                  <button class="header__menu-close js-menuUserClose" type="button"></button>
+                </div>
+                <div class="header__menu-body"> 
+                  <div class="header__user-head header__user-head--menu"> 
+                    <div class="header__user-mail">ck***1@gmail.com</div>
+                    <div class="header__user-wrap js-copyWrap">
+                      <div class="header__user-id">ID: <span class="js-copyText">5563321</span></div>
+                      <div class="header__user-copy js-copyBtn"></div>
+                    </div>
+                  </div>
+                  <ul class="header__menu-links"> 
+                    <li class="header__menu-link header__menu-link--dropdown js-menuDropdown"> <span>Кошелек</span>
+                      <div class="header__menu-dropdown"> <a class="header__menu-link" href="№">Спотовый счет</a><a class="header__menu-link" href="№">Фьючерсный счет</a><a class="header__menu-link" href="№">Фиатный счет</a><a class="header__menu-link" href="№">Копи-трейдинг</a><a class="header__menu-link" href="№">История транзакций</a></div>
+                    </li>
+                    <li class="header__menu-link header__menu-link--dropdown js-menuDropdown"> <span>Ордера</span>
+                      <div class="header__menu-dropdown"> <a class="header__menu-link" href="№">Спотовые ордера</a><a class="header__menu-link" href="№">Фьючерсные ордера</a><a class="header__menu-link" href="№">История транзакций</a></div>
+                    </li>
+                    <li class="header__menu-link"><a href="#">Личный кабинет</a></li>
+                    <li class="header__menu-link"><a href="#">Безопасность</a></li>
+                    <li class="header__menu-link"><a href="#">Верификация</a></li>
+                    <li class="header__menu-link"><a href="#">Реферальная программа</a></li>
+                    <li class="header__menu-link"><a href="#">Торговые комисии</a></li>
+                    <li class="header__menu-link">
+                      <button type="button">Выйти</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main profile"> 
+        <nav class="profile-nav"> 
+          <ul class="profile-nav__links"> 
+            <li class="profile-nav__link"><a class="profile-nav__link-inner active" href="#">
+                <div class="profile-nav__link-icon" style="mask-image: url(/img/icons/profile-account.svg); -webkit-mask-image: url(/img/icons/profile-account.svg)"></div>
+                <div class="profile-nav__link-text">Личный кабинет</div></a></li>
+            <li class="profile-nav__link"><a class="profile-nav__link-inner" href="#">
+                <div class="profile-nav__link-icon" style="mask-image: url(/img/icons/profile-security.svg); -webkit-mask-image: url(/img/icons/profile-security.svg)"></div>
+                <div class="profile-nav__link-text">Безопасность</div></a></li>
+            <li class="profile-nav__link"><a class="profile-nav__link-inner" href="#">
+                <div class="profile-nav__link-icon" style="mask-image: url(/img/icons/profile-verification.svg); -webkit-mask-image: url(/img/icons/profile-verification.svg)"></div>
+                <div class="profile-nav__link-text">Проверка личности</div></a></li>
+            <li class="profile-nav__link"><a class="profile-nav__link-inner" href="#">
+                <div class="profile-nav__link-icon" style="mask-image: url(/img/icons/profile-referral.svg); -webkit-mask-image: url(/img/icons/profile-referral.svg)"></div>
+                <div class="profile-nav__link-text">Реферальная программа</div></a></li>
+            <li class="profile-nav__link"><a class="profile-nav__link-inner" href="#">
+                <div class="profile-nav__link-icon" style="mask-image: url(/img/icons/profile-commissions.svg); -webkit-mask-image: url(/img/icons/profile-commissions.svg)"></div>
+                <div class="profile-nav__link-text">Торговые комиссии</div></a></li>
+          </ul>
+        </nav>
+        <section class="profile-account"> 
+          <div class="profile-account__head">
+            <div class="profile-account__avatar"> <img src="/img/profile/user.png" alt="Ваше фото"></div>
+            <div class="profile-account__nickname"> 
+              <div class="profile-account__nickname-text">Установить псевдоним</div>
+              <button class="profile-account__nickname-btn" type="button">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#edit"></use>
+                </svg>
+              </button>
+            </div>
+            <!--.profile-account__verif Личность не подтверждена-->
+            <div class="profile-account__verif verified">Верифицирован</div>
+            <ul class="profile-account__info">
+              <li class="profile-account__item">
+                <div class="profile-account__term">Аккаунт</div>
+                <div class="profile-account__defin">asf***@yandex.ru</div>
+              </li>
+              <li class="profile-account__item">
+                <div class="profile-account__term">UID</div>
+                <div class="profile-account__defin">16936884</div>
+              </li>
+              <li class="profile-account__item">
+                <div class="profile-account__term">Время регистрации</div>
+                <time class="profile-account__defin" datetime="2023-12-11T09:43">2023-12-11 09:43:54</time>
+              </li>
+              <li class="profile-account__item"><a class="profile-account__term profile-account__term--link" href="#">Последний вход в систему</a>
+                <div class="profile-account__defin">2023-12-11 09:43:54 (5.129.58.15)</div>
+              </li>
+            </ul>
+          </div>
+          <div class="profile-account__body"> 
+            <div class="profile-account__blocks">
+              <div class="profile-account__block">
+                <h4 class="profile-account__title">Проверка личности</h4>
+                <p class="profile-account__text">Текущий лимит вывода: 30BTC за 24 ч</p>
+                <p class="profile-account__text">Завершите проверку личности, чтобы повысить уровень безопасности и лимит вывода</p>
+                <div class="profile-account__links"><a class="link link--yellow" href="#" target="_self">Базовый KYC</a><a class="profile-account__link" href="#">Перейти к расширенной верификации</a>
+                </div>
+              </div>
+              <div class="profile-account__block">
+                <div class="profile-account__block-head">
+                  <h4 class="profile-account__title profile-account__title--icon">Общий баланс</h4><a class="profile-account__link profile-account__link--desktop" href="#">Сведения об активах</a>
+                </div>
+                <div class="profile-account__balance">
+                  <p class="profile-account__balance-crypto">0 USDT </p>
+                  <p class="profile-account__balance-fiat">0.00 USD</p>
+                </div><a class="link__btn" href="#" target="_self">Депозит</a>
+              </div>
+            </div>
+            <div class="profile-account__other"><a class="profile-account__other-item" href="#"> 
+                <h4 class="profile-account__title profile-account__title--icon">Реферальная программа</h4>
+                <p class="profile-account__other-text">Приглашайте друзей для получения дополнительных комиссионных </p>
+                <div class="profile-account__other-code">https://www...Code-1zZGA</div></a><a class="profile-account__other-item" href="#"> 
+                <h4 class="profile-account__title">Обучение</h4>
+                <p class="profile-account__other-text">Узнайте все о криптовалютах. Ответы на интересующие вас вопросы.</p></a></div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer-inner">
+          <div class="footer__category js-footerOpener">О нас
+            <ul class="footer__links"> 
+              <li class="footer__link"><a href="#">О бирже MEXC</a></li>
+              <li class="footer__link"><a href="#">Пользовательским соглашением</a></li>
+              <li class="footer__link"><a href="#">Политикой конфиденциальности</a></li>
+              <li class="footer__link"><a href="#">Предупреждение о рисках</a></li>
+              <li class="footer__link"><a href="#">M-Ventures</a></li>
+              <li class="footer__link"><a href="#">MEXC Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer__category js-footerOpener">Услуги
+            <ul class="footer__links"> 
+              <li class="footer__link"><a href="#">Купить крипто</a></li>
+              <li class="footer__link"><a href="#">Скачать приложение</a></li>
+              <li class="footer__link"><a href="#">Комиссии</a></li>
+              <li class="footer__link"><a href="#">Реферальная программа</a></li>
+              <li class="footer__link"><a href="#">Партнерская программа</a></li>
+              <li class="footer__link"><a href="#">API</a></li>
+              <li class="footer__link"><a href="#">Корпоративные услуги</a></li>
+              <li class="footer__link"><a href="#">Как купить криптовалюту</a></li>
+              <li class="footer__link"><a href="#">Информация о криптовалюте</a></li>
+              <li class="footer__link"><a href="#">Цена криптовалюты</a></li>
+            </ul>
+          </div>
+          <div class="footer__category js-footerOpener">Служба поддержки
+            <ul class="footer__links"> 
+              <li class="footer__link"><a href="#">Служба поддержки</a></li>
+              <li class="footer__link"><a href="#">Справочный центр</a></li>
+              <li class="footer__link"><a href="#">Объявления</a></li>
+              <li class="footer__link"><a href="#">Обучение</a></li>
+              <li class="footer__link"><a href="#">VIP-привилегии</a></li>
+              <li class="footer__link"><a href="#">Отправить запрос</a></li>
+              <li class="footer__link"><a href="#">Предложения по улучшению</a></li>
+              <li class="footer__link"><a href="#">Сообщить об аномальных средствах</a></li>
+              <li class="footer__link"><a href="#">Судебная помощь</a></li>
+              <li class="footer__link"><a href="#">Верификация MEXC</a></li>
+              <li class="footer__link"><a href="#">Подать жалобу</a></li>
+            </ul>
+          </div>
+          <div class="footer__category js-footerOpener">Свяжитесь с нами
+            <ul class="footer__links"> 
+              <li class="footer__link"><a href="#">Деловое сотрудничество</a></li>
+              <li class="footer__link"><a href="#">Сотрудничество (Корпоративные клиенты)</a></li>
+              <li class="footer__link"><a href="#">Деловое сотрудничество (СМИ)</a></li>
+              <li class="footer__link"><a href="#">Заявка на листинг</a></li>
+              <li class="footer__link"><a href="#">Заявка на P2P-мерчанта</a></li>
+            </ul>
+          </div>
+          <div class="footer__category footer__category--socials">Сообщество
+            <div class="footer__socials"><a class="footer__social" href="#">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
+                </svg></a><a class="footer__social" href="#">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
+                </svg></a><a class="footer__social" href="#">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
+                </svg></a><a class="footer__social" href="#">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
+                </svg></a><a class="footer__social" href="#">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
+                </svg></a><a class="footer__social" href="#">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
+                </svg></a><a class="footer__social" href="#">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
+                </svg></a><a class="footer__social" href="#">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
+                </svg></a><a class="footer__social" href="#">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
+                </svg></a><a class="footer__social" href="#">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
+                </svg></a><a class="footer__social" href="#">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
+                </svg></a><a class="footer__social" href="#">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
+                </svg></a><a class="footer__social" href="#">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
+                </svg></a><a class="footer__social" href="#">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#circle-holder"></use>
+                </svg></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__copyright">© 2024 RIWATEX.COM</div>
+      </footer>
+    </div>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
