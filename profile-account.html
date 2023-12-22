@@ -203,13 +203,13 @@
                   <div class="header__balance js-hideWrapper">
                     <div class="header__balance-head"> 
                       <div class="header__balance-title">Общий баланс </div>
-                      <div class="header__balance-eye js-hideNumber"></div><a class="header__balance-link" href="#">
+                      <div class="header__balance-eye js-hideText"></div><a class="header__balance-link" href="#">
                         <svg>
                           <use xlink:href="img/sprites/sprite.svg#arrow"></use>
                         </svg></a>
                     </div>
-                    <div class="header__balance-crypto js-hiddenNumber">9 990 999 999.00 <span>USDT</span> </div>
-                    <div class="header__balance-fiat js-hiddenNumber">9 990 999 999.00 <span>USD</span></div>
+                    <div class="header__balance-crypto"><span class="js-hiddenText">9 990 999 999.00</span> <span>USDT</span> </div>
+                    <div class="header__balance-fiat"><span class="js-hiddenText">9 990 999 999.00</span> <span>USD</span></div>
                   </div>
                   <div class="header__wallet-btns"><a class="header__wallet-btn" href="#">Депозит</a><a class="header__wallet-btn header__wallet-btn--up" href="#">Вывод</a></div>
                   <div class="header__dropdown-links"><a class="header__dropdown-link" href="#">Спотовый</a><a class="header__dropdown-link" href="#">Фьючерсный</a><a class="header__dropdown-link" href="#">История транзакций</a></div>
@@ -233,7 +233,7 @@
                     <div class="header__user-copy js-copyBtn"></div>
                   </div>
                 </div>
-                <div class="header__dropdown-links"><a class="header__dropdown-link" href="#">Личный кабинет</a><a class="header__dropdown-link" href="#">Верификация</a><a class="header__dropdown-link" href="#">Безопасность</a><a class="header__dropdown-link" href="#">Настройки</a><a class="header__dropdown-link" href="#">Реферальная программа</a><a class="header__dropdown-link" href="#">Выйти</a></div>
+                <div class="header__dropdown-links"><a class="header__dropdown-link" href="profile-account.html">Личный кабинет</a><a class="header__dropdown-link" href="#">Верификация</a><a class="header__dropdown-link" href="#">Безопасность</a><a class="header__dropdown-link" href="#">Настройки</a><a class="header__dropdown-link" href="#">Реферальная программа</a><a class="header__dropdown-link" href="#">Выйти</a></div>
               </div>
             </div>
             <div class="header__notification dropdown">
@@ -378,7 +378,7 @@
                     <li class="header__menu-link header__menu-link--dropdown js-menuDropdown"> <span>Ордера</span>
                       <div class="header__menu-dropdown"> <a class="header__menu-link" href="№">Спотовые ордера</a><a class="header__menu-link" href="№">Фьючерсные ордера</a><a class="header__menu-link" href="№">История транзакций</a></div>
                     </li>
-                    <li class="header__menu-link"><a href="#">Личный кабинет</a></li>
+                    <li class="header__menu-link"><a href="profile-account.html">Личный кабинет</a></li>
                     <li class="header__menu-link"><a href="#">Безопасность</a></li>
                     <li class="header__menu-link"><a href="#">Верификация</a></li>
                     <li class="header__menu-link"><a href="#">Реферальная программа</a></li>
@@ -423,17 +423,17 @@
                   <use xlink:href="img/sprites/sprite.svg#edit"></use>
                 </svg>
               </button>
+              <!--.profile-account__verif Личность не подтверждена-->
+              <div class="profile-account__verif verified">Верифицирован</div>
             </div>
-            <!--.profile-account__verif Личность не подтверждена-->
-            <div class="profile-account__verif verified">Верифицирован</div>
             <ul class="profile-account__info">
-              <li class="profile-account__item">
+              <li class="profile-account__item js-hideWrapper">
                 <div class="profile-account__term">Аккаунт</div>
-                <div class="profile-account__defin">asf***@yandex.ru</div>
+                <div class="profile-account__defin">asf<span class="js-hiddenText">asd</span>@yandex.ru <span class="hide-eye js-hideText"></span></div>
               </li>
-              <li class="profile-account__item">
+              <li class="profile-account__item js-copyWrap">
                 <div class="profile-account__term">UID</div>
-                <div class="profile-account__defin">16936884</div>
+                <div class="profile-account__defin js-copyText">16936884<span class="copy js-copyBtn"></span></div>
               </li>
               <li class="profile-account__item">
                 <div class="profile-account__term">Время регистрации</div>
@@ -453,22 +453,44 @@
                 <div class="profile-account__links"><a class="link link--yellow" href="#" target="_self">Базовый KYC</a><a class="profile-account__link" href="#">Перейти к расширенной верификации</a>
                 </div>
               </div>
-              <div class="profile-account__block">
+              <div class="profile-account__block js-hideWrapper">
                 <div class="profile-account__block-head">
-                  <h4 class="profile-account__title profile-account__title--icon">Общий баланс</h4><a class="profile-account__link profile-account__link--desktop" href="#">Сведения об активах</a>
+                  <h4 class="profile-account__title profile-account__title--eye">Общий баланс<span class="hide-eye js-hideText"></span></h4><a class="profile-account__link profile-account__link--desktop" href="#">Сведения об активах</a>
                 </div>
                 <div class="profile-account__balance">
-                  <p class="profile-account__balance-crypto">0 USDT </p>
-                  <p class="profile-account__balance-fiat">0.00 USD</p>
+                  <div class="profile-account__balance-crypto"> <span class="js-hiddenText">0</span>
+                    <div class="profile-account__balance-select itc-select js-select"> 
+                      <button class="profile-account__balance-toggle itc-select__toggle" type="button" name="crypto" value="USDT" data-select="toggle" data-index="0">USDT </button>
+                      <div class="profile-account__balance-dropdown itc-select__dropdown">
+                        <ul class="profile-account__balance-options itc-select__options">
+                          <li class="profile-account__balance-option itc-select__option" data-select="option" data-value="USDT" data-index="0">USDT</li>
+                          <li class="profile-account__balance-option itc-select__option" data-select="option" data-value="ELF" data-index="1">ELF</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="profile-account__balance-fiat"> <span class="js-hiddenText">0.00 </span>
+                    <div class="profile-account__balance-select itc-select js-select"> 
+                      <button class="profile-account__balance-toggle itc-select__toggle" type="button" name="fiat" value="USD" data-select="toggle" data-index="0">USD </button>
+                      <div class="profile-account__balance-dropdown itc-select__dropdown">
+                        <ul class="profile-account__balance-options itc-select__options">
+                          <li class="profile-account__balance-option itc-select__option" data-select="option" data-value="USD" data-index="0">USD</li>
+                          <li class="profile-account__balance-option itc-select__option" data-select="option" data-value="RUB" data-index="1">RUB</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div><a class="link__btn" href="#" target="_self">Депозит</a>
               </div>
             </div>
-            <div class="profile-account__other"><a class="profile-account__other-item" href="#"> 
-                <h4 class="profile-account__title profile-account__title--icon">Реферальная программа</h4>
+            <div class="profile-account__other">
+              <div class="profile-account__other-item"> <a class="profile-account__title profile-account__title--gift" href="#">Реферальная программа</a>
                 <p class="profile-account__other-text">Приглашайте друзей для получения дополнительных комиссионных </p>
-                <div class="profile-account__other-code">https://www...Code-1zZGA</div></a><a class="profile-account__other-item" href="#"> 
-                <h4 class="profile-account__title">Обучение</h4>
-                <p class="profile-account__other-text">Узнайте все о криптовалютах. Ответы на интересующие вас вопросы.</p></a></div>
+                <div class="profile-account__other-code js-copyWrap"> <span class="js-copyText">https://www...Code-1zZGA</span><span class="copy js-copyBtn"></span></div>
+              </div><a class="profile-account__other-item" href="#">
+                <h4 class="profile-account__title profile-account__title--training">Обучение</h4>
+                <p class="profile-account__other-text">Узнайте все о криптовалютах. Ответы на интересующие вас вопросы.</p></a>
+            </div>
           </div>
         </section>
       </main>
