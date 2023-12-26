@@ -24,6 +24,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
     <link rel="stylesheet" href="styles/main.min.css">
+    <script src="https://static.geetest.com/v4/gt4.min.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -39,16 +40,17 @@
       <main class="main"> 
         <section class="login"> 
           <div class="container container--flex"> 
-            <div class="login-inner">
+            <div class="login-inner js-loginStart">
               <h2 class="login__title">Добро пожаловать на Riwatex</h2>
               <p class="login__subtitle">Первый вход в систему считается регистрацией</p>
               <div class="login__tab">Эл. почта</div>
-              <form class="login__content js-form" action="POST" data-tab="email">
+              <form class="login__content js-form" action="POST">
                 <div class="login__input-wrap login__input-wrap--email">
-                  <input class="login__input login__input--icon js-inputCheck" type="email" name="email" required placeholder="Эл. почта">
+                  <input class="login__input login__input--icon js-inputCheck" type="email" name="email" placeholder="Эл. почта">
                   <button class="login__input-clearing js-inputClearing" type="button"></button>
+                  <div class="login__error-text js-error">Введите корректный email</div>
                 </div>
-                <div class="login__input-wrap login__input-wrap--pass js-stepTwo">
+                <div class="login__input-wrap login__input-wrap--pass js-stepReg">
                   <input class="login__input login__input--icon js-inputCheck" type="password" name="password" autocomplete="autocomplete" placeholder="Пароль">
                   <ul class="login__hints js-passRequirements">
                     <li class="login__hint js-passMinMax">От 10 до 128 символов</li>
@@ -59,9 +61,10 @@
                   </ul>
                   <div class="login__error-text">Не менее 10 символов, содержащих прописные и строчные буквы, цифры и символы</div>
                 </div>
-                        <button class="btn js-stepOne login__btn btn--wide js-FormSubmit" type="submit" disabled>Далее</button>
-                <div class="login__code js-toggleWrap js-stepTwo">
-                  <div class="login__code-title js-toggle"><span>Реферальный код (Необязательно)  </span>
+                <div class="login__captcha" id="captcha"></div>
+                        <button class="btn js-stepStart login__btn btn--wide js-FormSubmit" type="submit">Далее</button>
+                <div class="login__referral js-toggleWrap js-stepReg">
+                  <div class="login__referral-title js-toggle"><span>Реферальный код (Необязательно)  </span>
                     <svg>
                       <use xlink:href="img/sprites/sprite.svg#triangle"></use>
                     </svg>
@@ -70,18 +73,32 @@
                     <input class="login__input" type="text" name="code" placeholder="Реферальный код (Необязательно)">
                   </div>
                 </div>
-                <div class="login__agreement js-stepTwo">
+                <div class="login__agreement js-stepReg">
                   <input class="login__input-checkbox" type="checkbox" name="agreement" id="agreement">
                   <label for="agreement">Я прочитал и согласен с <a href="#" target="_blank">Пользовательским соглашением</a> и <a href="#" target="_blank">Политикой конфиденциальности</a>.</label>
                 </div>
-                        <button class="btn js-stepTwo login__btn btn--wide js-FormSubmit" type="submit">Регистрация</button>
+                        <button class="btn js-stepReg login__btn btn--wide js-FormSubmit" type="submit">Регистрация</button>
               </form>
-              <div class="login__line"> <span>или</span></div>
-              <button class="login__google" type="button">
+              <div class="login__line js-stepStart"> <span>или</span></div>
+              <button class="login__google js-stepStart" type="button">
                 <svg>
                   <use xlink:href="img/sprites/sprite.svg#google"></use>
                 </svg><span>Войти с помощью Google</span>
               </button>
+            </div>
+            <div class="login-inner login-inner--code js-stepCode">
+              <h2 class="login__title">Код электронной почты</h2>
+              <p class="login__subtitle">Пожалуйста введите 6-ти значный код, который мы отправили на ваш адрес электронной почты <span>pi***k@yandex.ru</span></p>
+              <form class="login__code" action="POST">
+                <input class="login__code-input" data-id="0" type="tel" min="0" max="9" maxlength="1" autocomplete="off" value="">
+                <input class="login__code-input" data-id="1" type="tel" min="0" max="9" maxlength="1" autocomplete="off" value="">
+                <input class="login__code-input" data-id="2" type="tel" min="0" max="9" maxlength="1" autocomplete="off" value="">
+                <input class="login__code-input" data-id="3" type="tel" min="0" max="9" maxlength="1" autocomplete="off" value="">
+                <input class="login__code-input" data-id="4" type="tel" min="0" max="9" maxlength="1" autocomplete="off" value="">
+                <input class="login__code-input" data-id="5" type="tel" min="0" max="9" maxlength="1" autocomplete="off" value="">
+              </form>
+              <div class="login__timer"><span class="js-timerDown">60</span> s</div>
+                      <button class="btn login__btn btn--wide js-FormSubmit" type="submit">Подтвердить</button><a class="login__link" href="#">Не получили код подтверждения?</a>
             </div>
             <div class="login-banner">
               <div class="login-banner__img"><img src="img/holder.jpg" alt="Баннер"></div>
