@@ -49,8 +49,17 @@
                   <button class="login__input-clearing js-inputClearing" type="button"></button>
                   <div class="login__error-text js-error">Введите корректный email</div>
                 </div>
+                <div class="login__captcha js-firstStep" id="captcha"></div>
+                        <button class="btn js-firstStep login__btn btn--wide js-FormSubmit" type="submit">Далее</button>
+                <div class="login__line js-firstStep"> <span>или</span></div>
+                <button class="login__google js-firstStep" type="button">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#google"></use>
+                  </svg><span>Войти с помощью Google</span>
+                </button>
                 <div class="login__input-wrap login__input-wrap--pass js-stepReg">
                   <input class="login__input login__input--icon js-inputCheck" type="password" name="password" autocomplete="autocomplete" placeholder="Пароль">
+                  <button class="login__input-clearing js-inputClearing" type="button"></button>
                   <ul class="login__hints js-passRequirements">
                     <li class="login__hint js-passMinMax">От 10 до 128 символов</li>
                     <li class="login__hint js-passCapital">1 заглавная буква</li>
@@ -60,8 +69,6 @@
                   </ul>
                   <div class="login__error-text">Не менее 10 символов, содержащих прописные и строчные буквы, цифры и символы</div>
                 </div>
-                <div class="login__captcha" id="captcha"></div>
-                        <button class="btn js-stepStart login__btn btn--wide js-FormSubmit" type="submit">Далее</button>
                 <div class="login__referral js-toggleWrap js-stepReg">
                   <div class="login__referral-title js-toggle"><span>Реферальный код (Необязательно)  </span>
                     <svg>
@@ -77,13 +84,12 @@
                   <label for="agreement">Я прочитал и согласен с <a href="#" target="_blank">Пользовательским соглашением</a> и <a href="#" target="_blank">Политикой конфиденциальности</a>.</label>
                 </div>
                         <button class="btn js-stepReg login__btn btn--wide js-FormSubmit" type="submit">Регистрация</button>
+                <div class="login__input-wrap login__input-wrap--pass js-stepLogin">
+                  <input class="login__input login__input--icon js-inputCheck" type="password" name="password" autocomplete="autocomplete" placeholder="Пароль">
+                  <button class="login__input-clearing js-inputClearing" type="button"></button>
+                          <button class="btn js-stepLogin login__btn btn--wide js-FormSubmit" type="submit">Вход</button><a class="login__link" href="#">Забыли пароль?</a>
+                </div>
               </form>
-              <div class="login__line js-stepStart"> <span>или</span></div>
-              <button class="login__google js-stepStart" type="button">
-                <svg>
-                  <use xlink:href="img/sprites/sprite.svg#google"></use>
-                </svg><span>Войти с помощью Google</span>
-              </button>
             </div>
             <div class="login-inner login-inner--code js-stepCode">
               <h2 class="login__title">Код электронной почты</h2>
