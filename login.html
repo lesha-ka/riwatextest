@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>login</title>
+    <title>Вход/регистрация</title>
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -29,10 +29,367 @@
     <div class="wrapper">
       <header class="header"> 
         <div class="header-inner"> <a class="header__logo" href="/"><img src="img/header/logo.svg" alt="Riwatex"></a>
-          <div class="header__lang header__lang--solo">
-            <svg>
-              <use xlink:href="img/sprites/sprite.svg#lang"></use>
-            </svg>
+          <nav class="header__nav">
+            <ul class="header__links"> 
+              <li class="header__link"><a href="#">Рынок</a></li>
+              <li class="header__link header__link--dropdown dropdown">Купить крипто
+                <ul class="header__dropdown">
+                  <li class="header__dropdown-item"> <a class="header__dropdown-card" href="#">
+                      <div class="header__dropdown-img">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#card"></use>
+                        </svg>
+                      </div>
+                      <div class="header__dropdown-text">
+                        <h4>Банковский перевод P2P</h4>
+                        <p>Купить криптовалюту с помощью карты</p>
+                      </div></a></li>
+                </ul>
+              </li>
+              <li class="header__link header__link--dropdown dropdown">Спот
+                <ul class="header__dropdown">
+                  <li class="header__dropdown-item"> <a class="header__dropdown-card" href="#">
+                      <div class="header__dropdown-img">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#spot"></use>
+                        </svg>
+                      </div>
+                      <div class="header__dropdown-text">
+                        <h4>Спотовая торговля</h4>
+                        <p>Самые популярные криптовалюты на RIWATEX</p>
+                      </div></a></li>
+                  <li class="header__dropdown-item"> <a class="header__dropdown-card" href="#">
+                      <div class="header__dropdown-img">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#rwtx"></use>
+                        </svg>
+                      </div>
+                      <div class="header__dropdown-text">
+                        <h4>Купить RWTX</h4>
+                        <p>Торгуй токеном RWTX и получай бонусы</p>
+                      </div></a></li>
+                </ul>
+              </li>
+              <li class="header__link header__link--dropdown header__link--hot dropdown">Фьючерсы
+                <ul class="header__dropdown">
+                  <li class="header__dropdown-item"> <a class="header__dropdown-card" href="#">
+                      <div class="header__dropdown-img">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#futures"></use>
+                        </svg>
+                      </div>
+                      <div class="header__dropdown-text">
+                        <h4>Обзор фьючерсов</h4>
+                        <p>Обзор рынка фьючерсов на популярные криптовалюты</p>
+                      </div></a></li>
+                  <li class="header__dropdown-item"> <a class="header__dropdown-card" href="#">
+                      <div class="header__dropdown-img">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#futures2"></use>
+                        </svg>
+                      </div>
+                      <div class="header__dropdown-text">
+                        <h4>Бессрочные фьючерсы USDT-M</h4>
+                        <p>Бессрочные фьючерсы с расчетом в USDT</p>
+                      </div></a></li>
+                </ul>
+              </li>
+              <li class="header__link"><a href="#">Обучение</a></li>
+            </ul>
+          </nav>
+          <div class="header__right">
+            <div class="header__search dropdown">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#search"></use>
+              </svg>
+              <div class="header__dropdown header__dropdown--search">
+                <div class="header__search-head"> 
+                  <input class="header__search-input js-headerSearch" type="text" placeholder="Поиск...">
+                </div>
+                <div class="header__search-body"> 
+                  <div class="header__search-inner show js-tabWrapper js-searchRecom">
+                    <div class="header__search-tabs"> 
+                      <div class="header__search-tab js-tabItem show" data-tab="1">Популярные запросы </div>
+                      <div class="header__search-tab js-tabItem" data-tab="2">Ещё запросы </div>
+                    </div>
+                    <ul class="header__search-list header__search-list--recom show js-tabContent" data-tab="1">
+                                  <li class="header__search-item"><a class="header__search-link" href="#">
+                                      <div class="header__search-number">1.</div>
+                                      <div class="header__search-name"> 
+                                        <p>BTC-USDT</p><span>Perpetual</span>
+                                      </div>
+                                      <div class="header__search-value">44 099.22</div>
+                                      <div class="header__search-change red">-0.44%</div>
+                                      <div class="header__search-favourite"></div></a></li>
+                                  <li class="header__search-item"><a class="header__search-link" href="#">
+                                      <div class="header__search-number">2.</div>
+                                      <div class="header__search-name"> 
+                                        <p>BTC-USDT</p><span>Perpetual</span>
+                                      </div>
+                                      <div class="header__search-value">44 099.22</div>
+                                      <div class="header__search-change red">-0.44%</div>
+                                      <div class="header__search-favourite"></div></a></li>
+                    </ul>
+                    <ul class="header__search-list header__search-list--recom js-tabContent" data-tab="2"> 
+                                  <li class="header__search-item"><a class="header__search-link" href="#">
+                                      <div class="header__search-number">1.</div>
+                                      <div class="header__search-name"> 
+                                        <p>BTC-USDT</p><span>Perpetual</span>
+                                      </div>
+                                      <div class="header__search-value">44 099.22</div>
+                                      <div class="header__search-change red">-0.44%</div>
+                                      <div class="header__search-favourite"></div></a></li>
+                    </ul>
+                  </div>
+                  <div class="header__search-inner js-searchEmpty">
+                    <div class="header__search-empty"> <img src="img/icons/no-data.png" alt="Нет данных"><span>Нет данных</span></div>
+                  </div>
+                  <div class="header__search-inner js-searchResult">
+                    <div class="header__search-title">Торговля</div>
+                    <ul class="header__search-list header__search-list--recom show js-tabContent">
+                                  <li class="header__search-item"><a class="header__search-link" href="#">
+                                      <div class="header__search-number">1.</div>
+                                      <div class="header__search-name"> 
+                                        <p>BTC-USDT</p><span>Perpetual</span>
+                                      </div>
+                                      <div class="header__search-value">44 099.22</div>
+                                      <div class="header__search-change red">-0.44%</div>
+                                      <div class="header__search-favourite"></div></a></li>
+                                  <li class="header__search-item"><a class="header__search-link" href="#">
+                                      <div class="header__search-number">2.</div>
+                                      <div class="header__search-name"> 
+                                        <p>BTC-USDT</p><span>Perpetual</span>
+                                      </div>
+                                      <div class="header__search-value">44 099.22</div>
+                                      <div class="header__search-change red">-0.44%</div>
+                                      <div class="header__search-favourite"></div></a></li>
+                                  <li class="header__search-item"><a class="header__search-link" href="#">
+                                      <div class="header__search-number">3.</div>
+                                      <div class="header__search-name"> 
+                                        <p>BTC-USDT</p><span>Perpetual</span>
+                                      </div>
+                                      <div class="header__search-value">44 099.22</div>
+                                      <div class="header__search-change red">-0.44%</div>
+                                      <div class="header__search-favourite"></div></a></li>
+                    </ul>
+                    <div class="header__search-title">Информация</div>
+                    <ul class="header__search-list">
+                      <li class="header__search-item header__search-item--info"><a class="header__search-link" href="#">
+                          <div class="header__search-img">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#btc"></use>
+                            </svg>
+                          </div>
+                          <div class="header__search-name"> 
+                            <p>Bitcoin | BTC</p><span>Узнай больше о криптовалюте</span>
+                          </div></a></li>
+                      <li class="header__search-item header__search-item--info"><a class="header__search-link" href="#">
+                          <div class="header__search-img">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#btc"></use>
+                            </svg>
+                          </div>
+                          <div class="header__search-name"> 
+                            <p>Bitcoin | BTC</p><span>Узнай больше о криптовалюте</span>
+                          </div></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header__right-links">
+              <div class="header__link dropdown">Кошелек
+                <div class="header__dropdown header__dropdown--wallet">
+                  <div class="header__balance js-hideWrapper">
+                    <div class="header__balance-head"> 
+                      <div class="header__balance-title">Общий баланс </div>
+                      <div class="header__balance-eye js-hideText"></div><a class="header__balance-link" href="#">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#arrow"></use>
+                        </svg></a>
+                    </div>
+                    <div class="header__balance-crypto"><span class="js-hiddenText">9 990 999 999.00</span> <span>USDT</span> </div>
+                    <div class="header__balance-fiat"><span class="js-hiddenText">9 990 999 999.00</span> <span>USD</span></div>
+                  </div>
+                  <div class="header__wallet-btns"><a class="header__wallet-btn" href="#">Депозит</a><a class="header__wallet-btn header__wallet-btn--up" href="#">Вывод</a></div>
+                  <div class="header__dropdown-links"><a class="header__dropdown-link" href="#">Спотовый</a><a class="header__dropdown-link" href="#">Фьючерсный</a><a class="header__dropdown-link" href="#">История транзакций</a></div>
+                </div>
+              </div>
+              <div class="header__link dropdown">Ордера
+                <div class="header__dropdown header__dropdown--orders">
+                  <div class="header__dropdown-links"><a class="header__dropdown-link" href="#">Спотовый</a><a class="header__dropdown-link" href="#">Фьючерсный</a><a class="header__dropdown-link" href="#">История ранзакций</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="header__user dropdown js-headerUser"> 
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#user"></use>
+              </svg>
+              <div class="header__dropdown header__dropdown--user">
+                <div class="header__user-head"> 
+                  <div class="header__user-mail">ck***1@gmail.com</div>
+                  <div class="header__user-wrap js-copyWrap">
+                    <div class="header__user-id">ID: <span class="js-copyText">5563321</span></div>
+                    <div class="header__user-copy js-copyBtn"></div>
+                  </div>
+                </div>
+                <div class="header__dropdown-links"><a class="header__dropdown-link" href="profile-account.html">Личный кабинет</a><a class="header__dropdown-link" href="#">Верификация</a><a class="header__dropdown-link" href="#">Безопасность</a><a class="header__dropdown-link" href="#">Настройки</a><a class="header__dropdown-link" href="#">Реферальная программа</a><a class="header__dropdown-link" href="#">Выйти</a></div>
+              </div>
+            </div>
+            <div class="header__notification dropdown">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#notification"></use>
+              </svg><span class="count">9+</span>
+              <div class="header__dropdown header__dropdown--notification js-tabWrapper"> 
+                <div class="header__notification-head"> 
+                  <div class="header__notification-count">
+                    999<span>новых уведомлений</span></div>
+                  <button class="header__notification-btn" type="button">Прочитать все</button><a class="link link--bold" href="#" target="_self">Посмотреть все</a>
+                </div>
+                <ul class="header__notification-tabs">
+                  <li class="header__notification-tab new show js-tabItem" data-tab="all">Все уведомления</li>
+                  <li class="header__notification-tab new js-tabItem" data-tab="system">Системные</li>
+                  <li class="header__notification-tab js-tabItem" data-tab="move">Ввод/вывод</li>
+                </ul>
+                <div class="header__notification-body">
+                  <ul class="header__notification-list js-tabContent show" data-tab="all"> 
+                                <li class="header__notification-item new"><a class="header__notification-link" href="#">
+                                    <div class="header__notification-name">Депозит USDT</div>
+                                    <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                                    <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                                <li class="header__notification-item new"><a class="header__notification-link" href="#">
+                                    <div class="header__notification-name">Депозит USDT</div>
+                                    <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                                    <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                                <li class="header__notification-item"><a class="header__notification-link" href="#">
+                                    <div class="header__notification-name">Депозит USDT</div>
+                                    <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                                    <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                                <li class="header__notification-item"><a class="header__notification-link" href="#">
+                                    <div class="header__notification-name">Депозит USDT</div>
+                                    <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                                    <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                                <li class="header__notification-item"><a class="header__notification-link" href="#">
+                                    <div class="header__notification-name">Депозит USDT</div>
+                                    <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                                    <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                                <li class="header__notification-item"><a class="header__notification-link" href="#">
+                                    <div class="header__notification-name">Депозит USDT</div>
+                                    <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                                    <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                                <li class="header__notification-item"><a class="header__notification-link" href="#">
+                                    <div class="header__notification-name">Депозит USDT</div>
+                                    <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                                    <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                                <li class="header__notification-item"><a class="header__notification-link" href="#">
+                                    <div class="header__notification-name">Депозит USDT</div>
+                                    <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                                    <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                  </ul>
+                  <ul class="header__notification-list js-tabContent" data-tab="system"> 
+                                <li class="header__notification-item"><a class="header__notification-link" href="#">
+                                    <div class="header__notification-name">Депозит USDT</div>
+                                    <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                                    <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                                <li class="header__notification-item"><a class="header__notification-link" href="#">
+                                    <div class="header__notification-name">Депозит USDT</div>
+                                    <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                                    <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                  </ul>
+                  <ul class="header__notification-list js-tabContent" data-tab="move"> 
+                                <li class="header__notification-item"><a class="header__notification-link" href="#">
+                                    <div class="header__notification-name">Депозит USDT</div>
+                                    <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                                    <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                                <li class="header__notification-item"><a class="header__notification-link" href="#">
+                                    <div class="header__notification-name">Депозит USDT</div>
+                                    <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                                    <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                                <li class="header__notification-item"><a class="header__notification-link" href="#">
+                                    <div class="header__notification-name">Депозит USDT</div>
+                                    <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                                    <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                                <li class="header__notification-item"><a class="header__notification-link" href="#">
+                                    <div class="header__notification-name">Депозит USDT</div>
+                                    <p class="header__notification-text">Депозит в размере 99 999 999.00 USDT успешно отправлен куда-то</p>
+                                    <time class="header__notification-time" datetime="2023-12-11T15:16">11.12.2023 15:16</time></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="header__lang">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#lang"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="header__burger">
+            <div class="header__burger-btn js-burgerBtn">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#burger"></use>
+              </svg>
+            </div>
+            <div class="header__menu js-burgerMenu">
+              <div class="header__menu-inner"> 
+                <div class="header__menu-head"> 
+                  <button class="header__menu-close js-menuClose" type="button"></button>
+                </div>
+                <div class="header__menu-body"> 
+                  <ul class="header__menu-links"> 
+                    <li class="header__menu-link header__menu-link--mobile"><a href="#">Уведомления</a></li>
+                    <li class="header__menu-link"><a href="#">Рынок</a></li>
+                    <li class="header__menu-link header__menu-link--dropdown js-menuDropdown"> <span>Купить крипто</span>
+                      <div class="header__menu-dropdown"> <a class="header__menu-link" href="№">Дебетовая/кредитная карта</a><a class="header__menu-link" href="№">Международный банковский перевод</a><a class="header__menu-link" href="№">Быстрая покупка/продажа</a><a class="header__menu-link" href="№">P2P-торговля</a><a class="header__menu-link" href="№">MasterCard MEXC</a></div>
+                    </li>
+                    <li class="header__menu-link header__menu-link--dropdown js-menuDropdown"> <span>Спот</span>
+                      <div class="header__menu-dropdown"> <a class="header__menu-link" href="№">Спотовая торговля</a><a class="header__menu-link" href="№">Купить RWTX</a></div>
+                    </li>
+                    <li class="header__menu-link header__menu-link--dropdown js-menuDropdown"> <span class="hot">Фьючерсы</span>
+                      <div class="header__menu-dropdown"> <a class="header__menu-link" href="№">Обзор фьючерсов</a><a class="header__menu-link" href="№">Бессрочные фьючерсы</a><a class="header__menu-link" href="№">Копи-трейдинг</a><a class="header__menu-link" href="№">Демо-трейдинг</a><a class="header__menu-link" href="№">Фьючерсные события</a></div>
+                    </li>
+                    <li class="header__menu-link"><a href="#">Обучение</a></li>
+                    <li class="header__menu-link header__menu-link--mobile header__menu-link--dropdown js-menuDropdown"> <span>Русский</span>
+                      <div class="header__menu-dropdown"> 
+                        <div class="header__menu-link">Русский</div>
+                        <div class="header__menu-link">Английкий</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="header__menu js-menuUser">
+              <div class="header__menu-inner"> 
+                <div class="header__menu-head"> 
+                  <button class="header__menu-close js-menuUserClose" type="button"></button>
+                </div>
+                <div class="header__menu-body"> 
+                  <div class="header__user-head header__user-head--menu"> 
+                    <div class="header__user-mail">ck***1@gmail.com</div>
+                    <div class="header__user-wrap js-copyWrap">
+                      <div class="header__user-id">ID: <span class="js-copyText">5563321</span></div>
+                      <div class="header__user-copy js-copyBtn"></div>
+                    </div>
+                  </div>
+                  <ul class="header__menu-links"> 
+                    <li class="header__menu-link header__menu-link--dropdown js-menuDropdown"> <span>Кошелек</span>
+                      <div class="header__menu-dropdown"> <a class="header__menu-link" href="№">Спотовый счет</a><a class="header__menu-link" href="№">Фьючерсный счет</a><a class="header__menu-link" href="№">Фиатный счет</a><a class="header__menu-link" href="№">Копи-трейдинг</a><a class="header__menu-link" href="№">История транзакций</a></div>
+                    </li>
+                    <li class="header__menu-link header__menu-link--dropdown js-menuDropdown"> <span>Ордера</span>
+                      <div class="header__menu-dropdown"> <a class="header__menu-link" href="№">Спотовые ордера</a><a class="header__menu-link" href="№">Фьючерсные ордера</a><a class="header__menu-link" href="№">История транзакций</a></div>
+                    </li>
+                    <li class="header__menu-link"><a href="profile-account.html">Личный кабинет</a></li>
+                    <li class="header__menu-link"><a href="#">Безопасность</a></li>
+                    <li class="header__menu-link"><a href="#">Верификация</a></li>
+                    <li class="header__menu-link"><a href="#">Реферальная программа</a></li>
+                    <li class="header__menu-link"><a href="#">Торговые комисии</a></li>
+                    <li class="header__menu-link">
+                      <button type="button">Выйти</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </header>
@@ -43,21 +400,29 @@
               <h2 class="login__title">Добро пожаловать на Riwatex</h2>
               <p class="login__subtitle">Первый вход в систему считается регистрацией</p>
               <div class="login__tab">Эл. почта</div>
-              <form class="login__content js-form" action="POST">
+              <div class="login__content js-form js-firstStep">
                 <div class="login__input-wrap login__input-wrap--email">
                   <input class="login__input login__input--icon js-inputCheck" type="email" name="email" placeholder="Эл. почта">
                   <button class="login__input-clearing js-inputClearing" type="button"></button>
                   <div class="login__error-text js-error">Введите корректный email</div>
                 </div>
-                        <button class="btn js-firstStep login__btn btn--wide js-FormSubmit" type="submit">Далее</button>
-                <div class="login__line js-firstStep"> <span>или</span></div>
-                <button class="login__google js-firstStep" type="button">
+                        <button class="btn login__btn btn--wide js-formSubmit" type="submit">Далее</button>
+                <div class="login__line"><span>или</span></div>
+                <button class="login__google" type="button">
                   <svg>
                     <use xlink:href="img/sprites/sprite.svg#google"></use>
                   </svg><span>Войти с помощью Google</span>
                 </button>
-                <div class="login__input-wrap login__input-wrap--pass js-stepReg">
+              </div>
+              <div class="login__content js-form js-stepReg">
+                <div class="login__input-wrap login__input-wrap--email">
+                  <input class="login__input login__input--icon js-inputCheck" type="email" name="email" placeholder="Эл. почта">
+                  <button class="login__input-clearing js-inputClearing" type="button"></button>
+                  <div class="login__error-text js-error">Введите корректный email</div>
+                </div>
+                <div class="login__input-wrap login__input-wrap--pass">
                   <input class="login__input login__input--icon js-inputCheck" type="password" name="password" autocomplete="autocomplete" placeholder="Пароль">
+                  <button class="login__input-eye js-inputEye" type="button"></button>
                   <button class="login__input-clearing js-inputClearing" type="button"></button>
                   <ul class="login__hints js-passRequirements">
                     <li class="login__hint js-passMinMax">От 10 до 128 символов</li>
@@ -68,7 +433,7 @@
                   </ul>
                   <div class="login__error-text">Не менее 10 символов, содержащих прописные и строчные буквы, цифры и символы</div>
                 </div>
-                <div class="login__referral js-toggleWrap js-stepReg">
+                <div class="login__referral js-toggleWrap">
                   <div class="login__referral-title js-toggle"><span>Реферальный код (Необязательно)  </span>
                     <svg>
                       <use xlink:href="img/sprites/sprite.svg#triangle"></use>
@@ -78,31 +443,38 @@
                     <input class="login__input" type="text" name="code" placeholder="Реферальный код (Необязательно)">
                   </div>
                 </div>
-                <div class="login__agreement js-stepReg">
+                <div class="login__agreement">
                   <input class="login__input-checkbox" type="checkbox" name="agreement" id="agreement">
                   <label for="agreement">Я прочитал и согласен с <a href="#" target="_blank">Пользовательским соглашением</a> и <a href="#" target="_blank">Политикой конфиденциальности</a>.</label>
                 </div>
-                        <button class="btn js-stepReg login__btn btn--wide js-FormSubmit" type="submit">Регистрация</button>
-                <div class="login__input-wrap login__input-wrap--pass js-stepLogin">
+                        <button class="btn login__btn btn--wide js-formSubmit" type="submit">Регистрация</button>
+              </div>
+              <div class="login__content js-form js-stepLogin">
+                <div class="login__input-wrap login__input-wrap--email">
+                  <input class="login__input login__input--icon js-inputCheck" type="email" name="email" placeholder="Эл. почта">
+                  <button class="login__input-clearing js-inputClearing" type="button"></button>
+                  <div class="login__error-text js-error">Введите корректный email</div>
+                </div>
+                <div class="login__input-wrap login__input-wrap--pass">
                   <input class="login__input login__input--icon js-inputCheck" type="password" name="password" autocomplete="autocomplete" placeholder="Пароль">
                   <button class="login__input-clearing js-inputClearing" type="button"></button>
-                          <button class="btn js-stepLogin login__btn btn--wide js-FormSubmit" type="submit">Вход</button><a class="login__link" href="#">Забыли пароль?</a>
+                          <button class="btn login__btn btn--wide js-formSubmit" type="submit">Вход</button><a class="login__link" href="#">Забыли пароль?</a>
                 </div>
-              </form>
+              </div>
             </div>
-            <div class="login-inner login-inner--code js-stepCode">
+            <div class="login-inner login-inner--code js-form js-stepCode">
               <h2 class="login__title">Код электронной почты</h2>
               <p class="login__subtitle">Пожалуйста введите 6-ти значный код, который мы отправили на ваш адрес электронной почты <span>pi***k@yandex.ru</span></p>
-              <form class="login__code" action="POST">
-                <input class="login__code-input" data-id="0" type="tel" min="0" max="9" maxlength="1" autocomplete="off" value="">
-                <input class="login__code-input" data-id="1" type="tel" min="0" max="9" maxlength="1" autocomplete="off" value="">
-                <input class="login__code-input" data-id="2" type="tel" min="0" max="9" maxlength="1" autocomplete="off" value="">
-                <input class="login__code-input" data-id="3" type="tel" min="0" max="9" maxlength="1" autocomplete="off" value="">
-                <input class="login__code-input" data-id="4" type="tel" min="0" max="9" maxlength="1" autocomplete="off" value="">
-                <input class="login__code-input" data-id="5" type="tel" min="0" max="9" maxlength="1" autocomplete="off" value="">
-              </form>
+              <div class="login__code">
+                <input class="login__code-input js-codeInput" data-id="0" type="tel" min="0" max="9" maxlength="1" autocomplete="off" value="">
+                <input class="login__code-input js-codeInput" data-id="1" type="tel" min="0" max="9" maxlength="1" autocomplete="off" value="">
+                <input class="login__code-input js-codeInput" data-id="2" type="tel" min="0" max="9" maxlength="1" autocomplete="off" value="">
+                <input class="login__code-input js-codeInput" data-id="3" type="tel" min="0" max="9" maxlength="1" autocomplete="off" value="">
+                <input class="login__code-input js-codeInput" data-id="4" type="tel" min="0" max="9" maxlength="1" autocomplete="off" value="">
+                <input class="login__code-input js-codeInput" data-id="5" type="tel" min="0" max="9" maxlength="1" autocomplete="off" value="">
+              </div>
               <div class="login__timer"><span class="js-timerDown">60</span> s</div>
-                      <button class="btn login__btn btn--wide js-FormSubmit" type="submit">Подтвердить</button><a class="login__link" href="#">Не получили код подтверждения?</a>
+                      <button class="btn login__btn btn--wide js-formSubmit" type="submit">Подтвердить</button><a class="login__link" href="#">Не получили код подтверждения?</a>
             </div>
             <div class="login-banner">
               <div class="login-banner__img"><img src="img/holder.jpg" alt="Баннер"></div>
