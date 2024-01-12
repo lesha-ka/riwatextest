@@ -1,1 +1,6 @@
-<svg aria-hidden="true" viewBox="0 0 1024 1024" data-icon="CaretDownOutlined"><path d="M929.178 203.162a61.44 61.44 0 0146.899 100.966l-416.973 494.9a61.44 61.44 0 01-94.003 0l-417.178-494.9a61.44 61.44 0 0146.9-100.966h834.355z"/></svg>
+<svg
+    focusable="false" width="" height="" fill="" aria-hidden="true"
+    viewBox="0 0 1024 1024" data-icon="CaretDownOutlined">
+    <path
+        d="M929.1776 203.1616a61.44 61.44 0 0 1 46.8992 100.9664L559.104 799.0272a61.44 61.44 0 0 1-94.0032 0L47.9232 304.128a61.44 61.44 0 0 1 46.8992-100.9664h834.3552z"></path>
+</svg>

@@ -397,112 +397,131 @@
         <section class="login"> 
           <div class="container container--flex"> 
             <!-- Ввод данных пользователя-->
-            <!--.login-inner.min.js-loginStart
-            h2.login__title Добро пожаловать на Riwatex
-            label.login__block Вы превысили число попыток входа в систему. Учетная запись заблокирована на 24 часа.
-            p.login__subtitle Первый вход в систему считается регистрацией
-            .login__tab Эл. почта
-            // Стартовый этап
-            .login__content.min.js-form.min.js-firstStep
-                .login__input-wrap.login__input-wrap--email
-                    input.login__input.login__input--icon.min.js-inputCheck(type="email" name="email" placeholder="Эл. почта")
-                    button.login__input-clearing.min.js-inputClearing(type="button")
-                    .login__error-text.min.js-error Введите корректный email
-                +btn('Далее', 'login__btn btn--wide js-formSubmit')(type="submit")
-                .login__line
-                    span или
-                button(type="button").login__google
-                    +svg('google') 
-                    span Войти с помощью Google
-            // Этап регистрации
-            .login__content.min.js-form.min.js-stepReg
-                .login__input-wrap.login__input-wrap--email
-                    input.login__input.login__input--icon.min.js-inputCheck(type="email" name="email" placeholder="Эл. почта")
-                    button.login__input-clearing.min.js-inputClearing(type="button")
-                    .login__error-text.min.js-error Введите корректный email
-                .login__input-wrap.login__input-wrap--pass
-                    input.login__input.login__input--icon.min.js-inputCheck(type="password" name="password" autocomplete="autocomplete" placeholder="Пароль")
-                    button.login__input-eye.min.js-inputEye(type="button")
-                    button.login__input-clearing.min.js-inputClearing(type="button")
-                    ul.login__hints.min.js-passRequirements
-                        li.login__hint.min.js-passMinMax От 10 до 128 символов
-                        li.login__hint.min.js-passCapital 1 заглавная буква
-                        li.login__hint.min.js-passLower 1 строчная буква
-                        li.login__hint.min.js-passNumber 1 цифра
-                        li.login__hint.min.js-passSymbol 1 символ
-                    .login__error-text Не менее 10 символов, содержащих прописные и строчные буквы, цифры и символы
-                .login__referral.min.js-toggleWrap
-                    .login__referral-title.min.js-toggle
-                        span Реферальный код (Необязательно)  
-                        +svg('triangle')
-                    .login__input-wrap.login__input-wrap--hide.min.js-toggleContent
-                        input.login__input(type="text" name="code" placeholder="Реферальный код (Необязательно)")
-                .login__agreement
-                    input.login__input-checkbox(type="checkbox" name="agreement" id="agreement")
-                    label(for="agreement") Я прочитал и согласен с <a href="#" target="_blank">Пользовательским соглашением</a> и <a href="#" target="_blank">Политикой конфиденциальности</a>.
-                +btn('Регистрация', 'login__btn btn--wide js-formSubmit')(type="submit",)
-            // Этап входа
-            .login__content.min.js-form.min.js-stepLogin
-                .login__input-wrap.login__input-wrap--email
-                    input.login__input.login__input--icon.min.js-inputCheck(type="email" name="email" placeholder="Эл. почта")
-                    button.login__input-clearing.min.js-inputClearing(type="button")
-                    .login__error-text.min.js-error Введите корректный email
-                .login__input-wrap.login__input-wrap--pass
-                    input.login__input.login__input--icon.min.js-inputCheck(type="password" name="password" autocomplete="autocomplete" placeholder="Пароль")
-                    button.login__input-clearing.min.js-inputClearing(type="button")
-                    +btn('Вход', 'login__btn btn--wide js-formSubmit')(type="submit",)
-                    a(href="#").login__link Забыли пароль?
-            -->
+            <div class="login-inner js-loginStart" style="display:none">
+              <h2 class="login__title">Добро пожаловать на Riwatex</h2>
+              <label class="login__block">Вы превысили число попыток входа в систему. Учетная запись заблокирована на 24 часа.</label>
+              <p class="login__subtitle">Первый вход в систему считается регистрацией</p>
+              <div class="login__tab">Эл. почта</div>
+              <!-- Стартовый этап-->
+              <div class="login__content js-form js-firstStep">
+                <div class="login__input-wrap login__input-wrap--email">
+                  <input class="login__input login__input--icon js-inputCheck" type="email" name="email" placeholder="Эл. почта">
+                  <button class="login__input-clearing js-inputClearing" type="button"></button>
+                  <div class="login__error-text js-error">Введите корректный email</div>
+                </div>
+                        <button class="btn login__btn btn--wide js-formSubmit" type="submit">Далее</button>
+                <div class="login__line"><span>или</span></div>
+                <button class="login__google" type="button">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#google"></use>
+                  </svg><span>Войти с помощью Google</span>
+                </button>
+              </div>
+              <!-- Этап регистрации-->
+              <div class="login__content js-form js-stepReg">
+                <div class="login__input-wrap login__input-wrap--email">
+                  <input class="login__input login__input--icon js-inputCheck" type="email" name="email" placeholder="Эл. почта">
+                  <button class="login__input-clearing js-inputClearing" type="button"></button>
+                  <div class="login__error-text js-error">Введите корректный email</div>
+                </div>
+                <div class="login__input-wrap login__input-wrap--pass">
+                  <input class="login__input login__input--icon js-inputCheck" type="password" name="password" autocomplete="autocomplete" placeholder="Пароль">
+                  <button class="login__input-eye js-inputEye" type="button"></button>
+                  <button class="login__input-clearing js-inputClearing" type="button"></button>
+                  <ul class="login__hints js-passRequirements">
+                    <li class="login__hint js-passMinMax">От 10 до 128 символов</li>
+                    <li class="login__hint js-passCapital">1 заглавная буква</li>
+                    <li class="login__hint js-passLower">1 строчная буква</li>
+                    <li class="login__hint js-passNumber">1 цифра</li>
+                    <li class="login__hint js-passSymbol">1 символ</li>
+                  </ul>
+                  <div class="login__error-text">Не менее 10 символов, содержащих прописные и строчные буквы, цифры и символы</div>
+                </div>
+                <div class="login__referral js-toggleWrap">
+                  <div class="login__referral-title js-toggle"><span>Реферальный код (Необязательно)  </span>
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#triangle"></use>
+                    </svg>
+                  </div>
+                  <div class="login__input-wrap login__input-wrap--hide js-toggleContent">
+                    <input class="login__input" type="text" name="code" placeholder="Реферальный код (Необязательно)">
+                  </div>
+                </div>
+                <div class="login__agreement">
+                  <input class="login__input-checkbox" type="checkbox" name="agreement" id="agreement">
+                  <label for="agreement">Я прочитал и согласен с <a href="#" target="_blank">Пользовательским соглашением</a> и <a href="#" target="_blank">Политикой конфиденциальности</a>.</label>
+                </div>
+                        <button class="btn login__btn btn--wide js-formSubmit" type="submit">Регистрация</button>
+              </div>
+              <!-- Этап входа-->
+              <div class="login__content js-form js-stepLogin">
+                <div class="login__input-wrap login__input-wrap--email">
+                  <input class="login__input login__input--icon js-inputCheck" type="email" name="email" placeholder="Эл. почта">
+                  <button class="login__input-clearing js-inputClearing" type="button"></button>
+                  <div class="login__error-text js-error">Введите корректный email</div>
+                </div>
+                <div class="login__input-wrap login__input-wrap--pass">
+                  <input class="login__input login__input--icon js-inputCheck" type="password" name="password" autocomplete="autocomplete" placeholder="Пароль">
+                  <button class="login__input-clearing js-inputClearing" type="button"></button>
+                          <button class="btn login__btn btn--wide js-formSubmit" type="submit">Вход</button><a class="login__link" href="#">Забыли пароль?</a>
+                </div>
+              </div>
+            </div>
             <!-- Последний этап регистрации или входа изначально не виден-->
-            <!--.login-inner.login-inner--code.min.js-form.min.js-stepCode
-            h2.login__title Код электронной почты
-            p.login__subtitle Пожалуйста введите 6-ти значный код, который мы отправили на ваш адрес электронной почты 
-                span pi***k@yandex.ru
-            .login__code
-                input.login__code-input.min.js-codeInput(data-id="0" type="tel" min="0" max="9" maxlength="1" autocomplete="off" value="")
-                input.login__code-input.min.js-codeInput(data-id="1" type="tel" min="0" max="9" maxlength="1" autocomplete="off" value="")
-                input.login__code-input.min.js-codeInput(data-id="2" type="tel" min="0" max="9" maxlength="1" autocomplete="off" value="")
-                input.login__code-input.min.js-codeInput(data-id="3" type="tel" min="0" max="9" maxlength="1" autocomplete="off" value="")
-                input.login__code-input.min.js-codeInput(data-id="4" type="tel" min="0" max="9" maxlength="1" autocomplete="off" value="")
-                input.login__code-input.min.js-codeInput(data-id="5" type="tel" min="0" max="9" maxlength="1" autocomplete="off" value="")
-            .login__timer <span class="js-timerDown">60</span> s
-            +btn('Подтвердить', 'login__btn btn--wide js-formSubmit')(type="submit",)
-            a(href="#").login__link Не получили код подтверждения?
-            -->
+            <div class="login-inner login-inner--code js-form js-stepCode" style="display:none">
+              <h2 class="login__title">Код электронной почты</h2>
+              <p class="login__subtitle">Пожалуйста введите 6-ти значный код, который мы отправили на ваш адрес электронной почты <span>pi***k@yandex.ru</span></p>
+              <div class="login__code">
+                <input class="login__code-input js-codeInput" data-id="0" type="tel" min="0" max="9" maxlength="1" autocomplete="off" value="">
+                <input class="login__code-input js-codeInput" data-id="1" type="tel" min="0" max="9" maxlength="1" autocomplete="off" value="">
+                <input class="login__code-input js-codeInput" data-id="2" type="tel" min="0" max="9" maxlength="1" autocomplete="off" value="">
+                <input class="login__code-input js-codeInput" data-id="3" type="tel" min="0" max="9" maxlength="1" autocomplete="off" value="">
+                <input class="login__code-input js-codeInput" data-id="4" type="tel" min="0" max="9" maxlength="1" autocomplete="off" value="">
+                <input class="login__code-input js-codeInput" data-id="5" type="tel" min="0" max="9" maxlength="1" autocomplete="off" value="">
+              </div>
+              <div class="login__timer"><span class="js-timerDown">60</span> s</div>
+                      <button class="btn login__btn btn--wide js-formSubmit" type="submit">Подтвердить</button><a class="login__link" href="#">Не получили код подтверждения?</a>
+            </div>
             <!-- Восстановление пароля-->
-            <!--.login-inner.min.js-loginReset
-            h2.login__title Восстановить пароль
-            .login__warning Вывод средств и внебиржевая торговля запрещены в течение 24 часов после сброса пароля для входа 
-            .login__tab Эл. почта
-            // Стартовый этап
-            //.login__content.min.js-form
-                .login__input-wrap.login__input-wrap--email
-                    input.login__input.login__input--icon.min.js-inputCheck(type="email" name="email" placeholder="Эл. почта")
-                    button.login__input-clearing.min.js-inputClearing(type="button")
-                    .login__error-text.min.js-error Введите корректный email
-                +btn('Далее', 'login__btn btn--wide js-formSubmit')(type="submit")
-            // Создание нового пароля
-            //.login__content.min.js-form
-                p.login__label Новый пароль
-                .login__input-wrap.login__input-wrap--pass
-                    input.login__input.login__input--icon.min.js-inputCheck(type="password" name="password" autocomplete="autocomplete" placeholder="Пароль")
-                    button.login__input-eye.min.js-inputEye(type="button")
-                    button.login__input-clearing.min.js-inputClearing(type="button")
-                    ul.login__hints.min.js-passRequirements
-                        li.login__hint.min.js-passMinMax От 10 до 128 символов
-                        li.login__hint.min.js-passCapital 1 заглавная буква
-                        li.login__hint.min.js-passLower 1 строчная буква
-                        li.login__hint.min.js-passNumber 1 цифра
-                        li.login__hint.min.js-passSymbol 1 символ
-                    .login__error-text Не менее 10 символов, содержащих прописные и строчные буквы, цифры и символы
-                p.login__label Подтвердите пароль
-                .login__input-wrap.login__input-wrap--pass
-                    input.login__input.login__input--icon.min.js-inputCheck.error(type="password" name="password" autocomplete="autocomplete" placeholder="Пароль")
-                    button.login__input-eye.min.js-inputEye(type="button")
-                    button.login__input-clearing.min.js-inputClearing(type="button")
-                    .login__error-text.show Пароли не совпадают
-                +btn('Подтвердить', 'login__btn btn--wide js-formSubmit')(type="submit")
-            -->
+            <div class="login-inner js-loginReset" style="display:none">
+              <h2 class="login__title">Восстановить пароль</h2>
+              <div class="login__warning">Вывод средств и внебиржевая торговля запрещены в течение 24 часов после сброса пароля для входа </div>
+              <div class="login__tab">Эл. почта</div>
+              <!-- Стартовый этап-->
+              <div class="login__content js-form">
+                <div class="login__input-wrap login__input-wrap--email">
+                  <input class="login__input login__input--icon js-inputCheck" type="email" name="email" placeholder="Эл. почта">
+                  <button class="login__input-clearing js-inputClearing" type="button"></button>
+                  <div class="login__error-text js-error">Введите корректный email</div>
+                </div>
+                        <button class="btn login__btn btn--wide js-formSubmit" type="submit">Далее</button>
+              </div>
+              <!-- Создание нового пароля-->
+              <div class="login__content js-form">
+                <p class="login__label">Новый пароль</p>
+                <div class="login__input-wrap login__input-wrap--pass">
+                  <input class="login__input login__input--icon js-inputCheck" type="password" name="password" autocomplete="autocomplete" placeholder="Пароль">
+                  <button class="login__input-eye js-inputEye" type="button"></button>
+                  <button class="login__input-clearing js-inputClearing" type="button"></button>
+                  <ul class="login__hints js-passRequirements">
+                    <li class="login__hint js-passMinMax">От 10 до 128 символов</li>
+                    <li class="login__hint js-passCapital">1 заглавная буква</li>
+                    <li class="login__hint js-passLower">1 строчная буква</li>
+                    <li class="login__hint js-passNumber">1 цифра</li>
+                    <li class="login__hint js-passSymbol">1 символ</li>
+                  </ul>
+                  <div class="login__error-text">Не менее 10 символов, содержащих прописные и строчные буквы, цифры и символы</div>
+                </div>
+                <p class="login__label">Подтвердите пароль</p>
+                <div class="login__input-wrap login__input-wrap--pass">
+                  <input class="login__input login__input--icon js-inputCheck error" type="password" name="password" autocomplete="autocomplete" placeholder="Пароль">
+                  <button class="login__input-eye js-inputEye" type="button"></button>
+                  <button class="login__input-clearing js-inputClearing" type="button"></button>
+                  <div class="login__error-text show">Пароли не совпадают</div>
+                </div>
+                        <button class="btn login__btn btn--wide js-formSubmit" type="submit">Подтвердить</button>
+              </div>
+            </div>
             <!-- Код безопасности-->
             <div class="login-inner js-loginReset">
               <h2 class="login__title">Добро пожаловать на Riwatex</h2>
