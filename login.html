@@ -39,8 +39,21 @@
       <main class="main"> 
         <section class="login"> 
           <div class="container container--flex"> 
+            <div class="login-inner login-inner--background">
+              <div class="login__title-back">
+                <button class="login__back" type="button"> 
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#arrow-link"></use>
+                  </svg>
+                </button>
+                <h2 class="login__title">Привяжите свой аккаунт Riwatex</h2>
+              </div>
+              <p class="login__subtitle">Каждый Google может быть привязан только к одному аккаунту Riwatex</p>
+                      <button class="btn login__btn btn--wide" type="button">Создать новый аккаунт на Riwatex</button>
+                      <button class="btn login__btn btn--wide btn--transparent" type="button">Привязать к существующему аккаунту Riwatex</button>
+            </div>
             <!-- Ввод данных пользователя-->
-            <div class="login-inner js-loginStart">
+            <div class="login-inner js-loginStart" style="display:none">
               <h2 class="login__title">Добро пожаловать на Riwatex</h2>
               <label class="login__block">Вы превысили число попыток входа в систему. Учетная запись заблокирована на 24 часа.</label>
               <p class="login__subtitle">Первый вход в систему считается регистрацией</p>
@@ -125,7 +138,7 @@
               <div class="login__timer"><span class="js-timerDown">60</span> s</div>
                       <button class="btn login__btn btn--wide js-formSubmit" type="submit">Подтвердить</button><a class="login__link" href="#">Не получили код подтверждения?</a>
             </div>
-            <div class="login-banner">
+            <div class="login-banner" style="display:none">
               <div class="login-banner__img"><img src="img/holder.jpg" alt="Баннер"></div>
             </div>
           </div>
