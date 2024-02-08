@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Личный кабинет</title>
+    <title>Безопасность</title>
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, viewport-fit=cover, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -396,10 +396,10 @@
       <main class="main profile"> 
         <nav class="profile-nav"> 
           <ul class="profile-nav__links"> 
-            <li class="profile-nav__link"><a class="profile-nav__link-inner active" href="profile-account.html">
+            <li class="profile-nav__link"><a class="profile-nav__link-inner" href="profile-account.html">
                 <div class="profile-nav__link-icon" style="mask-image: url(img/icons/profile-account.svg); -webkit-mask-image: url(img/icons/profile-account.svg)"></div>
                 <div class="profile-nav__link-text">Личный кабинет</div></a></li>
-            <li class="profile-nav__link"><a class="profile-nav__link-inner" href="profile-security.html">
+            <li class="profile-nav__link"><a class="profile-nav__link-inner active" href="profile-security.html">
                 <div class="profile-nav__link-icon" style="mask-image: url(img/icons/profile-security.svg); -webkit-mask-image: url(img/icons/profile-security.svg)"></div>
                 <div class="profile-nav__link-text">Безопасность</div></a></li>
             <li class="profile-nav__link"><a class="profile-nav__link-inner">
@@ -413,139 +413,120 @@
                 <div class="profile-nav__link-text">Торговые комиссии</div></a></li>
           </ul>
         </nav>
-        <section class="profile-account"> 
-          <div class="profile-account__head">
-            <div class="profile-account__avatar"> <img src="img/profile/user.png" alt="Ваше фото"></div>
-            <div class="profile-account__nickname"> 
-              <div class="profile-account__nickname-text">Установить псевдоним</div>
-              <button class="profile-account__nickname-btn js-popupOpen" data-popup="nickname-create" type="button">
-                <svg>
-                  <use xlink:href="img/sprites/sprite.svg#edit"></use>
-                </svg>
-              </button>
-              <!--.profile-account__verif Личность не подтверждена-->
-              <div class="profile-account__verif verified">Верифицирован</div>
+        <section class="profile-body"> 
+          <h2 class="profile__title">Безопасность</h2>
+          <div class="profile-security__block"> 
+            <div class="profile-security__head"> 
+              <h4 class="profile-security__title">Двухфакторная аутентификация (2FA)</h4>
+              <p class="profile-security__text">Для защиты аккаунта рекомендуется включить хотя бы один метод 2FA</p>
+              <div class="profile-security__level"> 
+                <p class="profile-security__level-label">Уровень безопасности:</p>
+                <div class="profile-security__level-wrap">   
+                  <p class="profile-security__level-name">Низкий</p>
+                  <div class="profile-security__level-icon"><span> </span><span> </span><span> </span></div>
+                </div>
+              </div>
             </div>
-            <ul class="profile-account__info">
-              <li class="profile-account__item js-hideWrapper">
-                <div class="profile-account__term">Аккаунт</div>
-                <div class="profile-account__defin"> 
-                  <div class="profile-account__user itc-select js-select"> 
-                    <button class="profile-account__user-toggle itc-select__toggle" type="button" name="username" value="asf***@yandex.ru" data-select="toggle" data-index="0">asf<span class="js-hiddenText">asd</span>@yandex.ru </button>
-                    <div class="profile-account__user-dropdown itc-select__dropdown">
-                      <ul class="profile-account__user-options itc-select__options">
-                        <li class="profile-account__user-option itc-select__option" data-select="option" data-value="asf***@yandex.ru" data-index="0">asf<span class="js-hiddenText">asd</span>@yandex.ru</li>
-                        <li class="profile-account__user-option itc-select__option" data-select="option" data-value="+7 9512522509" data-index="1">+7 951<span class="js-hiddenText">321</span>2509</li>
-                      </ul>
-                    </div>
-                  </div><span class="hide-eye js-hideText"></span>
+            <div class="profile-security__item">
+              <div class="profile-security__icon"></div>
+              <div class="profile-security__inner">
+                <div class="profile-security__name">Google Authenticator</div>
+                <div class="profile-security__text">Настройте свой Google Authenticator, чтобы обеспечить дополнительный уровень безопасности при выводе средств или настройке параметров безопасности.</div>
+                <div class="profile-security__actions">
+                  <div class="profile-security__status">Выкл.</div>
+                          <button class="btn profile-security__btn btn--transparent js-popupOpen" type="button" data-popup="123">Настроить</button>
                 </div>
-              </li>
-              <li class="profile-account__item js-copyWrap">
-                <div class="profile-account__term">UID</div>
-                <div class="profile-account__defin">
-                  <div class="js-copyText">16936884</div><span class="copy js-copyBtn"></span>
+              </div>
+            </div>
+            <div class="profile-security__item">
+              <div class="profile-security__icon"><img src="img/profile/phone.svg" alt="Пароль для входа"></div>
+              <div class="profile-security__inner">
+                <div class="profile-security__name">Подтверждение по номеру телефона</div>
+                <div class="profile-security__text">Привяжите свой номер мобильного телефона к своему аккаунту, чтобы получать коды подтверждения по SMS для подтверждения вывода средств, смены пароля и настроек безопасности.</div>
+                <div class="profile-security__actions">
+                  <div class="profile-security__status profile-security__status--check">951***2509</div>
+                          <button class="btn profile-security__btn btn--transparent js-popupOpen" type="button" data-popup="123">Настроить</button>
                 </div>
-              </li>
-              <li class="profile-account__item">
-                <div class="profile-account__term">Время регистрации</div>
-                <time class="profile-account__defin" datetime="2023-12-11T09:43">2023-12-11 09:43:54</time>
-              </li>
-              <li class="profile-account__item">
-                <div class="profile-account__term">Последний вход в систему</div>
-                <div class="profile-account__defin">2023-12-11 09:43:54 (5.129.58.15)</div>
-              </li>
-            </ul>
+              </div>
+            </div>
+            <div class="profile-security__item">
+              <div class="profile-security__icon"><img src="img/profile/password.svg" alt="Пароль для входа"></div>
+              <div class="profile-security__inner">
+                <div class="profile-security__name">Пароль для входа</div>
+                <div class="profile-security__text">Увеличьте надежность пароля, чтобы повысить безопасность учетной записи.</div>
+                <div class="profile-security__actions">
+                          <button class="btn profile-security__btn btn--transparent js-popupOpen" type="button" data-popup="123">Изменить</button>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="profile-account__body"> 
-            <div class="profile-account__blocks">
-              <div class="profile-account__block">
-                <h4 class="profile-account__title">Проверка личности</h4>
-                <p class="profile-account__text">Текущий лимит вывода: 30BTC за 24 ч</p>
-                <p class="profile-account__text">Завершите проверку личности, чтобы повысить уровень безопасности и лимит вывода</p>
-                <div class="profile-account__links"><a class="link link--yellow" href="#" target="_self">Базовый KYC</a><a class="profile-account__link" href="#">Перейти к расширенной верификации</a>
+          <div class="profile-security__block"> 
+            <div class="profile-security__head"> 
+              <h4 class="profile-security__title">Расширенная безопасность</h4>
+            </div>
+            <div class="profile-security__item">
+              <div class="profile-security__icon"><img src="img/profile/share.svg" alt="Расширенная безопасность"></div>
+              <div class="profile-security__inner">
+                <div class="profile-security__name">Вход с помощью стороннего аккаунта</div>
+                <div class="profile-security__text">Привяжите сторонние аккаунты к вашей учетной записи Riwatex. В случае успеха вы можете использовать их для входа в систему.</div>
+                <div class="profile-security__google"><img src="img/profile/google.svg" alt="google">
+                  <p>Google</p>
+                  <button class="js-popupOpen" type="button" data-popup="google">Привязать</button>
                 </div>
-              </div>
-              <div class="profile-account__block js-hideWrapper">
-                <div class="profile-account__block-head">
-                  <h4 class="profile-account__title profile-account__title--eye">Общий баланс<span class="hide-eye js-hideText"></span></h4><a class="profile-account__link profile-account__link--desktop" href="#">Сведения об активах</a>
-                </div>
-                <div class="profile-account__balance">
-                  <div class="profile-account__balance-crypto"> <span class="js-hiddenText">0</span>
-                    <div class="profile-account__balance-select itc-select js-select"> 
-                      <button class="profile-account__balance-toggle itc-select__toggle" type="button" name="crypto" value="USDT" data-select="toggle" data-index="0">USDT </button>
-                      <div class="profile-account__balance-dropdown itc-select__dropdown">
-                        <ul class="profile-account__balance-options itc-select__options">
-                          <li class="profile-account__balance-option itc-select__option" data-select="option" data-value="USDT" data-index="0">USDT</li>
-                          <li class="profile-account__balance-option itc-select__option" data-select="option" data-value="ELF" data-index="1">ELF</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="profile-account__balance-fiat"> <span class="js-hiddenText">0.00 </span>
-                    <div class="profile-account__balance-select itc-select js-select"> 
-                      <button class="profile-account__balance-toggle itc-select__toggle" type="button" name="fiat" value="USD" data-select="toggle" data-index="0">USD </button>
-                      <div class="profile-account__balance-dropdown itc-select__dropdown">
-                        <ul class="profile-account__balance-options itc-select__options">
-                          <li class="profile-account__balance-option itc-select__option" data-select="option" data-value="USD" data-index="0">USD</li>
-                          <li class="profile-account__balance-option itc-select__option" data-select="option" data-value="RUB" data-index="1">RUB</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div><a class="link__btn" href="#" target="_self">Депозит</a>
               </div>
             </div>
-            <div class="profile-account__other">
-              <div class="profile-account__other-item"> <a class="profile-account__title profile-account__title--gift" href="#">Реферальная программа</a>
-                <p class="profile-account__other-text">Приглашайте друзей для получения дополнительных комиссионных </p>
-                <div class="profile-account__other-code js-copyWrap"> <span class="js-copyText">https://www.Code-1zZGACode-1zZGACode-1zZGACode-1zZGA</span><span class="copy js-copyBtn"></span></div>
-              </div><a class="profile-account__other-item" href="#">
-                <h4 class="profile-account__title profile-account__title--training">Обучение</h4>
-                <p class="profile-account__other-text">Узнайте все о криптовалютах. Ответы на интересующие вас вопросы.</p></a>
+          </div>
+          <div class="profile-security__block"> 
+            <div class="profile-security__head"> 
+              <h4 class="profile-security__title">Устройства и действия</h4>
+            </div>
+            <div class="profile-security__item">
+              <div class="profile-security__icon"><img src="img/profile/action.svg" alt="Устройства и действия"></div>
+              <div class="profile-security__inner">
+                <div class="profile-security__name">Действия в аккаунте</div>
+                <div class="profile-security__text">Просмотр истории входа в систему и безопасности.</div>
+                <div class="profile-security__actions">
+                          <button class="btn profile-security__btn btn--transparent js-popupOpen" type="button" data-popup="123">Посмотреть</button>
+                </div>
+              </div>
+            </div>
+            <div class="profile-security__item">
+              <div class="profile-security__icon"><img src="img/profile/device.svg" alt="Управление устройствами"></div>
+              <div class="profile-security__inner">
+                <div class="profile-security__name">Управление устройствами</div>
+                <div class="profile-security__text">Управляйте устройствами, которым разрешен доступ к вашей учетной записи.</div>
+                <div class="profile-security__actions">
+                          <button class="btn profile-security__btn btn--transparent js-popupOpen" type="button" data-popup="123">Настроить</button>
+                </div>
+              </div>
+            </div>
+            <div class="profile-security__item">
+              <div class="profile-security__icon"><img src="img/profile/deactivate.svg" alt="Заморозить аккаунт"></div>
+              <div class="profile-security__inner">
+                <div class="profile-security__name">Заморозить аккаунт</div>
+                <div class="profile-security__text">Заморозьте свой аккаунт, чтобы немедленно отключить все функции.</div>
+                <div class="profile-security__actions">
+                          <button class="btn profile-security__btn btn--transparent js-popupOpen" type="button" data-popup="123">Заморозить</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="profile-security__block"> 
+            <div class="profile-security__head"> 
+              <h4 class="profile-security__title">Верификация Riwatex</h4>
+            </div>
+            <div class="profile-security__item">
+              <div class="profile-security__icon"><img src="img/profile/riwatex.svg" alt="Верификация"></div>
+              <div class="profile-security__inner">
+                <div class="profile-security__name">Верификация Riwatex</div>
+                <div class="profile-security__text">Верификация Riwatex позволяет проверить, являются ли номера телефонов и аккаунты в социальных сетях (например, Telegram), официальными каналами Riwatex.</div>
+                <div class="profile-security__actions">
+                          <button class="btn profile-security__btn btn--transparent js-popupOpen" type="button" data-popup="123">Верификация</button>
+                </div>
+              </div>
             </div>
           </div>
         </section>
-        <div class="popup js-popup hide" id="nickname-create">
-          <div class="popup-inner"> 
-            <div class="popup-head"> 
-              <h5 class="popup__title">Установить никнейм</h5>
-              <div class="popup__close js-popupClose"></div>
-            </div>
-            <div class="popup__form js-popupForm">
-              <div class="popup-body"> 
-                <div class="popup__input-block"> 
-                  <label class="popup__input-label" for="nickname">Мой никнейм</label>
-                  <div class="popup__input-wrap"> 
-                    <input class="popup__input js-nicknameCheck js-input" type="text" id="nickname" placeholder="Введите никнейм">
-                    <div class="popup__input-error">Только буквы латинского алфавита</div>
-                    <div class="popup__input-hint">
-                      <ul> 
-                        <li>Только буквы латинского алфавита</li>
-                        <li>От 6 до 32 символов</li>
-                        <li>Не должен содержать пробелов и специальных символов (~ !@#$%^&*()+`'";:<>/\|) </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="popup__text"> 
-                  <p>Примечание：</p>
-                  <ol>
-                    <li>1. Вы&nbsp;можете изменить свой псевдоним только один раз в&nbsp;30&nbsp;дней, редактируйте внимательно.</li>
-                    <li>2. Все устанавливаемые никнеймы проходят модерацию. Если никнейм содержит оскорбления, политически чувствительные слова и&nbsp;т.&nbsp;д., он&nbsp;будет отклонен.</li>
-                    <li>3. Время от&nbsp;времени ваш псевдоним будет пересматриваться. Если будут обнаружены какие-либо нарушения правил, ваш псевдоним станет недействительным, и&nbsp;вам придется подать заявку на&nbsp;другой.</li>
-                  </ol>
-                </div>
-              </div>
-              <div class="popup-footer"> 
-                <div class="popup__btns">
-                          <button class="btn popup__btn btn--transparent js-popupClose" type="button">Отмена</button>
-                          <button class="btn popup__btn js-popupFormCheck" type="submit">Подтвердить</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </main>
       <footer class="footer">
         <div class="footer-inner">
