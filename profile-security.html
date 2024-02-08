@@ -233,7 +233,7 @@
                     <div class="header__user-copy js-copyBtn"></div>
                   </div>
                 </div>
-                <div class="header__dropdown-links"><a class="header__dropdown-link" href="profile-account.html">Личный кабинет</a><a class="header__dropdown-link" href="#">Верификация</a><a class="header__dropdown-link" href="#">Безопасность</a><a class="header__dropdown-link" href="#">Настройки</a><a class="header__dropdown-link" href="#">Реферальная программа</a><a class="header__dropdown-link" href="#">Выйти</a></div>
+                <div class="header__dropdown-links"><a class="header__dropdown-link" href="profile-account.html">Личный кабинет</a><a class="header__dropdown-link" href="#">Верификация</a><a class="header__dropdown-link" href="profile-security.html">Безопасность</a><a class="header__dropdown-link" href="#">Настройки</a><a class="header__dropdown-link" href="#">Реферальная программа</a><a class="header__dropdown-link" href="#">Выйти</a></div>
               </div>
             </div>
             <div class="header__notification dropdown">
@@ -421,7 +421,7 @@
               <p class="profile-security__text">Для защиты аккаунта рекомендуется включить хотя бы один метод 2FA</p>
               <div class="profile-security__level"> 
                 <p class="profile-security__level-label">Уровень безопасности:</p>
-                <div class="profile-security__level-wrap">   
+                <div class="profile-security__level-wrap profile-security__level-wrap--red">   
                   <p class="profile-security__level-name">Низкий</p>
                   <div class="profile-security__level-icon"><span> </span><span> </span><span> </span></div>
                 </div>
@@ -439,13 +439,24 @@
               </div>
             </div>
             <div class="profile-security__item">
+              <div class="profile-security__icon"><img src="img/profile/email.svg" alt="email"></div>
+              <div class="profile-security__inner">
+                <div class="profile-security__name">Подтверждение по эл. почте</div>
+                <div class="profile-security__text">Привяжите адрес электронной почты к своему аккаунту для входа в систему, восстановления пароля и подтверждения вывода средств.</div>
+                <div class="profile-security__actions">
+                  <div class="profile-security__status profile-security__status--check">Включено</div>
+                          <button class="btn profile-security__btn btn--transparent js-popupOpen" type="button" data-popup="123">Настроить</button>
+                </div>
+              </div>
+            </div>
+            <div class="profile-security__item">
               <div class="profile-security__icon"><img src="img/profile/phone.svg" alt="Пароль для входа"></div>
               <div class="profile-security__inner">
                 <div class="profile-security__name">Подтверждение по номеру телефона</div>
                 <div class="profile-security__text">Привяжите свой номер мобильного телефона к своему аккаунту, чтобы получать коды подтверждения по SMS для подтверждения вывода средств, смены пароля и настроек безопасности.</div>
                 <div class="profile-security__actions">
                   <div class="profile-security__status profile-security__status--check">951***2509</div>
-                          <button class="btn profile-security__btn btn--transparent js-popupOpen" type="button" data-popup="123">Настроить</button>
+                          <button class="btn profile-security__btn btn--transparent js-popupOpen" type="button" data-popup="123">Изменить</button>
                 </div>
               </div>
             </div>
@@ -506,14 +517,14 @@
                 <div class="profile-security__name">Заморозить аккаунт</div>
                 <div class="profile-security__text">Заморозьте свой аккаунт, чтобы немедленно отключить все функции.</div>
                 <div class="profile-security__actions">
-                          <button class="btn profile-security__btn btn--transparent js-popupOpen" type="button" data-popup="123">Заморозить</button>
+                          <button class="btn profile-security__btn btn--red js-popupOpen" type="button" data-popup="123">Заморозить</button>
                 </div>
               </div>
             </div>
           </div>
           <div class="profile-security__block"> 
             <div class="profile-security__head"> 
-              <h4 class="profile-security__title">Верификация Riwatex</h4>
+              <h4 class="profile-security__title">Другие</h4>
             </div>
             <div class="profile-security__item">
               <div class="profile-security__icon"><img src="img/profile/riwatex.svg" alt="Верификация"></div>
