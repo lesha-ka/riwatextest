@@ -317,10 +317,13 @@
                 </div>
               </div>
             </div>
-            <div class="header__lang">
+            <div class="header__lang js-popupOpen" data-popup="lang">
               <svg>
                 <use xlink:href="img/sprites/sprite.svg#lang"></use>
               </svg>
+              <div class="header__dropdown header__dropdown--lang">
+                <div class="header__user-head"> </div>
+              </div>
             </div>
           </div>
           <div class="header__burger">
@@ -451,8 +454,7 @@
                 <div class="profile-account__term">Время регистрации</div>
                 <time class="profile-account__defin" datetime="2023-12-11T09:43">2023-12-11 09:43:54</time>
               </li>
-              <li class="profile-account__item">
-                <div class="profile-account__term">Последний вход в систему</div>
+              <li class="profile-account__item"><a class="profile-account__term profile-account__term--link" href="#">Последний вход в систему</a>
                 <div class="profile-account__defin">2023-12-11 09:43:54 (5.129.58.15)</div>
               </li>
             </ul>

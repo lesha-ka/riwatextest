@@ -317,10 +317,13 @@
                 </div>
               </div>
             </div>
-            <div class="header__lang">
+            <div class="header__lang js-popupOpen" data-popup="lang">
               <svg>
                 <use xlink:href="img/sprites/sprite.svg#lang"></use>
               </svg>
+              <div class="header__dropdown header__dropdown--lang">
+                <div class="header__user-head"> </div>
+              </div>
             </div>
           </div>
           <div class="header__burger">
@@ -434,7 +437,7 @@
                 <div class="profile-security__text">Настройте свой Google Authenticator, чтобы обеспечить дополнительный уровень безопасности при выводе средств или настройке параметров безопасности.</div>
                 <div class="profile-security__actions">
                   <div class="profile-security__status">Выкл.</div>
-                          <button class="btn profile-security__btn btn--transparent js-popupOpen" type="button" data-popup="123">Настроить</button>
+                          <button class="btn profile-security__btn btn--transparent js-popupOpen" type="button" data-popup="google">Настроить</button>
                 </div>
               </div>
             </div>
@@ -445,7 +448,7 @@
                 <div class="profile-security__text">Привяжите адрес электронной почты к своему аккаунту для входа в систему, восстановления пароля и подтверждения вывода средств.</div>
                 <div class="profile-security__actions">
                   <div class="profile-security__status profile-security__status--check">Включено</div>
-                          <button class="btn profile-security__btn btn--transparent js-popupOpen" type="button" data-popup="123">Настроить</button>
+                          <button class="btn profile-security__btn btn--transparent js-popupOpen" type="button" data-popup="email2">Настроить</button>
                 </div>
               </div>
             </div>
@@ -456,7 +459,7 @@
                 <div class="profile-security__text">Привяжите свой номер мобильного телефона к своему аккаунту, чтобы получать коды подтверждения по SMS для подтверждения вывода средств, смены пароля и настроек безопасности.</div>
                 <div class="profile-security__actions">
                   <div class="profile-security__status profile-security__status--check">951***2509</div>
-                          <button class="btn profile-security__btn btn--transparent js-popupOpen" type="button" data-popup="123">Изменить</button>
+                          <button class="btn profile-security__btn btn--transparent js-popupOpen" type="button" data-popup="phone2">Изменить</button>
                 </div>
               </div>
             </div>
@@ -477,12 +480,12 @@
             </div>
             <div class="profile-security__item">
               <div class="profile-security__icon"><img src="img/profile/share.svg" alt="Расширенная безопасность"></div>
-              <div class="profile-security__inner">
+              <div class="profile-security__inner profile-security__inner--google">
                 <div class="profile-security__name">Вход с помощью стороннего аккаунта</div>
                 <div class="profile-security__text">Привяжите сторонние аккаунты к вашей учетной записи Riwatex. В случае успеха вы можете использовать их для входа в систему.</div>
-                <div class="profile-security__google"><img src="img/profile/google.svg" alt="google">
+                <div class="profile-security__google profile-security__google--link"><img src="img/profile/google.svg" alt="google">
                   <p>Google</p>
-                  <button class="js-popupOpen" type="button" data-popup="google">Привязать</button>
+                  <button class="js-popupOpen" type="button" data-popup="google2">Отвязать</button>
                 </div>
               </div>
             </div>
@@ -538,6 +541,131 @@
             </div>
           </div>
         </section>
+        <div class="popup js-popup hide" id="google">
+          <div class="popup-inner"> 
+            <div class="popup-head"> 
+              <h5 class="popup__title">Проверка безопасности</h5>
+              <div class="popup__close js-popupClose"></div>
+            </div>
+            <div class="popup__form js-popupForm">
+              <div class="popup-body"> 
+                <div class="popup__input-block"> 
+                  <label class="popup__input-label" for="google"><span>*</span> Google Authenticator:</label>
+                  <div class="popup__input-wrap"> 
+                    <input class="popup__input js-emptyCheck js-input" type="text" id="google" placeholder="Введите код">
+                    <div class="popup__input-error">Введите код</div>
+                  </div>
+                </div>
+              </div>
+              <div class="popup-footer"> 
+                <div class="popup__btns">
+                          <button class="btn popup__btn btn--transparent js-popupClose" type="button">Отмена</button>
+                          <button class="btn popup__btn js-popupFormCheck" type="submit">Подтвердить</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popup js-popup hide" id="email">
+          <div class="popup-inner"> 
+            <div class="popup-head"> 
+              <h5 class="popup__title">Проверка безопасности</h5>
+              <div class="popup__close js-popupClose"></div>
+            </div>
+            <div class="popup__form js-popupForm">
+              <div class="popup-body"> 
+                <div class="popup__input-block"> 
+                  <label class="popup__input-label" for="email"><span>*</span> Код с эл. почты:</label>
+                  <p class="popup__input-text">Код будет направлен на почту as***@gmail.com</p>
+                  <div class="popup__input-wrap"> 
+                    <input class="popup__input js-emptyCheck js-input" type="text" id="email" placeholder="Введите код">
+                    <div class="popup__input-error">Введите код</div>
+                  </div>
+                </div>
+              </div>
+              <div class="popup-footer"> 
+                <div class="popup__btns">
+                          <button class="btn popup__btn btn--transparent js-popupClose" type="button">Отмена</button>
+                          <button class="btn popup__btn js-popupFormCheck" type="submit">Подтвердить</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popup js-popup hide" id="phone">
+          <div class="popup-inner"> 
+            <div class="popup-head"> 
+              <h5 class="popup__title">Проверка безопасности</h5>
+              <div class="popup__close js-popupClose"></div>
+            </div>
+            <div class="popup__form js-popupForm">
+              <div class="popup-body"> 
+                <div class="popup__input-block"> 
+                  <label class="popup__input-label" for="email"><span>*</span> SMS-код:</label>
+                  <p class="popup__input-text">Код будет направлен на номер +7 95***09</p>
+                  <div class="popup__input-wrap"> 
+                    <input class="popup__input js-emptyCheck js-input" type="text" id="email" placeholder="Введите код">
+                    <div class="popup__input-error">Введите код</div>
+                  </div>
+                </div>
+              </div>
+              <div class="popup-footer"> 
+                <div class="popup__btns">
+                          <button class="btn popup__btn btn--transparent js-popupClose" type="button">Отмена</button>
+                          <button class="btn popup__btn js-popupFormCheck" type="submit">Подтвердить</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popup js-popup hide" id="google2">
+          <div class="popup-inner"> 
+            <div class="popup-head"> 
+              <h5 class="popup__title">Отвязать Google</h5>
+              <div class="popup__close js-popupClose"></div>
+            </div>
+            <div class="popup-body"> 
+              <p class="popup__text">Вы не сможете войти в систему через Google после того, как отвяжете свою учетную запись.</p>
+            </div>
+            <div class="popup-footer"> 
+              <div class="popup__btns">
+                        <button class="btn popup__btn btn--transparent js-popupClose" type="button">Отмена</button>
+                        <button class="btn popup__btn js-popupFormCheck" type="submit">Подтвердить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popup js-popup hide" id="phone2">
+          <div class="popup-inner"> 
+            <div class="popup-head"> 
+              <h5 class="popup__title">Добавить номер телефона</h5>
+              <div class="popup__close js-popupClose"></div>
+            </div>
+            <div class="popup__form js-popupForm">
+              <div class="popup-body"> 
+                <div class="popup__input-block"> 
+                  <label class="popup__input-label" for="email">Новый номер телефона:</label>
+                  <div class="popup__input-wrap"> 
+                    <input class="popup__input js-emptyCheck js-input" type="text" id="email" placeholder="Введите код">
+                  </div>
+                </div>
+                <div class="popup__input-block"> 
+                  <label class="popup__input-label" for="email">Код подтверждения нового номера:</label>
+                  <div class="popup__input-wrap"> 
+                    <input class="popup__input js-emptyCheck js-input" type="text" id="email" placeholder="Введите код">
+                    <p class="popup__input-text">Не получили смс с кодом подтверждения? <a href="#">Помощь</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="popup-footer"> 
+                <div class="popup__btns">
+                          <button class="btn popup__btn btn--transparent js-popupClose" type="button">Отмена</button>
+                          <button class="btn popup__btn js-popupFormCheck" type="submit">Завершить</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
       <footer class="footer">
         <div class="footer-inner">
