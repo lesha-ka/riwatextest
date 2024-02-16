@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Riwatex</title>
+    <title>Управление устройствами</title>
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, viewport-fit=cover, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -196,7 +196,46 @@
                   </div>
                 </div>
               </div>
-            </div><a class="link__btn" href="login.html" target="_self">Вход/Регистрация</a>
+            </div>
+            <div class="header__right-links">
+              <div class="header__link dropdown js-dropdown"><span class="header__dropdown-btn js-dropdownBtn">Кошелек</span>
+                <div class="header__dropdown header__dropdown--wallet js-dropdownList">
+                  <div class="header__balance js-hideWrapper">
+                    <div class="header__balance-head"> 
+                      <div class="header__balance-title">Общий баланс </div>
+                      <div class="header__balance-eye js-hideText"></div><a class="header__balance-link" href="#">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#arrow"></use>
+                        </svg></a>
+                    </div>
+                    <div class="header__balance-crypto"><span class="js-hiddenText">9 990 999 999.00</span> <span>USDT</span> </div>
+                    <div class="header__balance-fiat"><span class="js-hiddenText">9 990 999 999.00</span> <span>USD</span></div>
+                  </div>
+                  <div class="header__wallet-btns"><a class="header__wallet-btn" href="#">Депозит</a><a class="header__wallet-btn header__wallet-btn--up" href="#">Вывод</a></div>
+                  <div class="header__dropdown-links"><a class="header__dropdown-link" href="#">Спотовый</a><a class="header__dropdown-link" href="#">Фьючерсный</a><a class="header__dropdown-link" href="#">История транзакций</a></div>
+                </div>
+              </div>
+              <div class="header__link dropdown js-dropdown"><span class="header__dropdown-btn js-dropdownBtn">Ордера</span>
+                <div class="header__dropdown header__dropdown--orders">
+                  <div class="header__dropdown-links js-dropdownList"><a class="header__dropdown-link" href="#">Спотовый</a><a class="header__dropdown-link" href="#">Фьючерсный</a><a class="header__dropdown-link" href="#">История ранзакций</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="header__user dropdown js-headerUser js-dropdown"><span class="js-dropdownBtn">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#user"></use>
+                </svg></span>
+              <div class="header__dropdown header__dropdown--user js-dropdownList">
+                <div class="header__user-head"> 
+                  <div class="header__user-mail">ck***1@gmail.com</div>
+                  <div class="header__user-wrap js-copyWrap">
+                    <div class="header__user-id">ID: <span class="js-copyText">5563321</span></div>
+                    <div class="header__user-copy js-copyBtn"></div>
+                  </div>
+                </div>
+                <div class="header__dropdown-links"><a class="header__dropdown-link" href="profile-account.html">Личный кабинет</a><a class="header__dropdown-link" href="#">Верификация</a><a class="header__dropdown-link" href="profile-security.html">Безопасность</a><a class="header__dropdown-link" href="#">Настройки</a><a class="header__dropdown-link" href="#">Реферальная программа</a><a class="header__dropdown-link" href="#">Выйти</a></div>
+              </div>
+            </div>
             <div class="header__notification dropdown js-dropdown"><span class="js-dropdownBtn">
                 <svg>
                   <use xlink:href="img/sprites/sprite.svg#notification"></use>
@@ -371,330 +410,108 @@
           </div>
         </div>
       </header>
-      <main class="main"> 
-        <section class="banner"> 
-          <div class="container"> 
-            <h1 class="banner__title">Минимум комиссий <br> Максимум прибыли</h1>
-            <p class="banner__subtitle"><strong>0%</strong> комиссия на споте<br><strong>0%/0,02%</strong> комиссия Maker/Taker на фьючерсах</p>
-            <form class="banner__form" action="POST"> 
-              <input class="banner__input" type="text" placeholder="Эл. почта/номер телефона" name="contact"><a class="link__btn banner__btn link__btn--wide" href="#" target="_self">Начать</a>
-            </form>
-          </div>
-        </section>
-        <section class="bonus"> 
-          <div class="container"> 
-            <div class="bonus-inner">
-              <div class="bonus-header">
-                        <h3 class="section-title">Получите бонус 1550$!</h3><a class="link" href="#" target="_self">Все Бонусы</a>
-              </div>
-              <ul class="bonus-list">
-                <li class="bonus__img"> <img src="img/bonus/box.svg" alt="Бонус"></li>
-                <li class="bonus__item"> 
-                  <div class="bonus__award">Бонусы заканчиваются 30.01.2024</div>
-                  <h6 class="bonus__title">Создать аккаунт </h6>
-                  <p class="bonus__text">Пройдите регистрацию и получите приветственный бонус в виде 50 USDT</p>
-                  <div class="bonus__link-wrap"> <a class="bonus__link" href="#">Регистрация</a></div>
-                </li>
-                <li class="bonus__item"> 
-                  <h6 class="bonus__title">Пройдите верификацию</h6>
-                  <p class="bonus__text">Пройдите верификацию и откройте для себя все преимущества платформы RIWATEX</p>
-                </li>
-                <li class="bonus__item"> 
-                  <h6 class="bonus__title">Совершите депозит</h6>
-                  <p class="bonus__text">Совершить депозит и получите cashback в размере 10% от суммы</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-        <section class="notices"> 
-          <div class="container container--flex">
-            <div class="notices__icon"> 
-              <svg>
-                <use xlink:href="img/sprites/sprite.svg#volume"></use>
-              </svg>
-            </div>
-            <div class="notices__slider swiper-container js-noticesSlider">
-              <ul class="notices__list swiper-wrapper">
-                <li class="notices__item swiper-slide"> <a class="notices__text" href="#">MEXC поддержит обновление основной сети NULS (NULS)</a></li>
-                <li class="notices__item swiper-slide"> <a class="notices__text" href="#">Фьючерсы MEXC Копи-трейдинг поддерживает фьючерсы SUSHI USDT-M</a></li>
-                <li class="notices__item swiper-slide"> <a class="notices__text" href="#">Результаты голосования на Kickstarter и листинг -  Intelligent (AITRAN)</a></li>
-                <li class="notices__item swiper-slide"> <a class="notices__text" href="#">31-й сезон Таблицы лидеров фьючерсов: Займите первые места в основных рейтингах и поборитесь за еженедельный бонус в размере 75 000 USDT. Бонус распределяется ежедневно (ежедневное фьючерсное событие)</a></li>
-              </ul>
-            </div><a class="link" href="#" target="_self">Подробнее</a>
-          </div>
-        </section>
-        <section class="advertising"> 
-          <div class="container"> 
-            <div class="advertising__slider swiper-container js-advertisingSlider">
-              <ul class="advertising__list swiper-wrapper">
-                <li class="advertising__item swiper-slide"> <a class="advertising__img" href="#"> <img src="img/advertising/advertising1.svg" alt="Реклама 1"></a></li>
-                <li class="advertising__item swiper-slide"> <a class="advertising__img" href="#"> <img src="img/advertising/advertising1.svg" alt="Реклама 2"></a></li>
-                <li class="advertising__item swiper-slide"> <a class="advertising__img" href="#"><img src="img/advertising/advertising1.svg" alt="Реклама 3"></a></li>
-                <li class="advertising__item swiper-slide"> <a class="advertising__img" href="#"><img src="img/advertising/advertising1.svg" alt="Реклама 3"></a></li>
-                <li class="advertising__item swiper-slide"> <a class="advertising__img" href="#"> <img src="img/advertising/advertising1.svg" alt="Реклама 1"></a></li>
-                <li class="advertising__item swiper-slide"> <a class="advertising__img" href="#"> <img src="img/advertising/advertising1.svg" alt="Реклама 2"></a></li>
-              </ul>
-              <div class="advertising__pagination swiper-pagination"></div>
-              <div class="advertising__arrows">
-                <div class="swiper-button-prev advertising__slider-prev"></div>
-                <div class="swiper-button-next advertising__slider-next"></div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="popular"> 
-          <div class="container"> 
-                    <h3 class="section-title">Популярные криптовалюты</h3><a class="link popular__link" href="#" target="_self">Подробнее</a>
-            <div class="popular-inner">
-              <div class="popular-tabs js-tabWrapper"> 
-                <div class="popular__nav" role="tablist">
-                  <div class="popular__nav-wrap"> 
-                    <ul class="popular__nav-list">
-                      <li class="popular-tab js-tabItem show" data-tab="1">
-                        <div class="popular-tab__btn" role="tab">Топ фьючерсы <span class="green">Мейкер 0% / Тейкер 0,01%</span> </div>
+      <main class="main profile"> 
+        <section class="profile-content"> 
+          <div class="container">
+                    <ol class="breadcrumbs">
+                      <li><a href="index.html">Личный кабинет</a>
                       </li>
-                      <li class="popular-tab js-tabItem" data-tab="2">
-                        <div class="popular-tab__btn" role="tab">В тренде</div>
+                      <li><a href="profile-security.html">Безопасность</a>
                       </li>
-                      <li class="popular-tab js-tabItem" data-tab="3">
-                        <div class="popular-tab__btn" role="tab">Новые</div>
+                      <li><span>Управление устройствами</span>
                       </li>
-                      <li class="popular-tab js-tabItem" data-tab="4">
-                        <div class="popular-tab__btn" role="tab">Топ по объему</div>
-                      </li>
-                      <li class="popular-tab js-tabItem" data-tab="5">
-                        <div class="popular-tab__btn" role="tab">Лидеры дня <span class="green">398.18%</span></div>
-                      </li>
-                    </ul>
-                  </div>
+                    </ol>
+            <h2 class="profile__title profile__title--small"> Управление устройствами</h2>
+            <ul class="profile-devices"> 
+              <li class="profile-devices__item profile-devices__item--head"> 
+                <h3 class="profile-devices__title">Устройство</h3>
+                <h3 class="profile-devices__title">Время последнего входа</h3>
+                <h3 class="profile-devices__title">Местоположение</h3>
+                <h3 class="profile-devices__title">IP-адрес</h3>
+                <h3 class="profile-devices__title">Действие</h3>
+              </li>
+              <li class="profile-devices__item"> 
+                <div class="profile-devices__name"> <span class="profile-devices__new">Новый</span>
+                  <p>Chrome 121.0.0 (Windows)</p>
                 </div>
-                <div class="popular__content">
-                  <div class="popular__tabpanel js-tabContent show" role="tabpanel" data-tab="1">
-                    <div class="popular__table">
-                      <div class="popular__table-container">
-                        <div class="popular__table-content">
-                          <table> 
-                            <thead class="popular__table-thead">
-                              <tr>
-                                <th class="popular__table-cell">Торговая пара</th>
-                                <th class="popular__table-cell">Цена</th>
-                                <th class="popular__table-cell">Изменение </th>
-                                <th class="popular__table-cell">Рынок</th>
-                                <th class="popular__table-cell">Действие</th>
-                              </tr>
-                            </thead>
-                            <tbody class="popular__table-tbody"> 
-                              <tr>
-                                <th class="popular__table-cell popular__table-cell--flex">
-                                  <div class="popular__table-symbol">
-                                    <div class="popular__table-img"><img src="img/popular/btc.png" alt="BTC USDT Perpetual"></div>
-                                  </div>
-                                  <div class="popular__table-name">BTC USDT Perpetual</div>
-                                </th>
-                                <th class="popular__table-cell">37,362.1</th>
-                                <th class="popular__table-cell green">+0.72%</th>
-                                <th class="popular__table-cell popular__table-cell--chart"><img src="img/popular/chart.svg" alt="график"></th>
-                                <th class="popular__table-cell"><a class="popular__table-action btn" href="#">Торговать</a></th>
-                              </tr>
-                              <tr>
-                                <th class="popular__table-cell popular__table-cell--flex">
-                                  <div class="popular__table-symbol">
-                                    <div class="popular__table-img"><img src="img/popular/eth.png" alt="ETH USDT Perpetual"></div>
-                                  </div>
-                                  <div class="popular__table-name">ETH USDT Perpetual</div>
-                                </th>
-                                <th class="popular__table-cell">2,096.82</th>
-                                <th class="popular__table-cell">0.00%</th>
-                                <th class="popular__table-cell popular__table-cell--chart"><img src="img/popular/chart.svg" alt="график"></th>
-                                <th class="popular__table-cell"><a class="popular__table-action btn" href="#">Торговать</a></th>
-                              </tr>
-                              <tr>
-                                <th class="popular__table-cell popular__table-cell--flex">
-                                  <div class="popular__table-symbol">
-                                    <div class="popular__table-img"><img src="img/popular/gas.png" alt="GAS USDT Perpetual"></div>
-                                  </div>
-                                  <div class="popular__table-name">GAS USDT Perpetual</div>
-                                </th>
-                                <th class="popular__table-cell">22.001</th>
-                                <th class="popular__table-cell red">-25.09%</th>
-                                <th class="popular__table-cell popular__table-cell--chart"><img src="img/popular/chart.svg" alt="график"></th>
-                                <th class="popular__table-cell"><a class="popular__table-action btn" href="#">Торговать</a></th>
-                              </tr>
-                              <tr>
-                                <th class="popular__table-cell popular__table-cell--flex">
-                                  <div class="popular__table-symbol">
-                                    <div class="popular__table-img"><img src="img/popular/sol.png" alt="SOL USDT Perpetual"></div>
-                                  </div>
-                                  <div class="popular__table-name">SOL USDT Perpetual</div>
-                                </th>
-                                <th class="popular__table-cell">54,562</th>
-                                <th class="popular__table-cell green">+7.14%</th>
-                                <th class="popular__table-cell popular__table-cell--chart"><img src="img/popular/chart.svg" alt="график"></th>
-                                <th class="popular__table-cell"><a class="popular__table-action btn" href="#">Торговать</a></th>
-                              </tr>
-                              <tr>
-                                <th class="popular__table-cell popular__table-cell--flex">
-                                  <div class="popular__table-symbol">
-                                    <div class="popular__table-img"><img src="img/popular/trb.png" alt="TBR USDT Perpetual"></div>
-                                  </div>
-                                  <div class="popular__table-name">TBR USDT Perpetual</div>
-                                </th>
-                                <th class="popular__table-cell">94.614</th>
-                                <th class="popular__table-cell green">+3.83%</th>
-                                <th class="popular__table-cell popular__table-cell--chart"><img src="img/popular/chart.svg" alt="график"></th>
-                                <th class="popular__table-cell"><a class="popular__table-action btn" href="#">Торговать</a></th>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="popular__tabpanel js-tabContent" role="tabpanel" data-tab="2">
-                    <div class="popular__table">
-                      <div class="popular__table-container">
-                        <div class="popular__table-content">
-                          <table> 
-                            <thead class="popular__table-thead">
-                              <tr>
-                                <th class="popular__table-cell">Торговая пара</th>
-                                <th class="popular__table-cell">Цена</th>
-                                <th class="popular__table-cell">Изменение </th>
-                                <th class="popular__table-cell">Рынок</th>
-                                <th class="popular__table-cell">Действие</th>
-                              </tr>
-                            </thead>
-                            <tbody class="popular__table-tbody"> 
-                              <tr>
-                                <th class="popular__table-cell popular__table-cell--flex">
-                                  <div class="popular__table-symbol">
-                                    <div class="popular__table-img"><img src="img/popular/mx.png" alt="MX/USDT"></div>
-                                  </div>
-                                  <div class="popular__table-name">MX/USDT</div>
-                                </th>
-                                <th class="popular__table-cell">2.9405</th>
-                                <th class="popular__table-cell red">-1.93%</th>
-                                <th class="popular__table-cell">img/popular/chart.svg</th>
-                                <th class="popular__table-cell"><a class="popular__table-action" href="#">Торговля</a></th>
-                              </tr>
-                              <tr>
-                                <th class="popular__table-cell popular__table-cell--flex">
-                                  <div class="popular__table-symbol">
-                                    <div class="popular__table-img"><img src="img/popular/btc.png" alt="BTC/USDT"></div>
-                                  </div>
-                                  <div class="popular__table-name">BTC/USDT</div>
-                                </th>
-                                <th class="popular__table-cell">2,096.82</th>
-                                <th class="popular__table-cell">0.00%</th>
-                                <th class="popular__table-cell">img/popular/chart.svg</th>
-                                <th class="popular__table-cell"><a class="popular__table-action" href="#">Торговля</a></th>
-                              </tr>
-                              <tr>
-                                <th class="popular__table-cell popular__table-cell--flex">
-                                  <div class="popular__table-symbol">
-                                    <div class="popular__table-img"><img src="img/popular/eth.png" alt="ETH/USDT"></div>
-                                  </div>
-                                  <div class="popular__table-name">ETH/USDT</div>
-                                </th>
-                                <th class="popular__table-cell">2.001</th>
-                                <th class="popular__table-cell red">-0.09%</th>
-                                <th class="popular__table-cell">img/popular/chart.svg</th>
-                                <th class="popular__table-cell"><a class="popular__table-action" href="#">Торговля</a></th>
-                              </tr>
-                              <tr>
-                                <th class="popular__table-cell popular__table-cell--flex">
-                                  <div class="popular__table-symbol">
-                                    <div class="popular__table-img"><img src="img/popular/kas.png" alt="KAS/USDT"></div>
-                                  </div>
-                                  <div class="popular__table-name">KAS/USDT</div>
-                                </th>
-                                <th class="popular__table-cell">54,562</th>
-                                <th class="popular__table-cell green">+7.14%</th>
-                                <th class="popular__table-cell">img/popular/chart.svg</th>
-                                <th class="popular__table-cell"><a class="popular__table-action" href="#">Торговля</a></th>
-                              </tr>
-                              <tr>
-                                <th class="popular__table-cell popular__table-cell--flex">
-                                  <div class="popular__table-symbol">
-                                    <div class="popular__table-img"><img src="img/popular/xrp.png" alt="XRP/USDT"></div>
-                                  </div>
-                                  <div class="popular__table-name">XRP/USDT</div>
-                                </th>
-                                <th class="popular__table-cell">94.614</th>
-                                <th class="popular__table-cell green">+3.83%</th>
-                                <th class="popular__table-cell">img/popular/chart.svg</th>
-                                <th class="popular__table-cell"><a class="popular__table-action" href="#">Торговля</a></th>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <div class="profile-devices__date"><span class="profile-devices__label">Время последнего входа</span>
+                  <p>2024-01-29 15:48:12</p>
                 </div>
-              </div>
-            </div><a class="link__btn popular__btn link__btn--regular" href="#" target="_self">Торговать</a>
-          </div>
-        </section>
-        <section class="community">
-          <div class="container"> 
-                    <h3 class="section-title">Присоединяйтесь к сообществам RIWATEX</h3>
-            <p class="community__subtitle">Новости. Обсуждение. События </p>
-            <div class="community__btns"> <a class="community__btn" href="#">
-                <svg>
-                  <use xlink:href="img/sprites/sprite.svg#x"></use>
-                </svg>
-                <p>twitter.com</p></a><a class="community__btn" href="#">
-                <svg>
-                  <use xlink:href="img/sprites/sprite.svg#telegram"></use>
-                </svg>
-                <p>Telegram</p></a></div>
-            <ul class="community__list"> 
-              <li class="community__item"><a class="community__link" href="#">
-                  <svg class="vk">
-                    <use xlink:href="img/sprites/sprite.svg#vk"></use>
-                  </svg></a></li>
-              <li class="community__item"><a class="community__link" href="#">
-                  <svg class="facebook">
-                    <use xlink:href="img/sprites/sprite.svg#facebook"></use>
-                  </svg></a></li>
-              <li class="community__item"><a class="community__link" href="#">
-                  <svg class="tiktok">
-                    <use xlink:href="img/sprites/sprite.svg#tiktok"></use>
-                  </svg></a></li>
-              <li class="community__item"><a class="community__link" href="#">
-                  <svg class="reddit">
-                    <use xlink:href="img/sprites/sprite.svg#reddit"></use>
-                  </svg></a></li>
-              <li class="community__item"><a class="community__link" href="#">
-                  <svg class="discord">
-                    <use xlink:href="img/sprites/sprite.svg#discord"></use>
-                  </svg></a></li>
-              <li class="community__item"><a class="community__link" href="#">
-                  <svg class="youtube">
-                    <use xlink:href="img/sprites/sprite.svg#youtube"></use>
-                  </svg></a></li>
-              <li class="community__item"><a class="community__link" href="#">
-                  <svg class="dots">
-                    <use xlink:href="img/sprites/sprite.svg#dots"></use>
-                  </svg></a></li>
+                <div class="profile-devices__locate"><span class="profile-devices__label">Местоположение</span>
+                  <p>Russian Federation-Novosibirskaya oblast'-Novosibirsk</p>
+                </div>
+                <div class="profile-devices__ip"><span class="profile-devices__label">IP-адрес</span>
+                  <p>5.129.58.15</p>
+                </div>
+                <button class="profile-devices__delete js-popupOpen" type="button" data-popup="delete">Удалить</button>
+              </li>
+              <li class="profile-devices__item"> 
+                <div class="profile-devices__name"> 
+                  <p>Chrome 121.0.0 (Windows)</p>
+                </div>
+                <div class="profile-devices__date"><span class="profile-devices__label">Время последнего входа</span>
+                  <p>2024-01-29 15:48:12</p>
+                </div>
+                <div class="profile-devices__locate"><span class="profile-devices__label">Местоположение</span>
+                  <p>Russian Federation-Novosibirskaya oblast'-Novosibirsk</p>
+                </div>
+                <div class="profile-devices__ip"><span class="profile-devices__label">IP-адрес</span>
+                  <p>5.129.58.15</p>
+                </div>
+                <button class="profile-devices__delete js-popupOpen" type="button" data-popup="delete">Удалить</button>
+              </li>
+              <li class="profile-devices__item"> 
+                <div class="profile-devices__name"> 
+                  <p>Chrome 121.0.0 (Windows)</p>
+                </div>
+                <div class="profile-devices__date"><span class="profile-devices__label">Время последнего входа</span>
+                  <p>2024-01-29 15:48:12</p>
+                </div>
+                <div class="profile-devices__locate"><span class="profile-devices__label">Местоположение</span>
+                  <p>Russian Federation-Novosibirskaya oblast'-Novosibirsk</p>
+                </div>
+                <div class="profile-devices__ip"><span class="profile-devices__label">IP-адрес</span>
+                  <p>5.129.58.15</p>
+                </div>
+                <button class="profile-devices__delete js-popupOpen" type="button" data-popup="delete">Удалить</button>
+              </li>
             </ul>
+                    <ol class="pagination">
+                      <li class="pagination__item">
+                        <button class="pagination__btn pagination__btn--back" type="button"></button>
+                      </li>
+                      <li class="pagination__item active"> 
+                        <button class="pagination__btn" type="button">1</button>
+                      </li>
+                      <li class="pagination__item"> 
+                        <button class="pagination__btn" type="button">2</button>
+                      </li>
+                      <li class="pagination__item"> 
+                        <button class="pagination__btn" type="button">3</button>
+                      </li>
+                      <li class="pagination__item pagination__item--dots">...</li>
+                      <li class="pagination__item">
+                        <button class="pagination__btn pagination__btn--next" type="button"></button>
+                      </li>
+                    </ol>
           </div>
         </section>
-        <section class="start"> 
-          <div class="container"> 
-            <div class="start-inner">
-              <div class="start__description">
-                        <h3 class="section-title">Начните свой путь в мире криптовалют</h3>
-                <p class="start__text">Зарегистрируйтесь на RIWATEX сейчас и торгуйте более чем 100 деривативами на криптовалюты с плечом до х155</p><a class="link__btn link__btn--center" href="#" target="_self">Начните работу с RIWATEX</a>
-              </div>
-              <div class="start__img"> <img src="img/start/start.svg" alt="Путь в мире криптовалют"><a class="link__btn start__btn" href="#" target="_self">Начните работу с RIWATEX</a>
+        <div class="popup js-popup hide" id="delete">
+          <div class="popup-inner"> 
+            <div class="popup-head"> 
+              <h5 class="popup__title">Удалить устройство?</h5>
+              <div class="popup__close js-popupClose"></div>
+            </div>
+            <div class="popup__subtitle">Chrome 121.0.0 (Windows)</div>
+            <div class="popup__text">Вы уверены, что хотите удалить выбранное доверенное устройство?</div>
+            <div class="popup-footer"> 
+              <div class="popup__btns">
+                        <button class="btn popup__btn btn--transparent js-popupClose" type="button">Отмена</button>
+                        <button class="btn popup__btn js-popupFormCheck" type="submit">Подтвердить</button>
               </div>
             </div>
-            <div class="start__disclaimer">Торговля на&nbsp;маржине, фьючерсами и&nbsp;возможность получения наград подчинены определенным географическим ограничениям и&nbsp;критериям доступности. Ставки на&nbsp;вознаграждение могут изменяться, и&nbsp;их&nbsp;применение зависит от&nbsp;соблюдения условий и&nbsp;положений Riwatex. Эти материалы предназначены исключительно для общей информации и&nbsp;не&nbsp;являются инвестиционным советом, рекомендацией или приглашением к&nbsp;покупке, продаже, стейкингу или удержанию любого криптоактива или участию в&nbsp;какой-либо конкретной стратегии торговли. Некоторые криптопродукты и&nbsp;рынки не&nbsp;регулируются, и&nbsp;вы&nbsp;можете не&nbsp;быть защищены государственными компенсационными и/или регулирующими схемами защиты. Непредсказуемая природа рынков криптоактивов может привести к&nbsp;потере средств. Налоги могут быть обязательными при получении дохода и/или при увеличении стоимости ваших криптоактивов, и&nbsp;вам следует получить независимый налоговый совет по&nbsp;вашему налоговому положению. Для получения дополнительной информации, ознакомьтесь с&nbsp;нашими Условиями обслуживания. Торговля фьючерсами, деривативами и&nbsp;другими инструментами с&nbsp;использованием кредитного плеча сопряжена с&nbsp;риском и&nbsp;может быть не&nbsp;подходящей для всех. Чтобы узнать больше, ознакомьтесь с&nbsp;открытием рисков Kraken.</div>
           </div>
-        </section>
+        </div>
       </main>
       <footer class="footer">
         <div class="footer-inner">
