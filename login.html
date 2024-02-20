@@ -59,7 +59,7 @@
               <p class="login__subtitle">Первый вход в систему считается регистрацией</p>
               <div class="login__tab">Эл. почта</div>
               <!-- Стартовый этап-->
-              <div class="login__content js-form js-firstStep">
+              <div class="login__content js-formLogin js-firstStep">
                 <div class="login__input-wrap login__input-wrap--email">
                   <input class="login__input login__input--icon js-inputCheck" type="email" name="email" placeholder="Эл. почта">
                   <button class="login__input-clearing js-inputClearing" type="button"></button>
@@ -74,7 +74,7 @@
                 </button>
               </div>
               <!-- Этап регистрации-->
-              <div class="login__content js-form js-stepReg" style="display:none">
+              <div class="login__content js-formLogin js-stepReg" style="display:none">
                 <div class="login__input-wrap login__input-wrap--email">
                   <input class="login__input login__input--icon js-inputCheck" type="email" name="email" placeholder="Эл. почта">
                   <button class="login__input-clearing js-inputClearing" type="button"></button>
@@ -110,7 +110,7 @@
                         <button class="btn login__btn btn--wide js-formSubmit" type="submit">Регистрация</button>
               </div>
               <!-- Этап входа-->
-              <div class="login__content js-form js-stepLogin" style="display:none">
+              <div class="login__content js-formLogin js-stepLogin" style="display:none">
                 <div class="login__input-wrap login__input-wrap--email">
                   <input class="login__input login__input--icon js-inputCheck" type="email" name="email" placeholder="Эл. почта">
                   <button class="login__input-clearing js-inputClearing" type="button"></button>
@@ -124,7 +124,7 @@
               </div>
             </div>
             <!-- Последний этап регистрации или входа изначально не виден-->
-            <div class="login-inner login-inner--code js-form js-stepCode" style="display:none">
+            <div class="login-inner login-inner--code js-formLogin js-stepCode" style="display:none">
               <h2 class="login__title">Код электронной почты</h2>
               <p class="login__subtitle">Пожалуйста введите 6-ти значный код, который мы отправили на ваш адрес электронной почты <span>pi***k@yandex.ru</span></p>
               <div class="login__code">
