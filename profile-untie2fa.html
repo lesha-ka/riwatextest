@@ -426,13 +426,14 @@
               <div class="profile__form-title">Отвязать Google Authenticator</div>
                       <div class="warning-block">Вывод средств в криптовалюте или в фиате будет запрещен в течение 24 часов после отключения Google Authenticator.</div>
                       <div class="input__block"> 
-                        <label class="input__label" for="code"><span>*&nbsp;</span>Код подтверждения с почты:</label>
+                        <label class="input__label" for="code"><span>*&nbsp;</span>SMS-код:</label>
                         <div class="input__wrap"> 
-                          <input class="input js-emptyCheck" type="text" id="code" placeholder="Введите код">
+                          <input class="input js-emptyCheck js-inputNumbers" type="text" id="code" placeholder="Введите код">
                           <button class="input__code" type="button">Получить код</button>
                           <div class="input__error js-inputError">Введите код</div>
                         </div>
                       </div>
+              <!--+input-code('Код подтверждения с почты:', 'text', 'code', 'Введите код', 'js-emptyCheck', 'Введите код')-->
                       <div class="input__block"> 
                         <label class="input__label" for="code2"><span>*&nbsp;</span>Google Authenticator:
                         </label>
