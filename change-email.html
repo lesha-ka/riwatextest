@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Безопасность</title>
+    <title>Подтверждение по электронной почте</title>
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, viewport-fit=cover, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -411,325 +411,67 @@
         </div>
       </header>
       <main class="main profile"> 
-        <nav class="profile-nav"> 
-          <ul class="profile-nav__links"> 
-            <li class="profile-nav__link"><a class="profile-nav__link-inner" href="profile-account.html">
-                <div class="profile-nav__link-icon" style="mask-image: url(img/icons/profile-account.svg); -webkit-mask-image: url(img/icons/profile-account.svg)"></div>
-                <div class="profile-nav__link-text">Личный кабинет</div></a></li>
-            <li class="profile-nav__link"><a class="profile-nav__link-inner active" href="profile-security.html">
-                <div class="profile-nav__link-icon" style="mask-image: url(img/icons/profile-security.svg); -webkit-mask-image: url(img/icons/profile-security.svg)"></div>
-                <div class="profile-nav__link-text">Безопасность</div></a></li>
-            <li class="profile-nav__link"><a class="profile-nav__link-inner">
-                <div class="profile-nav__link-icon" style="mask-image: url(img/icons/profile-verification.svg); -webkit-mask-image: url(img/icons/profile-verification.svg)"></div>
-                <div class="profile-nav__link-text">Проверка личности</div></a></li>
-            <li class="profile-nav__link"><a class="profile-nav__link-inner">
-                <div class="profile-nav__link-icon" style="mask-image: url(img/icons/profile-referral.svg); -webkit-mask-image: url(img/icons/profile-referral.svg)"></div>
-                <div class="profile-nav__link-text">Реферальная программа</div></a></li>
-            <li class="profile-nav__link"><a class="profile-nav__link-inner">
-                <div class="profile-nav__link-icon" style="mask-image: url(img/icons/profile-commissions.svg); -webkit-mask-image: url(img/icons/profile-commissions.svg)"></div>
-                <div class="profile-nav__link-text">Торговые комиссии</div></a></li>
-          </ul>
-        </nav>
-        <section class="profile-body"> 
-          <h2 class="profile__title">Безопасность</h2>
-          <div class="profile-security__block"> 
-            <div class="profile-security__head"> 
-              <h4 class="profile-security__title">Двухфакторная аутентификация (2FA)</h4>
-              <p class="profile-security__text">Для защиты аккаунта рекомендуется включить хотя бы один метод 2FA</p>
-              <div class="profile-security__level"> 
-                <p class="profile-security__level-label">Уровень безопасности:</p>
-                <div class="profile-security__level-wrap profile-security__level-wrap--red">   
-                  <p class="profile-security__level-name">Низкий</p>
-                  <div class="profile-security__level-icon"><span> </span><span> </span><span> </span></div>
+        <section class="profile-content"> 
+          <div class="container">
+                    <ol class="breadcrumbs">
+                      <li><a href="profile-account.html">Личный кабинет</a>
+                      </li>
+                      <li><a href="profile-security.html">Безопасность</a>
+                      </li>
+                      <li><span>Подтверждение по электронной почте</span>
+                      </li>
+                    </ol>
+            <h2 class="profile__title profile__title--small">Подтверждение по электронной почте</h2>
+            <div class="profile__form js-form">
+              <div class="profile__form-title">Изменить электронную почту </div>
+                      <div class="warning-block">Вывод средств в криптовалюте или в фиате будет запрещен в течение 24 часов после изменения пароля для входа.</div>
+                      <div class="input__block"> 
+                        <label class="input__label" for="email"><span>*&nbsp;</span>Новый адрес эл. почты:
+                        </label>
+                        <div class="input__wrap"> 
+                          <input class="input js-emailCheck" type="email" id="email" placeholder="Укажите E-mail">
+                          <div class="input__error js-inputError">Некорректный email</div>
+                        </div>
+                      </div>
+                      <div class="input__block"> 
+                        <label class="input__label" for="code2"><span>*&nbsp;</span>Код подтверждения новой эл. почты:</label>
+                        <div class="input__wrap"> 
+                          <input class="input js-emptyCheck" type="text" id="code2" placeholder="Введите код">
+                          <button class="input__code" type="button">Получить код</button>
+                          <div class="input__error js-inputError">Введите код</div>
+                        </div>
+                      </div>
+                      <div class="input__block"> 
+                        <label class="input__label" for="code3"><span>*&nbsp;</span>Код подтверждения старой почты:</label>
+                        <div class="input__wrap"> 
+                          <input class="input js-emptyCheck" type="text" id="code3" placeholder="Введите код">
+                          <button class="input__code" type="button">Получить код</button>
+                          <div class="input__error js-inputError">Введите код</div>
+                        </div>
+                      </div>
+              <!-- <div class="input__block"> 
+                <label class="input__label" for="code"><span>*&nbsp;</span>SMS-код:</label>
+                <div class="input__wrap"> 
+                  <input class="input js-emptyCheck js-inputNumbers" type="text" id="code" placeholder="Введите код">
+                  <button class="input__code" type="button">Получить код</button>
+                  <div class="input__error js-inputError">Введите код</div>
                 </div>
               </div>
-            </div>
-            <div class="profile-security__item">
-              <div class="profile-security__icon"></div>
-              <div class="profile-security__inner">
-                <div class="profile-security__name">Google Authenticator</div>
-                <div class="profile-security__text">Настройте свой Google Authenticator, чтобы обеспечить дополнительный уровень безопасности при выводе средств или настройке параметров безопасности.</div>
-                <div class="profile-security__actions">
-                  <div class="profile-security__status profile-security__status--check">Вкл.</div><a class="link__btn profile-security__btn link__btn--transparent" href="profile-untie2fa.html" target="_self">Отвязать</a>
-                </div>
-              </div>
-            </div>
-            <div class="profile-security__item">
-              <div class="profile-security__icon"><img src="img/profile/email.svg" alt="email"></div>
-              <div class="profile-security__inner">
-                <div class="profile-security__name">Подтверждение по эл. почте</div>
-                <div class="profile-security__text">Привяжите адрес электронной почты к своему аккаунту для входа в систему, восстановления пароля и подтверждения вывода средств.</div>
-                <div class="profile-security__actions">
-                  <div class="profile-security__status profile-security__status--check">as**@gmail.com</div>
-                          <button class="btn profile-security__btn btn--transparent js-popupOpen" type="button" data-popup="email2">Настроить</button>
-                </div>
-              </div>
-            </div>
-            <div class="profile-security__item">
-              <div class="profile-security__icon"><img src="img/profile/phone.svg" alt="Пароль для входа"></div>
-              <div class="profile-security__inner">
-                <div class="profile-security__name">Подтверждение по номеру телефона</div>
-                <div class="profile-security__text">Привяжите свой номер мобильного телефона к своему аккаунту, чтобы получать коды подтверждения по SMS для подтверждения вывода средств, смены пароля и настроек безопасности.</div>
-                <div class="profile-security__actions">
-                  <div class="profile-security__status profile-security__status--check">951***2509</div>
-                          <button class="btn profile-security__btn btn--transparent js-popupOpen" type="button" data-popup="phone2">Изменить</button>
-                </div>
-              </div>
-            </div>
-            <div class="profile-security__item">
-              <div class="profile-security__icon"><img src="img/profile/password.svg" alt="Пароль для входа"></div>
-              <div class="profile-security__inner">
-                <div class="profile-security__name">Пароль для входа</div>
-                <div class="profile-security__text">Увеличьте надежность пароля, чтобы повысить безопасность учетной записи.</div>
-                <div class="profile-security__actions"><a class="link__btn profile-security__btn link__btn--transparent" href="change-password.html" target="_self">Настроить</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="profile-security__block"> 
-            <div class="profile-security__head"> 
-              <h4 class="profile-security__title">Расширенная безопасность</h4>
-            </div>
-            <div class="profile-security__item">
-              <div class="profile-security__icon"><img src="img/profile/share.svg" alt="Расширенная безопасность"></div>
-              <div class="profile-security__inner profile-security__inner--google">
-                <div class="profile-security__name">Вход с помощью стороннего аккаунта</div>
-                <div class="profile-security__text">Привяжите сторонние аккаунты к вашей учетной записи Riwatex. В случае успеха вы можете использовать их для входа в систему.</div>
-                <div class="profile-security__google profile-security__google--link"><img src="img/profile/google.svg" alt="google">
-                  <p>Google</p>
-                  <button class="js-popupOpen" type="button" data-popup="google2">Отвязать</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="profile-security__block"> 
-            <div class="profile-security__head"> 
-              <h4 class="profile-security__title">Устройства и действия</h4>
-            </div>
-            <div class="profile-security__item">
-              <div class="profile-security__icon"><img src="img/profile/action.svg" alt="Устройства и действия"></div>
-              <div class="profile-security__inner">
-                <div class="profile-security__name">Действия в аккаунте</div>
-                <div class="profile-security__text">Просмотр истории входа в систему и безопасности.</div>
-                <div class="profile-security__actions"><a class="link__btn profile-security__btn btn--transparent js-popupOpen" href="profile-actions.html" target="_self">Посмотреть</a>
-                </div>
-              </div>
-            </div>
-            <div class="profile-security__item">
-              <div class="profile-security__icon"><img src="img/profile/device.svg" alt="Управление устройствами"></div>
-              <div class="profile-security__inner">
-                <div class="profile-security__name">Управление устройствами</div>
-                <div class="profile-security__text">Управляйте устройствами, которым разрешен доступ к вашей учетной записи.</div>
-                <div class="profile-security__actions"><a class="link__btn profile-security__btn link__btn--transparent" href="profile-devices.html" target="_self">Настроить</a>
-                </div>
-              </div>
-            </div>
-            <div class="profile-security__item">
-              <div class="profile-security__icon"><img src="img/profile/deactivate.svg" alt="Заморозить аккаунт"></div>
-              <div class="profile-security__inner">
-                <div class="profile-security__name">Заморозить аккаунт</div>
-                <div class="profile-security__text">Заморозьте свой аккаунт, чтобы немедленно отключить все функции.</div>
-                <div class="profile-security__actions"><a class="link__btn profile-security__btn btn--red js-popupOpen" href="profile-blocking.html" target="_self">Заморозить</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="profile-security__block"> 
-            <div class="profile-security__head"> 
-              <h4 class="profile-security__title">Другие</h4>
-            </div>
-            <div class="profile-security__item">
-              <div class="profile-security__icon"><img src="img/profile/riwatex.svg" alt="Верификация"></div>
-              <div class="profile-security__inner">
-                <div class="profile-security__name">Верификация Riwatex</div>
-                <div class="profile-security__text">Верификация Riwatex позволяет проверить, являются ли номера телефонов и аккаунты в социальных сетях (например, Telegram), официальными каналами Riwatex.</div>
-                <div class="profile-security__actions"><a class="link__btn profile-security__btn btn--transparent js-popupOpen" href="profile-verif.html" target="_self">Верификация</a>
-                </div>
+              -->
+                      <div class="input__block"> 
+                        <label class="input__label" for="google3"><span>*&nbsp;</span>Google Authenticator:
+                        </label>
+                        <div class="input__wrap"> 
+                          <input class="input js-emptyCheck" type="text" id="google3" placeholder="Введите код">
+                          <div class="input__error js-inputError">Введите код</div>
+                        </div>
+                      </div>
+              <div class="profile__form-btns"><a class="profile__form-link" href="#">Сброс настроек безопасности</a>
+                        <button class="btn profile__form-btn profile__form-btn--small js-formCheck" type="button" data-popup="check">Подтвердить</button>
               </div>
             </div>
           </div>
         </section>
-        <div class="popup js-popup hide" id="google">
-          <div class="popup-inner"> 
-            <div class="popup-head"> 
-              <h5 class="popup__title">Проверка безопасности</h5>
-              <div class="popup__close js-popupClose"></div>
-            </div>
-            <div class="popup__form js-form">
-              <div class="popup-body"> 
-                        <div class="input__block"> 
-                          <label class="input__label" for="google"><span>*&nbsp;</span>Google Authenticator
-                          </label>
-                          <div class="input__wrap"> 
-                            <input class="input js-emptyCheck" type="text" id="google" placeholder="Введите код">
-                            <div class="input__error js-inputError">Введите код</div>
-                          </div>
-                        </div>
-              </div>
-              <div class="popup-footer"> 
-                <div class="popup__btns">
-                          <button class="btn popup__btn btn--transparent js-popupClose" type="button">Отмена</button>
-                          <button class="btn popup__btn js-formCheck" type="submit">Подтвердить</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="popup js-popup hide" id="email">
-          <div class="popup-inner"> 
-            <div class="popup-head"> 
-              <h5 class="popup__title">Проверка безопасности</h5>
-              <div class="popup__close js-popupClose"></div>
-            </div>
-            <div class="popup__form js-form">
-              <div class="popup-body"> 
-                        <div class="input__block"> 
-                          <label class="input__label" for="email"><span>*&nbsp;</span>Код с эл. почты:
-                          </label>
-                          <div class="input__wrap"> 
-                            <input class="input js-emptyCheck" type="text" id="email" placeholder="Введите код">
-                            <div class="input__error js-inputError">Введите код</div>
-                          </div>
-                        </div>
-              </div>
-              <div class="popup-footer"> 
-                <div class="popup__btns">
-                          <button class="btn popup__btn btn--transparent js-popupClose" type="button">Отмена</button>
-                          <button class="btn popup__btn js-formCheck" type="submit">Подтвердить</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="popup js-popup hide" id="phone">
-          <div class="popup-inner"> 
-            <div class="popup-head"> 
-              <h5 class="popup__title">Проверка безопасности</h5>
-              <div class="popup__close js-popupClose"></div>
-            </div>
-            <div class="popup__form js-form">
-              <div class="popup-body"> 
-                        <div class="input__block"> 
-                          <label class="input__label" for="number"><span>*&nbsp;</span>SMS-код:
-                          </label>
-                          <div class="input__text">Код будет направлен на номер +7 95***09</div>
-                          <div class="input__wrap"> 
-                            <input class="input js-emptyCheck" type="text" id="number" placeholder="Введите код">
-                            <div class="input__error js-inputError">Введите код</div>
-                          </div>
-                        </div>
-              </div>
-              <div class="popup-footer"> 
-                <div class="popup__btns">
-                          <button class="btn popup__btn btn--transparent js-popupClose" type="button">Отмена</button>
-                          <button class="btn popup__btn js-formCheck" type="submit">Подтвердить</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="popup js-popup hide" id="google2">
-          <div class="popup-inner"> 
-            <div class="popup-head"> 
-              <h5 class="popup__title">Отвязать Google</h5>
-              <div class="popup__close js-popupClose"></div>
-            </div>
-            <div class="popup-body"> 
-              <p class="popup__text">Вы не сможете войти в систему через Google после того, как отвяжете свою учетную запись.</p>
-            </div>
-            <div class="popup-footer"> 
-              <div class="popup__btns">
-                        <button class="btn popup__btn btn--transparent js-popupClose" type="button">Отмена</button>
-                        <button class="btn popup__btn js-formCheck" type="submit">Подтвердить</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="popup js-popup hide" id="phone2">
-          <div class="popup-inner"> 
-            <div class="popup-head"> 
-              <h5 class="popup__title">Добавить номер телефона</h5>
-              <div class="popup__close js-popupClose"></div>
-            </div>
-            <div class="popup__form js-form">
-              <div class="popup-body"> 
-                <div class="input__block"> 
-                  <label class="input__label" for="phone2">Новый номер телефона:</label>
-                  <div class="input__wrap input__wrap--flex">
-                    <div class="input__select-phone itc-select js-select"> 
-                      <button class="input__select-phone-toggle itc-select__toggle" type="button" name="phonecode" value="+7" data-select="toggle" data-index="0"><img src="img/flags/ru.svg", alt="ru"> +7 <span>Российская Федерация</span></button>
-                      <div class="input__select-phone-dropdown itc-select__dropdown">
-                        <div class="input__select-search">
-                          <input class="js-search" type="text" value="" placeholder="Поиск">
-                        </div>
-                        <ul class="input__select-phone-options itc-select__options js-searchBlock">
-                          <li class="input__select-phone-option itc-select__option" data-select="option" data-value="+994" data-index="0"><img src="img/flags/az.svg", alt="az"> +994 <span>Азербайджан</span></li>
-                          <li class="input__select-phone-option itc-select__option" data-select="option" data-value="+374" data-index="1"><img src="img/flags/am.svg", alt="am"> +374 <span>Армения</span></li>
-                          <li class="input__select-phone-option itc-select__option" data-select="option" data-value="+375" data-index="2"><img src="img/flags/by.svg", alt="by"> +375 <span>Белоруссия</span></li>
-                          <li class="input__select-phone-option itc-select__option" data-select="option" data-value="+7" data-index="3"><img src="img/flags/kz.svg", alt="kz"> +7 <span>Казахстан</span></li>
-                          <li class="input__select-phone-option itc-select__option" data-select="option" data-value="+996" data-index="4"><img src="img/flags/ky.svg", alt="ky"> +996 <span>Кыргызстан</span></li>
-                          <li class="input__select-phone-option itc-select__option" data-select="option" data-value="+998" data-index="5"><img src="img/flags/uz.svg", alt="uz"> +998 <span>Узбекистан</span></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <input class="input js-emptyCheck js-inputNumbers" type="tel" id="phone2" inputmode="tel" placeholder="Введите номер телефона">
-                  </div>
-                </div>
-                        <div class="input__block"> 
-                          <label class="input__label" for="code"><span>*&nbsp;</span>Код подтверждения нового номера:</label>
-                          <div class="input__wrap"> 
-                            <input class="input js-emptyCheck" type="text" id="code" placeholder="Введите код">
-                            <button class="input__code" type="button">Получить код</button>
-                            <div class="input__error js-inputError">Введите код</div>
-                            <p class="input__text">Не получили смс с кодом подтверждения?&nbsp;<a href="#">Помощь</a></p>
-                          </div>
-                        </div>
-              </div>
-              <div class="popup-footer"> 
-                <div class="popup__btns">
-                          <button class="btn popup__btn btn--transparent js-popupClose" type="button">Отмена</button>
-                          <button class="btn popup__btn js-formCheck" type="submit">Завершить</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="popup js-popup hide" id="email2">
-          <div class="popup-inner"> 
-            <div class="popup-head"> 
-              <h5 class="popup__title">Добавить электронную почту</h5>
-              <div class="popup__close js-popupClose"></div>
-            </div>
-            <div class="popup__form js-form">
-              <div class="popup-body"> 
-                        <div class="input__block"> 
-                          <label class="input__label" for="email2"><span>*&nbsp;</span>Новый адрес эл. почты:
-                          </label>
-                          <div class="input__text">Код будет направлен на почту as***@gmail.com</div>
-                          <div class="input__wrap"> 
-                            <input class="input js-emailCheck" type="email" id="email2" placeholder="Укажите E-mail">
-                            <div class="input__error js-inputError">Некорректный email</div>
-                          </div>
-                        </div>
-                        <div class="input__block"> 
-                          <label class="input__label" for="code2"><span>*&nbsp;</span>Код подтверждения новой почты:</label>
-                          <div class="input__wrap"> 
-                            <input class="input js-emptyCheck" type="text" id="code2" placeholder="Введите код">
-                            <button class="input__code" type="button">Получить код</button>
-                            <div class="input__error js-inputError">Введите код</div>
-                            <p class="input__text">Не получили письмо с кодом подтверждения?&nbsp;<a href="#">Помощь</a></p>
-                          </div>
-                        </div>
-              </div>
-              <div class="popup-footer"> 
-                <div class="popup__btns">
-                          <button class="btn popup__btn btn--transparent js-popupClose" type="button">Отмена</button>
-                          <button class="btn popup__btn js-formCheck" type="submit">Завершить</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </main>
       <footer class="footer">
         <div class="footer-inner">
