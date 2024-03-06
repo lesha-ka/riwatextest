@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Действия в аккаунте</title>
+    <title>Подтверждение по номеру телефона</title>
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, viewport-fit=cover, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -418,155 +418,72 @@
                       </li>
                       <li><a href="profile-security.html">Безопасность</a>
                       </li>
-                      <li><span>Действия в аккаунте:</span>
+                      <li><span>Подтверждение по номеру телефона</span>
                       </li>
                     </ol>
-            <h2 class="profile__title profile__title--small">Действия в аккаунте</h2>
-            <div class="profile-actions">
-              <div class="profile-actions__table"> 
-                <div class="profile-actions__head"> 
-                  <div class="profile-actions__controls"> 
-                    <div class="profile-actions__toggle js-actionsToggle">История входов в систему</div>
-                    <div class="profile-actions__tabs">
-                      <div class="profile-actions__tab js-actionsTab active" data-content="login">История входов в систему</div>
-                      <div class="profile-actions__tab js-actionsTab" data-content="security">История активности безопасности</div>
+            <h2 class="profile__title profile__title--small">Подтверждение по номеру телефона</h2>
+            <div class="profile__form js-form">
+              <div class="profile__form-title">Изменить номер телефона</div>
+                      <div class="warning-block">Вывод средств в криптовалюте или в фиате будет запрещен в течение 24 часов после изменения номера телефона</div>
+              <div class="input__block"> 
+                <label class="input__label" for="phone2">Новый номер телефона:</label>
+                <div class="input__wrap input__wrap--flex">
+                  <div class="input__select-phone itc-select js-select"> 
+                    <button class="input__select-phone-toggle itc-select__toggle" type="button" name="phonecode" value="+7" data-select="toggle" data-index="0"><img src="img/flags/ru.svg", alt="ru"> +7 <span>Российская Федерация</span></button>
+                    <div class="input__select-phone-dropdown itc-select__dropdown">
+                      <div class="input__select-search">
+                        <input class="js-search" type="text" value="" placeholder="Поиск">
+                      </div>
+                      <ul class="input__select-phone-options itc-select__options js-searchBlock">
+                        <li class="input__select-phone-option itc-select__option" data-select="option" data-value="+994" data-index="0"><img src="img/flags/az.svg", alt="az"> +994 <span>Азербайджан</span></li>
+                        <li class="input__select-phone-option itc-select__option" data-select="option" data-value="+374" data-index="1"><img src="img/flags/am.svg", alt="am"> +374 <span>Армения</span></li>
+                        <li class="input__select-phone-option itc-select__option" data-select="option" data-value="+375" data-index="2"><img src="img/flags/by.svg", alt="by"> +375 <span>Белоруссия</span></li>
+                        <li class="input__select-phone-option itc-select__option" data-select="option" data-value="+7" data-index="3"><img src="img/flags/kz.svg", alt="kz"> +7 <span>Казахстан</span></li>
+                        <li class="input__select-phone-option itc-select__option" data-select="option" data-value="+996" data-index="4"><img src="img/flags/ky.svg", alt="ky"> +996 <span>Кыргызстан</span></li>
+                        <li class="input__select-phone-option itc-select__option" data-select="option" data-value="+998" data-index="5"><img src="img/flags/uz.svg", alt="uz"> +998 <span>Узбекистан</span></li>
+                      </ul>
                     </div>
                   </div>
-                </div>
-                <div class="profile-actions__body"> 
-                  <div class="profile-actions__content js-actionsContent active" data-content="login"> 
-                    <div class="profile-actions__row profile-actions__row--head">
-                      <div class="profile-actions__column">Время</div>
-                      <div class="profile-actions__column">Местоположение</div>
-                      <div class="profile-actions__column">IP-адрес</div>
-                      <div class="profile-actions__column">Источник</div>
-                      <div class="profile-actions__column">Устройство</div>
-                    </div>
-                    <ul class="profile-actions__list">
-                      <li class="profile-actions__row">
-                        <div class="profile-actions__column"><span>Время</span> 2023-12-11 09:43:54</div>
-                        <div class="profile-actions__column"><span>Местоположение</span> Russian Federation-Novosibirskaya oblast'-Novosibirsk</div>
-                        <div class="profile-actions__column js-copyWrap"> <span>IP-адрес</span>
-                          <p class="profile-actions__ip js-copyText"> 
-                            <button class="copy js-copyBtn" type="button"></button><span>999.999.999.999</span>
-                          </p>
-                        </div>
-                        <div class="profile-actions__column"><span>Источник</span> WEB</div>
-                        <div class="profile-actions__column profile-actions__column--first">Chrome 120.0.0 (Windows)</div>
-                      </li>
-                      <li class="profile-actions__row">
-                        <div class="profile-actions__column"><span>Время</span> 2023-12-11 09:43:54</div>
-                        <div class="profile-actions__column"><span>Местоположение</span> Russian Federation-Novosibirskaya oblast'-Novosibirsk</div>
-                        <div class="profile-actions__column js-copyWrap"> <span>IP-адрес</span>
-                          <p class="profile-actions__ip js-copyText"> 
-                            <button class="copy js-copyBtn" type="button"></button><span>999.999.999.999</span>
-                          </p>
-                        </div>
-                        <div class="profile-actions__column"><span>Источник</span> WEB</div>
-                        <div class="profile-actions__column profile-actions__column--first">Chrome 120.0.0 (Windows)</div>
-                      </li>
-                      <li class="profile-actions__row">
-                        <div class="profile-actions__column"><span>Время</span> 2023-12-11 09:43:54</div>
-                        <div class="profile-actions__column"><span>Местоположение</span> Russian Federation-Novosibirskaya oblast'-Novosibirsk</div>
-                        <div class="profile-actions__column js-copyWrap"> <span>IP-адрес</span>
-                          <p class="profile-actions__ip js-copyText"> 
-                            <button class="copy js-copyBtn" type="button"></button><span>999.999.999.999</span>
-                          </p>
-                        </div>
-                        <div class="profile-actions__column"><span>Источник</span> WEB</div>
-                        <div class="profile-actions__column profile-actions__column--first">Chrome 120.0.0 (Windows)</div>
-                      </li>
-                      <li class="profile-actions__row">
-                        <div class="profile-actions__column"><span>Время</span> 2023-12-11 09:43:54</div>
-                        <div class="profile-actions__column"><span>Местоположение</span> Russian Federation-Novosibirskaya oblast'-Novosibirsk</div>
-                        <div class="profile-actions__column js-copyWrap"> <span>IP-адрес</span>
-                          <p class="profile-actions__ip js-copyText"> 
-                            <button class="copy js-copyBtn" type="button"></button><span>999.999.999.999</span>
-                          </p>
-                        </div>
-                        <div class="profile-actions__column"><span>Источник</span> WEB</div>
-                        <div class="profile-actions__column profile-actions__column--first">Chrome 120.0.0 (Windows)</div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="profile-actions__content profile-actions__content--less js-actionsContent" data-content="security"> 
-                    <div class="profile-actions__row profile-actions__row--head">
-                      <div class="profile-actions__column">Дата</div>
-                      <div class="profile-actions__column">Настройки проверки безопасности</div>
-                      <div class="profile-actions__column">Примечание</div>
-                      <div class="profile-actions__column">IP-адрес</div>
-                    </div>
-                    <ul class="profile-actions__list">
-                      <li class="profile-actions__row">
-                        <div class="profile-actions__column"><span>Дата</span> 2023-12-11 09:43:54</div>
-                        <div class="profile-actions__column profile-actions__column--first">Изменен логин пользователя</div>
-                        <div class="profile-actions__column"><span>Примечание</span> Текст примечания?</div>
-                        <div class="profile-actions__column js-copyWrap"> <span>IP-адрес</span>
-                          <p class="profile-actions__ip js-copyText"> 
-                            <button class="copy js-copyBtn" type="button"></button><span>999.999.999.999</span>
-                          </p>
-                        </div>
-                      </li>
-                      <li class="profile-actions__row">
-                        <div class="profile-actions__column"><span>Дата</span> 2023-12-11 09:43:54</div>
-                        <div class="profile-actions__column profile-actions__column--first">Изменен логин пользователя</div>
-                        <div class="profile-actions__column"><span>Примечание</span> Текст примечания?</div>
-                        <div class="profile-actions__column js-copyWrap"> <span>IP-адрес</span>
-                          <p class="profile-actions__ip js-copyText"> 
-                            <button class="copy js-copyBtn" type="button"></button><span>999.999.999.999</span>
-                          </p>
-                        </div>
-                      </li>
-                      <li class="profile-actions__row">
-                        <div class="profile-actions__column"><span>Дата</span> 2023-12-11 09:43:54</div>
-                        <div class="profile-actions__column profile-actions__column--first">Изменен логин пользователя</div>
-                        <div class="profile-actions__column"><span>Примечание</span> Текст примечания?</div>
-                        <div class="profile-actions__column js-copyWrap"> <span>IP-адрес</span>
-                          <p class="profile-actions__ip js-copyText"> 
-                            <button class="copy js-copyBtn" type="button"></button><span>999.999.999.999</span>
-                          </p>
-                        </div>
-                      </li>
-                      <li class="profile-actions__row">
-                        <div class="profile-actions__column"><span>Дата</span> 2023-12-11 09:43:54</div>
-                        <div class="profile-actions__column profile-actions__column--first">Изменен логин пользователя</div>
-                        <div class="profile-actions__column"><span>Примечание</span> Текст примечания?</div>
-                        <div class="profile-actions__column js-copyWrap"> <span>IP-адрес</span>
-                          <p class="profile-actions__ip js-copyText"> 
-                            <button class="copy js-copyBtn" type="button"></button><span>999.999.999.999</span>
-                          </p>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="profile-actions__footer"> 
-                  <p class="profile-actions__text">Отображается только история входа / история активности безопасности за последние 30 дней</p>
-                  <p class="profile-actions__text">Заметили подозрительную активность? <a href="#">Заблокировать аккаунт</a></p>
+                  <input class="input js-emptyCheck js-inputNumbers" type="tel" id="phone2" inputmode="tel" placeholder="Введите номер телефона">
                 </div>
               </div>
+                      <div class="input__block"> 
+                        <label class="input__label" for="code2"><span>*&nbsp;</span>Код подтверждения нового номера:</label>
+                        <div class="input__wrap"> 
+                          <input class="input js-emptyCheck js-inputNumbers" type="text" id="code2" placeholder="Введите код">
+                          <button class="input__code" type="button">Получить код</button>
+                          <div class="input__error js-inputError">Введите код</div>
+                        </div>
+                      </div>
+                      <div class="input__block"> 
+                        <label class="input__label" for="code3"><span>*&nbsp;</span>Код подтверждения старого номера:</label>
+                        <div class="input__wrap"> 
+                          <input class="input js-emptyCheck js-inputNumbers" type="text" id="code3" placeholder="Введите код">
+                          <button class="input__code" type="button">Получить код</button>
+                          <div class="input__error js-inputError">Введите код</div>
+                        </div>
+                      </div>
+              <!-- <div class="input__block"> 
+                <label class="input__label" for="code"><span>*&nbsp;</span>Код подтверждения с эл. почты:</label>
+                <div class="input__wrap"> 
+                  <input class="input js-emptyCheck js-inputNumbers" type="text" id="code" placeholder="Введите код">
+                  <button class="input__code" type="button">Получить код</button>
+                  <div class="input__error js-inputError">Введите код</div>
+                </div>
+              </div>
+              -->
+                      <div class="input__block"> 
+                        <label class="input__label" for="google3"><span>*&nbsp;</span>Google Authenticator:
+                        </label>
+                        <div class="input__wrap"> 
+                          <input class="input js-emptyCheck js-inputNumbers" type="text" id="google3" placeholder="Введите код">
+                          <div class="input__error js-inputError">Введите код</div>
+                        </div>
+                      </div>
+              <div class="profile__form-btns"><a class="profile__form-link" href="#">Сброс настроек безопасности</a>
+                        <button class="btn profile__form-btn profile__form-btn--small js-formCheck" type="button" data-popup="check">Подтвердить</button>
+              </div>
             </div>
-                    <ol class="pagination">
-                      <li class="pagination__item">
-                        <button class="pagination__btn pagination__btn--back" type="button"></button>
-                      </li>
-                      <li class="pagination__item active"> 
-                        <button class="pagination__btn" type="button">1</button>
-                      </li>
-                      <li class="pagination__item"> 
-                        <button class="pagination__btn" type="button">2</button>
-                      </li>
-                      <li class="pagination__item"> 
-                        <button class="pagination__btn" type="button">3</button>
-                      </li>
-                      <li class="pagination__item pagination__item--dots">...</li>
-                      <li class="pagination__item"> 
-                        <button class="pagination__btn" type="button">9</button>
-                      </li>
-                      <li class="pagination__item">
-                        <button class="pagination__btn pagination__btn--next" type="button"></button>
-                      </li>
-                    </ol>
           </div>
         </section>
       </main>
