@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Подтверждение по номеру телефона</title>
+    <title>Сброс проверки безопасности</title>
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, viewport-fit=cover, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -418,70 +418,121 @@
                       </li>
                       <li><a href="profile-security.html">Безопасность</a>
                       </li>
-                      <li><span>Подтверждение по номеру телефона</span>
+                      <li><span>Сброс проверки безопасности</span>
                       </li>
                     </ol>
-            <h2 class="profile__title profile__title--small">Подтверждение по номеру телефона</h2>
-            <div class="profile__form js-form">
-              <div class="profile__form-title">Изменить номер телефона</div>
-                      <div class="warning-block">Вывод средств в криптовалюте или в фиате будет запрещен в течение 24 часов после изменения номера телефона</div>
-              <div class="input__block"> 
-                <label class="input__label" for="phone2">Новый номер телефона:</label>
-                <div class="input__wrap input__wrap--flex">
-                  <div class="input__select-phone itc-select js-select"> 
-                    <button class="input__select-phone-toggle itc-select__toggle" type="button" name="phonecode" value="+7" data-select="toggle" data-index="0"><img src="img/flags/ru.svg", alt="ru"> +7 <span>Российская Федерация</span></button>
-                    <div class="input__select-phone-dropdown itc-select__dropdown">
-                      <div class="input__select-search">
-                        <input class="js-search" type="text" value="" placeholder="Поиск">
-                      </div>
-                      <ul class="input__select-phone-options itc-select__options js-searchBlock">
-                        <li class="input__select-phone-option itc-select__option" data-select="option" data-value="+994" data-index="0"><img src="img/flags/az.svg", alt="az"> +994 <span>Азербайджан</span></li>
-                        <li class="input__select-phone-option itc-select__option" data-select="option" data-value="+374" data-index="1"><img src="img/flags/am.svg", alt="am"> +374 <span>Армения</span></li>
-                        <li class="input__select-phone-option itc-select__option" data-select="option" data-value="+375" data-index="2"><img src="img/flags/by.svg", alt="by"> +375 <span>Белоруссия</span></li>
-                        <li class="input__select-phone-option itc-select__option" data-select="option" data-value="+7" data-index="3"><img src="img/flags/kz.svg", alt="kz"> +7 <span>Казахстан</span></li>
-                        <li class="input__select-phone-option itc-select__option" data-select="option" data-value="+996" data-index="4"><img src="img/flags/ky.svg", alt="ky"> +996 <span>Кыргызстан</span></li>
-                        <li class="input__select-phone-option itc-select__option" data-select="option" data-value="+998" data-index="5"><img src="img/flags/uz.svg", alt="uz"> +998 <span>Узбекистан</span></li>
-                      </ul>
+            <h2 class="profile__title profile__title--small">Сброс проверки безопасности</h2>
+            <div class="profile-reset js-resetStart"> 
+              <div class="profile-reset__head">
+                <ol class="profile-reset__steps"> 
+                  <li class="profile-reset__step profile-reset__step--active"> <span>1</span>
+                    <p>Выберите метод проверки безопасности, который вы хотите сбросить</p>
+                  </li>
+                  <li class="profile-reset__step"><span>2</span>
+                    <p>Сброс проверки безопасности</p>
+                  </li>
+                </ol>
+              </div>
+              <div class="profile-reset__main profile-reset__main--slim">
+                <h3 class="profile-reset__title">Выберите метод проверки безопасности, который вы хотите сбросить</h3>
+                <div class="input__checkboxes input__checkboxes--square input__checkboxes--column js-resetOptionCheck">
+                  <div class="input__checkbox">
+                    <input type="radio" id="checkbox1" name="method" value="email" data-popup="phone">
+                    <label for="checkbox1">Сброс эл. почты ale***9@gmail.com</label>
+                  </div>
+                  <div class="input__checkbox">
+                    <input type="radio" id="checkbox2" name="method" value="phone" data-popup="google">
+                    <label for="checkbox2">Сбросить номер телефона 951***2509</label>
+                  </div>
+                  <div class="input__checkbox">
+                    <input type="radio" id="checkbox3" name="method" value="google" data-popup="mail">
+                    <label for="checkbox3">Сброс Google Authenticator</label>
+                  </div>
+                </div>
+                <ol class="profile-reset__rules">
+                  <li>Если вы&nbsp;выберете сброс нескольких или единственного метода проверки безопасности, Служба поддержки клиентов свяжется с&nbsp;вами, запросив видео-идентификацию для подтверждения вашей личности. Этот процесс может занять больше времени, чем обычно.</li>
+                  <li>Ваш запрос будет обработан в&nbsp;течение 1&nbsp;рабочего дня. Убедитесь, что ваш мобильный телефон включен, чтобы наша служба поддержки клиентов могла связаться с&nbsp;вами.</li>
+                </ol>
+                        <button class="btn profile-reset__btn js-resetOptionBtn">Сброс</button>
+              </div>
+            </div>
+            <div class="popup js-popup hide" id="google">
+              <div class="popup-inner"> 
+                <div class="popup-head"> 
+                  <h5 class="popup__title">Проверка безопасности</h5>
+                  <div class="popup__close js-popupClose"></div>
+                </div>
+                <div class="popup__form js-form">
+                  <div class="popup-body"> 
+                                <div class="input__block"> 
+                                  <label class="input__label" for="google"><span>*&nbsp;</span>Google Authenticator
+                                  </label>
+                                  <div class="input__wrap"> 
+                                    <input class="input js-emptyCheck" type="text" id="google" placeholder="Введите код">
+                                    <div class="input__error js-inputError">Введите код</div>
+                                  </div>
+                                </div>
+                  </div>
+                  <div class="popup-footer"> 
+                    <div class="popup__btns">
+                              <button class="btn popup__btn btn--transparent js-popupClose" type="button">Отмена</button>
+                              <button class="btn popup__btn js-formCheck" type="submit">Подтвердить</button>
                     </div>
                   </div>
-                  <input class="input js-emptyCheck js-inputNumbers" type="tel" id="phone2" inputmode="tel" placeholder="Введите номер телефона">
                 </div>
               </div>
-                      <div class="input__block"> 
-                        <label class="input__label" for="code2"><span>*&nbsp;</span>Код подтверждения нового номера:</label>
-                        <div class="input__wrap"> 
-                          <input class="input js-emptyCheck js-inputNumbers" type="text" id="code2" placeholder="Введите код">
-                          <button class="input__code" type="button">Получить код</button>
-                          <div class="input__error js-inputError">Введите код</div>
-                        </div>
-                      </div>
-                      <div class="input__block"> 
-                        <label class="input__label" for="code3"><span>*&nbsp;</span>Код подтверждения старого номера:</label>
-                        <div class="input__wrap"> 
-                          <input class="input js-emptyCheck js-inputNumbers" type="text" id="code3" placeholder="Введите код">
-                          <button class="input__code" type="button">Получить код</button>
-                          <div class="input__error js-inputError">Введите код</div>
-                        </div>
-                      </div>
-              <!-- <div class="input__block"> 
-                <label class="input__label" for="code"><span>*&nbsp;</span>Код подтверждения с эл. почты:</label>
-                <div class="input__wrap"> 
-                  <input class="input js-emptyCheck js-inputNumbers" type="text" id="code" placeholder="Введите код">
-                  <button class="input__code" type="button">Получить код</button>
-                  <div class="input__error js-inputError">Введите код</div>
+            </div>
+            <div class="popup js-popup hide" id="email">
+              <div class="popup-inner"> 
+                <div class="popup-head"> 
+                  <h5 class="popup__title">Проверка безопасности</h5>
+                  <div class="popup__close js-popupClose"></div>
+                </div>
+                <div class="popup__form js-form">
+                  <div class="popup-body"> 
+                                <div class="input__block"> 
+                                  <label class="input__label" for="email"><span>*&nbsp;</span>Код с эл. почты:
+                                  </label>
+                                  <div class="input__wrap"> 
+                                    <input class="input js-emptyCheck" type="text" id="email" placeholder="Введите код">
+                                    <div class="input__error js-inputError">Введите код</div>
+                                  </div>
+                                </div>
+                  </div>
+                  <div class="popup-footer"> 
+                    <div class="popup__btns">
+                              <button class="btn popup__btn btn--transparent js-popupClose" type="button">Отмена</button>
+                              <button class="btn popup__btn js-formCheck" type="submit">Подтвердить</button>
+                    </div>
+                  </div>
                 </div>
               </div>
-              -->
-                      <div class="input__block"> 
-                        <label class="input__label" for="google3"><span>*&nbsp;</span>Google Authenticator:
-                        </label>
-                        <div class="input__wrap"> 
-                          <input class="input js-emptyCheck js-inputNumbers" type="text" id="google3" placeholder="Введите код">
-                          <div class="input__error js-inputError">Введите код</div>
-                        </div>
-                      </div>
-              <div class="profile__form-btns"><a class="profile__form-link" href="profile-reset.html">Сброс настроек безопасности</a>
-                        <button class="btn profile__form-btn profile__form-btn--small js-formCheck" type="button" data-popup="check">Подтвердить</button>
+            </div>
+            <div class="popup js-popup hide" id="phone">
+              <div class="popup-inner"> 
+                <div class="popup-head"> 
+                  <h5 class="popup__title">Проверка безопасности</h5>
+                  <div class="popup__close js-popupClose"></div>
+                </div>
+                <div class="popup__form js-form">
+                  <div class="popup-body"> 
+                                <div class="input__block"> 
+                                  <label class="input__label" for="number"><span>*&nbsp;</span>SMS-код:
+                                  </label>
+                                  <div class="input__text">Код будет направлен на номер +7 95***09</div>
+                                  <div class="input__wrap"> 
+                                    <input class="input js-emptyCheck" type="text" id="number" placeholder="Введите код">
+                                    <div class="input__error js-inputError">Введите код</div>
+                                  </div>
+                                </div>
+                  </div>
+                  <div class="popup-footer"> 
+                    <div class="popup__btns">
+                              <button class="btn popup__btn btn--transparent js-popupClose" type="button">Отмена</button>
+                              <button class="btn popup__btn js-formCheck" type="submit">Подтвердить</button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
