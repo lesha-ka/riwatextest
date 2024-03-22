@@ -476,13 +476,13 @@
                   <div class="popup-footer"> 
                     <div class="popup__btns">
                               <button class="btn popup__btn btn--transparent js-popupClose" type="button">Отмена</button>
-                              <button class="btn popup__btn js-formCheck" type="submit">Подтвердить</button>
+                              <button class="btn popup__btn js-formCheck js-onStepInfo" type="submit">Подтвердить</button>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="popup js-popup hide" id="email">
+            <div class="popup js-popup hide" id="mail">
               <div class="popup-inner"> 
                 <div class="popup-head"> 
                   <h5 class="popup__title">Проверка безопасности</h5>
@@ -502,7 +502,7 @@
                   <div class="popup-footer"> 
                     <div class="popup__btns">
                               <button class="btn popup__btn btn--transparent js-popupClose" type="button">Отмена</button>
-                              <button class="btn popup__btn js-formCheck" type="submit">Подтвердить</button>
+                              <button class="btn popup__btn js-formCheck js-onStepInfo" type="submit">Подтвердить</button>
                     </div>
                   </div>
                 </div>
@@ -529,10 +529,141 @@
                   <div class="popup-footer"> 
                     <div class="popup__btns">
                               <button class="btn popup__btn btn--transparent js-popupClose" type="button">Отмена</button>
-                              <button class="btn popup__btn js-formCheck" type="submit">Подтвердить</button>
+                              <button class="btn popup__btn js-formCheck js-onStepInfo" type="submit">Подтвердить</button>
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+            <div class="profile-reset js-resetInfo hide">
+              <div class="profile-reset__main js-form">
+                <h3 class="profile-reset__title profile-reset__title--big">Пожалуйста, предоставьте следующую информацию</h3>
+                <div class="input__blocks">
+                  <div class="input__block"> 
+                    <label class="input__label" for="date"><span>*</span> Дата последнего входа</label>
+                    <div class="input__wrap"> 
+                      <input class="input input__date-hidden js-inputDateCalendar js-emptyCheck" type="text" hidden>
+                      <input class="input input__date js-inputDate" type="text" name="date" placeholder="Пожалуйста, укажите дату">
+                      <button class="js-inputDateBtn input__date-btn"></button>
+                      <div class="input__calendar js-calendarWrap">
+                        <div class="input__calendar-prev-year js-calendarPrevYear"></div>
+                        <div class="input__calendar-next-year js-calendarNextYear"></div>
+                      </div>
+                      <div class="input__error js-inputError">Укажите корректную дату</div>
+                    </div>
+                  </div>
+                  <div class="input__block">
+                    <div class="input__label"><span>*</span> Страна или регион входа</div>
+                    <div class="input__select input__select-country itc-select js-select">
+                      <button class="input__select-toggle itc-select__toggle input__select-country-toggle" type="button" name="phonecode" value="Russian Federation" data-select="toggle" data-index="0"><img src="img/flags/ru.svg" alt="ru"> Russian Federation</button>
+                      <div class="input__select-dropdown itc-select__dropdown input__select-country-dropdown js-searchWrap">
+                        <div class="input__select-search">
+                          <input class="js-search" type="text" value="" placeholder="Поиск">
+                        </div>
+                        <ul class="input__select-options itc-select__options js-searchBlock">
+                          <li class="input__select-option input__select-country-option itc-select__option" data-select="option" data-value="Azerbaijan" data-index="0"><img src="img/flags/az.svg" alt="az">Azerbaijan</li>
+                          <li class="input__select-option input__select-country-option itc-select__option" data-select="option" data-value="Armenia" data-index="1"><img src="img/flags/am.svg" alt="am">Armenia</li>
+                          <li class="input__select-option input__select-country-option itc-select__option" data-select="option" data-value="Belarus" data-index="2"><img src="img/flags/by.svg" alt="by">Belarus</li>
+                          <li class="input__select-option input__select-country-option itc-select__option" data-select="option" data-value="Kazakhstan" data-index="3"><img src="img/flags/kz.svg" alt="kz">Kazakhstan</li>
+                          <li class="input__select-option input__select-country-option itc-select__option" data-select="option" data-value="Kyrgyzstan" data-index="4"><img src="img/flags/ky.svg" alt="ky">Kyrgyzstan</li>
+                          <li class="input__select-option input__select-country-option itc-select__option" data-select="option" data-value="Uzbekistan" data-index="5"><img src="img/flags/uz.svg" alt="uz">Uzbekistan</li>
+                          <li class="input__select-option input__select-country-option itc-select__option" data-select="option" data-value="Russian Federation" data-index="6"><img src="img/flags/ru.svg" alt="uz">Russian Federation</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="input__block"> 
+                  <div class="input__label">Недавно торгуемые пары (например, BTC/USDT)</div>
+                  <div class="input__wrap"> 
+                    <div class="input__checkboxes input__checkboxes--square js-checkboxesTrade">
+                      <div class="input__checkbox">
+                        <input type="checkbox" id="spot" value="spot">
+                        <label for="spot">Спотовая торговля</label>
+                      </div>
+                      <div class="input__checkbox">
+                        <input type="checkbox" id="futures" value="futures">
+                        <label for="futures">Фьючерсная торговля</label>
+                      </div>
+                      <div class="input__checkbox">
+                        <input type="checkbox" id="margin" value="margin">
+                        <label for="margin">Маржинальная торговля/ETF</label>
+                      </div>
+                      <div class="input__checkbox">
+                        <input class="js-checkboxNoTrade" type="checkbox" id="none" value="none" checked disabled>
+                        <label for="none">Нет торговли</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                            <div class="select-to-inputs js-selectToInputWrap">
+                              <div class="input__block">
+                                <div class="input__label">Ваш текущий баланс на Riwatex</div>
+                                <div class="select-to-inputs__block js-selectToInput">
+                                  <button class="select-to-inputs__btn js-selectToInputBtn" type="button">Выберите активы</button>
+                                  <div class="select-to-inputs__dropdown js-selectToInputDropdown js-searchWrap">
+                                    <div class="input__select-search">
+                                      <input class="js-search" type="text" value="" placeholder="Поиск">
+                                    </div>
+                                    <ul class="select-to-inputs__options js-searchBlock">
+                                      <li class="select-to-inputs__option select-to-inputs__option--selected"> 
+                                        <div class="select-to-inputs__checkbox"> 
+                                          <input class="js-selectNoAssets" type="checkbox" id="no-assets" checked disabled>
+                                          <label for="no-assets">Нет активов</label>
+                                        </div>
+                                      </li>
+                                      <li class="select-to-inputs__option">
+                                        <div class="select-to-inputs__checkbox">
+                                          <input type="checkbox" id="0XS">
+                                          <label for="0XS">0XS</label>
+                                        </div>
+                                      </li>
+                                      <li class="select-to-inputs__option">
+                                        <div class="select-to-inputs__checkbox">
+                                          <input type="checkbox" id="10SET">
+                                          <label for="10SET">10SET</label>
+                                        </div>
+                                      </li>
+                                      <li class="select-to-inputs__option">
+                                        <div class="select-to-inputs__checkbox">
+                                          <input type="checkbox" id="1BOX">
+                                          <label for="1BOX">1BOX</label>
+                                        </div>
+                                      </li>
+                                      <li class="select-to-inputs__option">
+                                        <div class="select-to-inputs__checkbox">
+                                          <input type="checkbox" id="1CAT">
+                                          <label for="1CAT">1CAT</label>
+                                        </div>
+                                      </li>
+                                      <li class="select-to-inputs__option">
+                                        <div class="select-to-inputs__checkbox">
+                                          <input type="checkbox" id="1EX">
+                                          <label for="1EX">1EX</label>
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        <button class="btn profile-reset__btn profile-reset__btn--small js-formCheck js-onStepPhoto">Далее</button>
+              </div>
+            </div>
+            <div class="profile-reset js-resetPhoto hide">
+              <div class="profile-reset__head">
+                <ol class="profile-reset__steps profile-reset__steps--active"> 
+                  <li class="profile-reset__step profile-reset__step--active"> <span>1</span>
+                    <p>Выберите метод проверки безопасности, который вы хотите сбросить</p>
+                  </li>
+                  <li class="profile-reset__step profile-reset__step--active"> <span>2</span>
+                    <p>Сброс проверки безопасности</p>
+                  </li>
+                </ol>
+              </div>
+              <div class="profile-reset__main profile-reset__main--slim">
+                <h3 class="profile-reset__title">После того, как вы отправите запрос, наша служба поддержки выполнит следующие действия:</h3>
+                        <button class="btn profile-reset__btn">Отправить</button>
               </div>
             </div>
           </div>

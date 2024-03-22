@@ -39,7 +39,7 @@
       <main class="main"> 
         <section class="login"> 
           <div class="container container--flex"> 
-            <div class="login-inner login-inner--background">
+            <div class="login-inner login-inner--background" style="display:none">
               <div class="login__title-back">
                 <button class="login__back" type="button"> 
                   <svg>
@@ -53,7 +53,7 @@
                       <button class="btn login__btn btn--wide btn--transparent" type="button">Привязать к существующему аккаунту Riwatex</button>
             </div>
             <!-- Ввод данных пользователя-->
-            <div class="login-inner js-loginStart" style="display:none">
+            <div class="login-inner js-loginStart">
               <h2 class="login__title">Добро пожаловать на Riwatex</h2>
               <label class="login__block">Вы превысили число попыток входа в систему. Учетная запись заблокирована на 24 часа.</label>
               <p class="login__subtitle">Первый вход в систему считается регистрацией</p>
@@ -74,7 +74,7 @@
                 </button>
               </div>
               <!-- Этап регистрации-->
-              <div class="login__content js-formLogin js-stepReg" style="display:none">
+              <div class="login__content js-formLogin js-stepReg">
                 <div class="login__input-wrap login__input-wrap--email">
                   <input class="login__input login__input--icon js-inputCheck" type="email" name="email" placeholder="Эл. почта">
                   <button class="login__input-clearing js-inputClearing" type="button"></button>
@@ -110,7 +110,7 @@
                         <button class="btn login__btn btn--wide js-formSubmit" type="submit">Регистрация</button>
               </div>
               <!-- Этап входа-->
-              <div class="login__content js-formLogin js-stepLogin" style="display:none">
+              <div class="login__content js-formLogin js-stepLogin">
                 <div class="login__input-wrap login__input-wrap--email">
                   <input class="login__input login__input--icon js-inputCheck" type="email" name="email" placeholder="Эл. почта">
                   <button class="login__input-clearing js-inputClearing" type="button"></button>
@@ -124,7 +124,7 @@
               </div>
             </div>
             <!-- Последний этап регистрации или входа изначально не виден-->
-            <div class="login-inner login-inner--code js-formLogin js-stepCode" style="display:none">
+            <div class="login-inner login-inner--code js-formLogin js-stepCode">
               <h2 class="login__title">Код электронной почты</h2>
               <p class="login__subtitle">Пожалуйста введите 6-ти значный код, который мы отправили на ваш адрес электронной почты <span>pi***k@yandex.ru</span></p>
               <div class="login__code">
@@ -138,7 +138,7 @@
               <div class="login__timer"><span class="js-timerDown">60</span> s</div>
                       <button class="btn login__btn btn--wide js-formSubmit" type="submit">Подтвердить</button><a class="login__link" href="#">Не получили код подтверждения?</a>
             </div>
-            <div class="login-banner" style="display:none">
+            <div class="login-banner">
               <div class="login-banner__img"><img src="img/holder.jpg" alt="Баннер"></div>
             </div>
           </div>
